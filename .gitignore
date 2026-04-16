@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local input/output data
+in/
+cut_paintings/
+cut_paintings_debug/
+output_videos/
+temp_frames/
+temp_stages/
+
+# Generated media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Model weights / checkpoints
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Allow the smaller PaintTransformer model
+!PaintTransformer/inference/model.pth
+!PaintTransformer/inference/PaintTransformerPT/inference/model.pth
+
+# System / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
