@@ -1,0 +1,27 @@
+# URLs below were surfaced by web search (secondary) and are NOT verified by download.
+# Edit after opening the landing pages. Landing pages are listed first so you can read the true file names.
+htops:
+  files:
+    - {kind: landing_puf,   filename: htops_puf_landing_2026.html, url: "https://www.census.gov/programs-surveys/household-pulse-survey/data/datasets.2026.html"}
+    - {kind: landing_tech,  filename: htops_user_notes_2026.html,  url: "https://www.census.gov/programs-surveys/household-pulse-survey/technical-documentation/user-notes/2026.html"}
+    - {kind: tables_2603,   filename: htops_tables_2603.html,      url: "https://www.census.gov/data/tables/2026/demo/hhp/2603.html"}
+    - {kind: story_ai,      filename: census_story_ai_use_at_work.html, url: "https://www.census.gov/library/stories/2026/08/ai-use-at-work.html"}
+    - {kind: user_notes_may, filename: HTOPS_2605_user_notes.pdf,  url: "https://www2.census.gov/programs-surveys/demo/technical-documentation/hhp/2605_HTOPS_Household_Pulse_User_Notes_09102026.pdf"}
+    - {kind: questionnaire_jul, filename: HTOPS_2607_questionnaire.pdf, url: "https://www2.census.gov/programs-surveys/demo/technical-documentation/hhp/HTOPS_2607_Questionnaire_ENGLISH.pdf"}
+    # TODO: add the March 2026 PUF csv/zip, replicate-weight file, data dictionary and questionnaire once names are read from the landing page.
+shed:
+  files:
+    - {kind: landing_data,  filename: shed_landing.html,       url: "https://www.federalreserve.gov/consumerscommunities/shed.htm"}
+    - {kind: landing_data2, filename: shed_data.html,          url: "https://www.federalreserve.gov/consumerscommunities/shed_data.htm"}
+    - {kind: appendix_a,    filename: shed2025_appendix_a.html, url: "https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-a.htm"}
+    - {kind: report_employment, filename: shed2025_employment.html, url: "https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-employment-and-job-quality.htm"}
+    # TODO: add SHED 2025 CSV/Stata zip + codebook + methodology links from shed_data.html.
+ewcs:
+  files:
+    - {kind: landing_2024,  filename: ewcs2024_landing.html,   url: "https://www.eurofound.europa.eu/en/surveys-and-data/surveys/european-working-conditions-survey/ewcs-2024"}
+    - {kind: first_findings, filename: ewcs2024_first_findings.html, url: "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-first-findings"}
+    - {kind: overview,      filename: ewcs2024_overview.html,  url: "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-overview-report"}
+    - {kind: validation,    filename: ewcs2024_validation.html, url: "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-data-validation-and-editing-report"}
+    - {kind: coding,        filename: ewcs2024_coding.html,    url: "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-coding-report"}
+    - {kind: ukds_1991_2024, filename: ukds_7363_info.html,    url: "https://doc.ukdataservice.ac.uk/doc/7363/mrdoc/UKDA/UKDA_Study_7363_Information.htm"}
+    # TODO: questionnaire PDF link from ewcs2024_landing.html; UKDS study number for the 2024 cross-section (distinct from 7363, the 1991-2024 integrated file).

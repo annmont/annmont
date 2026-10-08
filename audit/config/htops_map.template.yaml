@@ -1,0 +1,15 @@
+# Fill from the March-2026 data dictionary. null = not yet identified. DO NOT guess; copy names verbatim.
+data_file: null              # path to PUF csv
+repweight_file: null         # path to replicate-weight csv (separate file per Census)
+merge_keys: []               # keys joining PUF and replicate weights, per data dictionary
+missing_codes: []            # e.g. [-99, -88] per dictionary
+weight: null                 # main person/household weight
+rep_prefix: null             # e.g. regex for replicate columns
+fay_rho: null                # from official variance documentation
+eligible: {var: null, codes: []}      # currently employed / worked for pay
+ai_user:  {var: null, codes: []}      # any AI use at work (task-level any-of is built from ai_task_vars)
+ai_task_vars: []             # one variable per task item
+ai_task_yes_codes: []
+outcomes: {}                 # name: {var: ..., universe: all_eligible | ai_users}
+id_cols: []
+time_cols: []

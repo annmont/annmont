@@ -1,0 +1,4 @@
+data/raw/
+tests/fixtures/
+__pycache__/
+outputs/synthetic_*

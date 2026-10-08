@@ -1,0 +1,17 @@
+# Regexes matched against variable NAME or LABEL (case-insensitive) to build the variable inventory.
+# These are SEARCH AIDS, not claims about what variables exist.
+ai_use:        '(\bAI\b|artificial|gen(erative)?\s?ai|chatgpt|gemini|copilot|machine learning|\bLLM\b)'
+ai_frequency:  '(freq|how often|days|daily|hours? .*(ai|saved))'
+ai_task:       '(task|writ|cod(e|ing)|summar|idea|search|admin|customer|logistic|translat|data analysis)'
+productivity:  '(save|saving|faster|time|quality|productiv|output|efficien|new tasks)'
+skills:        '(skill|train|overskill|underskill|learn|educat|qualif|match|mismatch)'
+autonomy:      '(autonom|discretion|control|decide|order of tasks|pace|method|supervis|monitor|schedule|flexib|telework|remote|hybrid)'
+employer:      '(employer|encourag|polic|company|organi[sz]ation|provided|allowed|ban|permit)'
+occupation:    '(occup|soc\b|isco|job title|profession)'
+industry:      '(industr|naics|nace|sector)'
+earnings:      '(earn|wage|income|pay\b|salary|inc[o_]m)'
+demographics:  '(\bage\b|birth|sex|gender|female|race|ethnic|hisp|educ|marital|child|nativ|born|citizen|state|region|country|urban|rural)'
+employment:    '(employ|work(ed)? (last|for)|job|labou?r force|self-?employ|hours|firm size|establishment)'
+weights:       '(weight|pweight|wgt|rep\s?wt|repweight|replicate|strata|psu|cluster)'
+time:          '(date|month|week|wave|period|year|interview|field)'
+ids:           '(\bid\b|caseid|resp|person|household|hh|serial|ppid|scram|^pid)'
