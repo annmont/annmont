@@ -1,215 +1,223 @@
 # Data / variable feasibility audit — HTOPS Mar-2026, SHED 2025, EWCS 2024
 
 Audit date: 2026-10-08. Target: CJAS special issue "AI, Future Skills, and Productivity" (deadline 2026-12-15).
-No regressions, no draft, no causal claims.
+No regressions, no draft, no causal claims. Everything below is counts, tabulations, weighted shares and the documentation they come from.
 
-## 0. READ FIRST: what this audit is and is not
+## 0. Evidence status (read first)
 
-**No microdata file, codebook PDF or questionnaire PDF was opened.** From the sandbox, census.gov, www2.census.gov,
-federalreserve.gov and eurofound.europa.eu all returned 403 on CONNECT (organization network policy), for both `curl` and WebFetch.
-I did not attempt to bypass this. Consequently:
-
-- Every "usable N" below is **NOT COMPUTED**. Nothing was estimated from data.
-- Everything stated here comes from **web-search summaries** of official pages (evidence tier **S**) and is a *lead to verify*, not a verified fact.
-  Tier **U** = nothing found, unknown. Tier **F** (verified in file) = nothing yet.
-- Search summaries are model-generated paraphrases. Quotation marks around survey wording below mean "as reported by a summary", not "copied from the questionnaire".
-- Verdicts are therefore **provisional** and conditional on named kill-checks that the scripts in `audit/` perform in ~1 hour once files are in hand.
-
-Reproducibility: `audit/src/` (fetch, generic stage-1/stage-2 runner), `audit/config/` (source URLs, construct regexes, map templates),
-`audit/tests/run_tests.sh` (logic test on synthetic data; passes). See `audit/README.md`.
-
-### Two unblock routes
-1. Add to the environment's allowed domains: `www.census.gov`, `www2.census.gov`, `www.federalreserve.gov`, `eurofound.europa.eu`, `ukdataservice.ac.uk`, `doc.ukdataservice.ac.uk` (Environment settings → Network access → Allowed domains), then I rerun in a new turn.
-2. Run `00_fetch.py` + `run_audit.py` locally and commit/upload `audit/outputs/`; I will fill the tables from them.
-
----
-
-## 1. US Census HTOPS, March 2026 (priority 1)
-
-### Facts gathered (all tier S unless noted)
-| Item | Finding | Source |
+| Dataset | What was inspected | Status |
 |---|---|---|
-| Design | From March 2026 HTOPS is **cross-sectional** (earlier 2025 waves longitudinal). Consistent with your correction. Treat as cross-section; do not link to 2025 waves. | PUF-page summary |
-| Collection window | 13–30 Mar 2026 → one wave spanning ~2.5 weeks; interview date/week variable existence **U** | PUF page |
-| Sample | "about 136,000 households" (tip sheet) — this reads as **sample/invitations, not respondents or workers**; respondent N **U** | Tip Sheet 13 |
-| Files | Each release = PUF + **separate replicate-weight file** + data dictionary | PUF page |
-| File version risk | PUF **corrected 10 Sep 2026** with revised weights; Census story figures revised 24 Sep. Must pin download date + SHA-256 and use the corrected file. | Census story; May user notes |
-| AI exposure | Workers asked about AI use for **11 job tasks**; AI defined broadly ("computational systems performing tasks typically associated with human intelligence", e.g. ML, NLP, virtual agents, voice recognition). **Not GenAI-specific.** | Census story |
-| Headline | ~56% of workers used AI for ≥1 of 11 tasks (Census); a third-party post reports 51% on a different base → prevalence is **definition- and universe-sensitive**; reproduce before relying on any number | Census story; Substack |
-| Task items | search/technical help 37%, writing 32%, idea generation 32%, interpret/summarise 31%, admin 27%; coding, customer support, logistics lower | Census story |
-| Frequency | "last week" use: every day ~24%, some days ~46%, none ~31% (among ever-users) | Census story |
-| Time saved | Among last-week users: "additional hours needed without AI" categories (<1h ≈25%, 1–2h ≈31%) | Census story |
-| Employer encouragement/policy | **Not found** in any summary | — |
-| Skills/training, autonomy/job design | **Not found**; HTOPS is a household survey, expect none or one-off items | — |
-| Variance | Pulse historically used Fay-BRR with 80 replicates (ρ = 0.5 ⇒ factor 4/80), but a secondary source cites ρ≈0.5005; **HTOPS value must be read from the March documentation** | secondary |
+| **HTOPS Mar-2026** | PUF CSV + replicate-weight CSV + data dictionary (xlsx) + Source & Accuracy + user notes, all downloaded from census.gov | **Verified in file** |
+| **SHED 2025** | public2025.dta / .csv, official codebook PDF, Appendix A questionnaire, plus the SHED 2024 public file for linkage | **Verified in file** |
+| **EWCS 2024** | **No microdata.** UKDS QA report, UKDS coding report, a 2026 arXiv paper that uses the file | **Documentation only** — file needs a UKDS login; Eurofound's site blocks automated access (Vercel bot challenge, HTTP 429), which I did not bypass |
 
-### A. Variable dictionary (March 2026 file — none verified; variable names U)
-| Construct | Variable | Wording | Coding | Universe | Usable N | Limitation |
-|---|---|---|---|---|---|---|
-| Total sample | – | – | – | all respondents | NOT COMPUTED | – |
-| Employed/eligible | U | U | U | U | NOT COMPUTED | definition of "worker" (employed last week? incl. self-employed?) decides the 51% vs 56% gap |
-| Any AI use at work (≥1 of 11 tasks) | U | AI defined broadly (S) | U | workers (S) | NOT COMPUTED | not GenAI; includes voice recognition/virtual agents |
-| Task-level AI use ×11 | U | U (verbatim not found) | U | U | NOT COMPUTED | skip logic may put "no" vs "missing" in different cells |
-| Last-week frequency | U | U | 3 categories (S) | AI users (S) | NOT COMPUTED | conditional on use; "last week" ≠ habitual |
-| Hours saved / extra hours w/o AI | U | U | ordinal bins (S) | last-week users | NOT COMPUTED | self-report, counterfactual recall, selected sample, no quality measure |
-| Quality / output | U | – | – | – | – | likely absent |
-| Skills / training | U | – | – | – | – | likely absent |
-| Autonomy / job design | U | – | – | – | – | likely absent |
-| Employer encouragement/policy | U | – | – | – | – | **not found**; if absent, HTOPS cannot address "who is allowed/encouraged" |
-| Occupation / industry | U | – | – | – | – | HPS-style files historically carry only coarse groups, if any; check |
-| Demographics | U | – | – | – | – | HPS-style: age, sex, race/ethnicity, education, household size/income bins expected (U) |
-| Earnings | U | – | – | – | – | household income *bins* expected, not individual earnings (U) |
-| Weights / replicates | U | – | – | – | – | separate file (S); merge key U; replicate count/ρ U |
-| Interview date/month | U | – | – | – | – | single wave; week may exist |
-| Person/panel ID | U | – | – | – | – | even if an ID exists, March 2026 is cross-section (S) → no linkage |
-| Missing coding | U | – | – | – | – | Census convention is negative codes (e.g. −99/−88) — **assumption, verify** |
+Tiers used: **F** = read in the file/official document; **S** = secondary (search summary or third-party paper); **U** = unknown.
+File hashes are in `outputs/*_audit_log.json`. Code: `audit/src/` (`00_fetch.py`, `run_audit.py`, `htops_checks.py`, `shed_checks.py`), maps in `audit/config/`. Reproduce with `audit/README.md`.
 
-### B. Candidate estimands the data *could* support (conditional on checks)
-1. Weighted distribution of AI task breadth (count of 11 tasks) and last-week frequency across worker groups (education, age, household income band, any occupation/industry grouping). Descriptive/associational only.
-2. Among last-week AI users, association between task profile (e.g. writing/analysis vs search) and reported hours saved. Conditional-on-use, descriptive only.
-
-### C. Fatal / major risks
-- **Selection into outcome**: hours-saved is asked only of last-week users → no non-user comparison; any "productivity gain" is conditional on adoption.
-- **Measurement**: broad AI definition (not GenAI); self-reported time savings; counterfactual-hours recall.
-- **No employer, skills, or job-design variables** (not found): the file may not speak to "future skills" at all. This is the main scientific risk for a CJAS skills/productivity special issue.
-- **Coarse controls**: occupation/industry/earnings likely coarse or absent.
-- **Temporal**: one 2.5-week cross-section; no pre-period, no trajectory.
-- **Contribution risk**: Census already published the headline tabulations (story, tables); novelty must come from cross-classifications the tables do not offer.
-- **Version risk**: corrected/revised PUF; Census-vs-third-party prevalence discrepancy; risk of building on a superseded file.
-- **Inference**: replicate-weight merge and ρ/R must be right or SEs are wrong (the script requires them explicitly).
-- **Access**: public, but not reachable from sandbox; no registration expected (S).
-
-### D. Verdict: **AUDIT FURTHER** (leaning NO-GO unless kill-checks pass)
-Kill (→ NO-GO) if any: (i) no occupation/industry detail beyond ≤5 broad groups **and** no employer/skills items; (ii) worker N < ~5,000 or AI-user N < ~1,500 after valid-code filtering; (iii) frequency/hours items cover <~1,000 users; (iv) replicate weights cannot be merged 1:1 or documentation gives no ρ/R.
+**Corrections to earlier assumptions (and my own first-pass report):**
+- HTOPS "136,000" is the **households sampled/invited**, not respondents. The PUF has **12,521** respondents; response rate **9.2%** (10.4% weighted) [F: Source & Accuracy].
+- HTOPS March 2026 is cross-sectional [F: user notes, S&A]. Confirmed; no linkage.
+- HTOPS PUF covers adults **25–88** only [F]. Weights were **re-issued 10 Sep 2026** (group-quarters control error) [F]; the zip contents are dated 1 Sep 2026. Use the current file and record the hash.
+- SHED **does** have a recontact panel: 4,419 respondents carry `panel_weight`, and their `shedid` matches the 2024 public file (section 2).
+- SHED public CSV stores answers as **text labels**; the `.dta` has numeric codes. I audited the `.dta`.
 
 ---
 
-## 2. Federal Reserve SHED 2025 (priority 2)
+## 1. US Census HTOPS, March 2026 (priority 1) — all [F] unless noted
 
-### Facts gathered (tier S; from summaries of Fed Appendix A and the May-2026 report)
-| Item | Finding |
+### Counts
+| Quantity | Value |
 |---|---|
-| Fieldwork | 17–28 Oct 2025 (single survey; cross-sectional public file). Respondent N **not retrieved** (U). |
-| **D50** | Defines generative AI (creates text, images, audio, video from prompts; examples **ChatGPT, Gemini, Midjourney**; do not count AI results from search engines) and asks whether R **used it at their job last month**. Yes=1/No=0. **Universe: those who worked last month.** |
-| **D51** | How often used at job last month (several frequency categories, from multiple times per day down to <1 day per week). **Universe: D50 = Yes only.** |
-| **D52** | Banked agree/disagree grid, **universe: everyone who worked last month** (so *non-users also answer*). Six statements as summarised: saves time; improves quality; enables new tasks; **employer encourages its use**; availability will improve my career; worried about AI replacing my job. |
-| **User vs non-user wording** | Non-users (D50 = No) get an inserted preface: although not currently using AI at work, give your view of the technology *for jobs like yours*. So the **same statements are factual-experience items for users and hypothetical/attitudinal items for non-users**. Exact statement wording: **U** (snippet truncated; see Appendix A page). |
-| Published results | ~25% of workers used GenAI last month; among users 81% agree saves time, 52% quality, 55% new tasks; among *all* workers 44% agree saves time (hence non-user answers are included); 20% of all workers worry about replacement; graduate-degree workers >4× as likely as ≤HS to use. |
-| Not found | skills match, training, autonomy/job-design, task-level AI items, panel/ID structure, replicate weights, month of interview (single fielding window ⇒ none useful). |
+| Total N (PUF rows) | **12,521** (219 variables; `SCRAMID` unique; replicate file merges 1:1) |
+| Eligible workers (`ANYWORK`=1, worked for pay/profit last 7 days) | **6,680** (148 DK; 5,693 no). Includes 996 self-employed/family-business (`CLASS_WORKER` 4,5) |
+| AI users (yes to ≥1 of 11 tasks) | **4,091** |
+| Non-users (valid "No" on all 11) | **2,186** |
+| Ambiguous (no "yes", ≥1 DK) / all 11 missing | 296 / 107 → valid denominator **6,277** |
+| Weighted prevalence (valid denominator) | **55.6%** (SE 2.1, SDR) — reproduces Census' 56% |
+| Same, ambiguous+missing counted as non-users | 51.2% (SE 1.9) — this is the "51%" in third-party posts |
+| Used AI last week (`AIWRK_FREQ`=1,2) | 3,042 (35.3% of workers, SE 1.8) |
+| Last-week users with valid time-saved answer | **2,991** (51 DK) |
+| Weights | `PWEIGHT` (= `PWEIGHT0`, verified), `HWEIGHT`; `PWEIGHT1–80` in a separate file keyed on `SCRAMID`; SDR, Var = 4/80 Σ(θᵢ−θ)² [F: S&A] |
 
-### A. Variable dictionary (file variable names U; D50–D52 are questionnaire item numbers)
-| Construct | Variable | Wording | Coding | Universe | Usable N | Limitation |
+Published figures reproduced: tasks (search 38.3%, comms 33.9%, ideas 33.2%, interpret 32.0%, admin 28.4%), frequency 24/46/31%, hours <1h 25.1% and 1–2h 31.5% — all match Census' August 2026 story.
+
+### A. Variable dictionary
+| Construct | Variable | Exact wording | Coding | Universe | Usable N | Limitation |
 |---|---|---|---|---|---|---|
-| Total sample | – | – | – | all | NOT COMPUTED | – |
-| Worked last month | U | U | U | all | NOT COMPUTED | the *D50 universe* is "worked last month", not an LFS employed concept |
-| GenAI use at work | D50 | defined GenAI; "used … at your job last month"; exclude search-engine AI (S) | 1/0 (S) | worked last month | NOT COMPUTED | 1-month window; single binary; self-defined by definition text |
-| Frequency | D51 | how often last month (S) | ordinal categories | D50=1 | NOT COMPUTED | users only; categories U |
-| Task-level use | – | – | – | – | – | **absent** (none found) |
-| Saves time | D52 item | "saves time" (S) | Likert agree/disagree (levels U) | all who worked | NOT COMPUTED | user=experience, non-user=hypothetical |
-| Quality | D52 item | "improves quality" (S) | same | same | NOT COMPUTED | same |
-| New tasks | D52 item | "enables new tasks" (S) | same | same | NOT COMPUTED | same |
-| Employer encouragement | D52 item | "employer encourages its use" (S) | same | same | NOT COMPUTED | single perceived item; no policy/provision detail; reverse causality with use possible |
-| Career / displacement worry | D52 items | (S) | same | same | NOT COMPUTED | attitudes, not outcomes |
-| Skills / training | U | – | – | – | – | none found in AI block; check rest of SHED (education, credentials) |
-| Autonomy / job design | U | – | – | – | – | probably absent; SHED has employment/job-quality items (U) |
-| Occupation / industry | U | – | – | – | – | SHED historically has coarse occupation/industry (U) — verify |
-| Demographics / income | U | – | – | – | – | SHED has age, sex, race, education, income categories (from prior waves; **verify**) |
-| Weights | U | – | – | – | – | SHED typically ships population weights; **no replicate weights expected** (assumption) → SEs via linearisation/Taylor needs strata/PSU, likely unavailable |
-| Interview date | – | – | – | – | – | one 12-day window |
-| Person ID / panel linkage | U | – | – | – | – | public file expected cross-sectional; repeated-wave linkage not possible for GenAI (items new in 2025) |
-| Missing coding | U | – | – | – | – | assumption: −1 = refused/skip; **verify** |
+| Employed | `ANYWORK` | "In the last 7 days, did you do ANY work for either pay or profit?" | 1 Yes, 2 No, −99 DK | all | 6,680 yes | 7-day window; includes self-employed |
+| Any AI use (11 items) | `AIWRK_ADMIN, _CODE, _CUSTSUPP, _DATAVIS, _GENIDEA, _INTERP, _LOG, _MED, _SEARCH, _TUTOR, _COMM` | "AI is the capability of computational systems to perform tasks typically associated with human intelligence… (Examples: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each." | 1 Yes, 2 No, −99 DK, −88 NIU | workers | 4,091 users / 2,186 non-users | **Not GenAI-specific**; reference period unspecified; "ever in work" |
+| Frequency | `AIWRK_FREQ` | "AT WORK, how often did you use AI last week?" | 1 every day, 2 ≥1 day not every day, 3 used but not last week | users (any task) | 4,068 (+23 DK) | 3 coarse bins; users only |
+| Time saved | `AIWRK_HOURS` | "If you had NOT been able to use AI at work last week, how many additional hours would you have needed to complete the same amount of work?" | 1 <1h … 6 >4h, 7 no saving, 8 required more time | used ≥1 day last week | 2,991 | Counterfactual self-report; users-only; no non-user comparison |
+| Quality | — | — | — | — | — | **Absent** |
+| Skills / training | — | — | — | — | — | **Absent** (education only) |
+| Autonomy / job design | `TWDAYS` | "In the last 7 days, have you teleworked or worked from home?" | 1 1–2d, 2 3–4d, 3 5+, 4 no | workers | 6,633 | Only job-organisation variable |
+| Employer encouragement / policy | — | — | — | — | — | **Absent** |
+| Occupation | `AI_OCC` | "What is your occupation?" | **10 broad groups** | workers | 6,439 (241 DK) | Very coarse; group 5 has 21 workers |
+| Industry | — | — | — | — | — | **Absent** |
+| Class of worker | `CLASS_WORKER` | gov't/private/nonprofit/self-emp/family | 1–5 | workers | 6,526 | — |
+| Demographics | `TAGE` (25–88), `ESEX`, `RRACETH`, `REDUC` (7 levels), `MS`, `THHLD_*`, `REGION`, `METRO` (10 MSAs) | — | — | all | no missing on age/education | Age ≥25 only |
+| Earnings | `RHHINCOME` | "In 2025 what was your total household income before taxes?" | 7 bins | all | 5,950 of 6,680 workers | **Household income bins; no individual earnings** |
+| Interview date | — | — | — | — | — | None; single wave 13–30 Mar 2026 [F: user notes] |
+| ID / linkage | `SCRAMID` | — | unique | — | — | Cross-section; no linkage possible |
+| Missing codes | — | −99 DK/no answer, −88 not in universe | — | — | — | Consistent across items |
 
-### B. Candidate estimands
-1. Weighted GenAI use (D50) and intensity (D51) by worker characteristics and by perceived employer encouragement (D52). Associational.
-2. Among users only, association between intensity (D51) and agreement that GenAI saves time / improves quality / enables new tasks (D52). Perception outcomes, user-conditional.
+### Usable analytic N (workers, valid AI)
+| Combination | AI users | Non-users |
+|---|---|---|
+| AI × frequency | 4,068 | n/a (users only) |
+| AI × time saved | 2,991 | n/a |
+| AI × occupation (10 groups) | 4,014 | 2,094 |
+| AI × telework days | 4,068 | 2,179 |
+| AI × class of worker | 4,027 | 2,131 |
+| AI × household income bin | 3,727 | 1,956 |
+
+### B. Candidate estimands the data support (max 2)
+1. Weighted distribution of AI **task breadth** (count of the 11 tasks) and last-week intensity by occupation group × education × class of worker.
+2. Among last-week users, the **association between task profile and reported time saved** (ordinal), by occupation group.
 
 ### C. Fatal / major risks
-- **Perceived, not measured, productivity** — all D52 outcomes are attitudes.
-- **Non-user D52 answers are hypothetical** → never pool users and non-users on D52 without an explicit flag; do not compare "agree saves time" across the D50 split.
-- **Reverse causality / common-cause** between employer encouragement and use (same-wave, self-report).
-- **Universe**: "worked last month" is looser than employment; self-employed/gig treatment U.
-- **Sample size**: user N drives power; prevalence ~25% × (worked-last-month N, **U**). Frequency categories × covariates may be thin.
-- **No skills/training/autonomy variables, no task-level items** → thin on the "Future Skills" theme.
-- **Inference**: replicate weights probably absent; design-based SEs approximate.
-- **Contribution risk**: Fed's report already gives the headline cuts.
-- Access: public, no registration expected (S); not verified.
+- **Content gap for this special issue:** no employer policy, no skills/training, no autonomy beyond telework, no industry, no quality. "Future skills" and "productivity" cannot be addressed beyond a self-reported hours item.
+- **Selection:** 9.2% response, online self-response; productivity item only for users.
+- **Measurement:** broad AI definition (voice recognition, virtual agents) → not GenAI; counterfactual hours.
+- **Coarse controls:** 10 occupation groups, household (not personal) income bins, no industry.
+- **Temporal:** one 18-day cross-section.
+- **Contribution:** Census has already published the headline tabulations; my checks reproduce them to the decimal.
+- **Version:** weights re-issued 10 Sep 2026; any earlier download is wrong.
 
-### D. Verdict: **AUDIT FURTHER** (cleanest and fastest, but narrow)
-Kill (→ NO-GO) if: (i) D50–D52 not in the public file or D52 absent for non-users in the file; (ii) AI-user N < ~800 or D51 non-missing < ~700; (iii) no occupation or industry variable at all and no employer variable beyond D52; (iv) weights missing.
+### D. Verdict: **NO-GO as primary dataset**
+(The literal kill rule I proposed earlier — ≤5 occupation groups — is *not* triggered; this is a judgement on content: employer, skills and autonomy are missing.) Keep only as a US descriptive benchmark.
 
 ---
 
-## 3. Eurofound EWCS 2024 (priority 3)
+## 2. Federal Reserve SHED 2025 (priority 2) — all [F]
 
-### Facts gathered (tier S)
-| Item | Finding |
+### Counts
+| Quantity | Value |
 |---|---|
-| Access | 2024 cross-section and 1990–2024 harmonised file distributed via **UK Data Service** (the integrated 1991–2024 file is SN 7363, 9th release Mar 2026). **2024 cross-section SN: U.** Registration/licence terms (end-user licence, academic vs other users, approval turnaround): **U – must read on UKDS**. Questionnaire is public on Eurofound's site. |
-| Design | EU27 + others; **first round mixing face-to-face and online (CAWI)** → mode effects. Respondent N/country N **U**. |
-| AI item | Per a 2026 arXiv paper (secondary on secondary): "At work, do you use artificial intelligence that simplifies complex mental tasks or makes recommendations (e.g. ChatGPT, LLAMA, DALL-E, Midjourney, Jasper)?" — **verify against official questionnaire.** Note: this is a broad "AI" item with GenAI examples, **not a clean GenAI-only measure**. EU27 prevalence ≈12%. |
-| Related items | technology-impact battery: "Technology has removed some of your tasks" / "…created new tasks for you" (binary, per same paper). |
-| **Skills match / need for training** | Eurofound overview reports **overskilling 30%** and **13% say they need more training** ⇒ the *survey* contains these measures. **Whether they are in the public 2024 file with usable coding: U.** (This answers your correction request only at the survey level, not the file level.) |
-| Repeated waves | Harmonised 1990–2024 file = **repeated cross-sections, not a panel**; the AI item exists only in 2024 ("first time") ⇒ no pre/post AI linkage possible. |
-| Occupation/industry | ISCO/NACE coding report exists (S); detail level in public file **U**. |
-| Weights | U (expect a design weight; replicate weights unlikely). Countries are strata; country FE and clustered SEs likely. |
+| Total N | **12,934** (815 variables; `shedid` unique) |
+| Worked last month (`D1A`=1; universe of D50 and D52) | **7,488** |
+| GenAI users (`D50`=1) / non-users | **1,850** / 5,638 |
+| Weighted prevalence (`weight_pop`) | **24.7%** (unweighted 24.7%) — matches Fed "one in four" |
+| `D51` frequency (users) | 1,850 valid: multiple/day 270, daily 269, several days/wk 441, weekly 326, <1/wk 544 |
+| `D52` a–f | 7,488 valid each (1,850 users / 5,638 non-users) |
+| Employees (`D3A`=0) with autonomy items | 6,285 (1,626 users / 4,659 non-users) |
+| Weights | `weight`, `weight_pop` (main), `panel_weight`, `panel_weight_pop` (recontact; 4,419 non-missing). **No strata/PSU, no replicate weights** |
+| Imputation | `*_iflag` columns; D50 flagged imputed for 18 rows |
 
-### A. Variable dictionary (names U; none verified)
-| Construct | Variable | Wording | Coding | Universe | Usable N | Limitation |
+### Who gets D50–D52 and how wording differs (verified in Appendix A)
+- **D50:** base = `D1A`=1 (worked last month). Wording: "Generative AI is a type of artificial intelligence that creates text, images, audio, or video in response to prompts. Some examples … include ChatGPT, Gemini, and Midjourney. Did you use Generative AI at your job last month? Please do not include seeing AI results from search engines."
+- **D51:** base = `D50`=1 only.
+- **D52 (6-item grid, 1 Agree / 2 Neither / 3 Disagree):** base = `D1A`=1, i.e. **all workers**. If `D50`=0 an extra preface is inserted: "Even though you aren't currently using AI at work, we're interested in your perspective on the technology for jobs like yours." The statements are identical for users and non-users (the stem still says "using Generative AI for your job"). So for non-users D52 is **hypothetical/attitudinal**, for users it is **experience**.
+- Published figures reproduced (Agree, weighted): saves time **users 81.0% / non-users 31.5% / all 43.7%**; improves quality 51.8 / 15.4 / 24.4; new tasks 55.5 / 19.5 / 28.4; **employer encourages** 50.8 / 8.5 / 19.0; career 48.1 / 11.0 / 20.2; worried about replacement 22.1 / 19.7 / 20.3.
+
+### A. Variable dictionary
+| Construct | Variable | Exact wording | Coding | Universe | Usable N | Limitation |
 |---|---|---|---|---|---|---|
-| Total sample | – | – | – | all | NOT COMPUTED | – |
-| Employed/eligible | U | – | – | EWCS targets employed persons (S, standard) | NOT COMPUTED | includes self-employed; check employee-only job-design items |
-| AI use | U | see above (S, secondary-of-secondary) | binary? U | U | NOT COMPUTED | not GenAI-only; wording must be checked |
-| Frequency/intensity | U | – | – | – | – | none found |
-| Task-level AI | – | – | – | – | – | none; only tech removed/created tasks |
-| Productivity/time-saving/quality | – | – | – | – | – | **none found** (EWCS is not a productivity survey) |
-| Skills match / training need | U | – | – | U | NOT COMPUTED | exists in survey (S); file presence U |
-| Training received | U | – | – | – | – | EWCS usually has paid/own-account training items (prior rounds; verify) |
-| Autonomy / job design | U | – | – | – | – | EWCS strength historically (task order, pace, methods, learning, complexity, intensity); verify items |
-| Employer encouragement/policy | – | – | – | – | – | none found |
-| Occupation / industry | U | – | – | – | – | verify ISCO digits, NACE sections |
-| Demographics / earnings | U | – | – | – | – | earnings likely **banded/quintile**; verify |
-| Weights / replicates | U | – | – | – | – | verify |
-| Interview date | U | – | – | – | – | verify; mode flag needed |
-| ID / linkage | U | – | – | – | – | cross-section |
-| Missing coding | U | – | – | – | – | EWCS uses 7/8/9-style DK/refusal codes in past rounds (**assumption**) |
+| Employed | `D1A` | "Last month, did you do any work for either pay or profit?" | 1/0 | all | 7,488 | 1-month window |
+| GenAI use | `D50` | see above | 1 Yes / 0 No | worked last month | 7,488 | Binary; 1-month window; single item |
+| Frequency | `D51` | "Last month, about how often did you use Generative AI at your job?" | 1–5 (see above) | D50=1 | 1,850 | Cells 269–544; users only |
+| Task-level AI use | — | — | — | — | — | **Absent** |
+| Saves time / quality / new tasks | `D52_a/_b/_c` | "It saves time" / "It improves quality" / "It enables me to do new tasks" | 1–3 | workers | 7,488 | Perceived; hypothetical for non-users |
+| Employer encouragement | `D52_d` | "My employer encourages me to use it" | 1–3 | workers | 7,488 | One perceived item; no policy/provision detail |
+| Career / replacement worry | `D52_e`, `D52_f` | "Having it available will improve my career" / "I am worried about AI replacing my job" | 1–3 | workers | 7,488 | Attitudes |
+| Skills / training | — | — | — | — | — | **Absent** (only `D22_h` "in school or training" as a reason for not working) |
+| Autonomy | `D28_a`, `D28_b` | "I can choose what tasks I work on" / "I can choose how I complete tasks at work" — "How often do each of these statements describe your work situation (at your main job)?" | 1 Never … 5 Always | employees (`D3A`=0) | 6,285 | Employees only; self-employed (935) excluded |
+| Job organisation | `D30` (hours schedule), `D34A/D34D` (telework), `D36B`, `D44_a/_b` (raise/promotion) | — | — | various | D34D 1,726 | `D34D` asked only if some telework |
+| Occupation | `ppcm0160` | "Q26: Occupation (tight scale) in current or main job" | codes 1–35 with overlapping categories (e.g. 2/30 both Business Operations) | workers | 6,926 | Needs recoding before use; −2 "Not asked" |
+| Industry | `ind1` | "IND1: Industry (tight scale)" | 27 codes with overlaps (e.g. 3/22, 14/23) | workers | 6,949 | Needs harmonising |
+| Employer type | `ppcm1301` | "GOVEMP1: Employer type" | 1–5 | workers | 6,962 | — |
+| Demographics | `ppage`, `ppgender`, `ppethm`, `ppeducat`/`ppeduc5`, `ppstaten`, `ppmsacat` | — | — | all | complete | — |
+| Earnings | `ppinc7` (household income, 7 cat), `inc_4cat_50k` | — | — | all | complete | **No individual earnings** |
+| Interview date | — | — | — | — | — | None (only `duration`); fielded 17–28 Oct 2025 [S] |
+| ID | `shedid` | — | unique | — | — | **Matches 2024 file for 4,420 respondents** (below) |
+| Missing | — | −1 Refused, −2 Not asked | — | — | — | Skip-pattern missing is system-missing (.) |
 
-### B. Candidate estimands (conditional on file checks)
-1. Association of AI use with job-design/work-organisation measures (autonomy, intensity, task variety), within country and occupation group. Associational.
-2. Association of AI use with skills-match / training-need and training participation. Associational.
+### Repeated-wave linkage (the one place SHED beats the others)
+- `shedid` appears in both the 2025 and 2024 public files for **4,420** respondents (4,419 = those with `panel_weight`).
+- Same persons: age is exactly +1 in 4,241/4,420 (96%); gender identical in 99.9%; education 92%, race 98%, state 97%.
+- Of those: **2,727** worked in 2025 (662 GenAI users); **2,478** worked in both years; **2,117 employees** have 2024 `D28_a` and a valid 2025 `D50` (**534 users**, all with `panel_weight_pop`).
+- `D28_a/_b` labels and value labels are identical across 2024 and 2025 [F]. The 2024 file has **no GenAI items** [F] and GenAI was already widespread by Oct 2024, so 2024 autonomy is *pre-measurement*, not *pre-exposure*.
+- Linked sample is a recontact subset (≈36% of 2025 respondents): selection must be checked against unlinked respondents.
+
+### Usable analytic N
+| Combination | Users | Non-users |
+|---|---|---|
+| D50/D51 × D52 outcomes (all workers) | 1,850 | 5,638 |
+| × autonomy (D28), employees | 1,626 | 4,659 |
+| × occupation / industry | 1,764 / 1,767 | 5,162 / 5,182 |
+| 2024 autonomy → 2025 use (linked employees) | 534 | 1,583 |
+| D51 × D52 (users only) | 1,850 | — |
+
+### B. Candidate estimands (max 2)
+1. **Prospective association:** 2024 task autonomy (`D28_a/_b`) and occupation/industry → 2025 GenAI use and intensity (`D50/D51`), among linked employees (N = 2,117; users 534), with panel weights. Associational.
+2. **Cross-sectional, users only:** association of intensity (`D51`) and perceived employer encouragement (`D52_d`) with perceived time saving/quality/new tasks (`D52_a–c`), 1,850 users. Perception outcomes only.
 
 ### C. Fatal / major risks
-- **Access**: UKDS registration/licence not yet verified → schedule risk; the kill-check sets mid-Nov as the latest acceptable approval date.
-- **Measurement**: broad AI wording, 12% prevalence (small user N within country), binary only, no intensity.
-- **No productivity or time-saving outcome** → "productivity" must be proxied (work intensity, quality-of-output items) — likely weak; the theme match rests on skills and job design.
-- **Mode mixing** (F2F + web) can confound AI-use reporting and attitudes.
-- **Temporal**: single 2024 cross-section; skills mismatch/training and AI use measured at the same time ⇒ direction unidentifiable.
-- **Country heterogeneity**: tiny cells at occupation × country.
-- Non-Canadian sample (applies also to the two US surveys): CJAS relevance must be argued, not assumed.
+- All productivity outcomes are **perceived** and the D52 statements are **hypothetical for non-users** — never pool users and non-users on D52.
+- Same-wave employer encouragement and use: reverse causality/common cause.
+- **No skills/training measure, no individual earnings, no task-level AI items.**
+- Linked N is modest (534 users); D51 cells are 269–544, so any covariate interaction will be thin.
+- **No strata/PSU or replicate weights:** only weighted point estimates and robust SEs; state this openly.
+- Selection into the recontact panel; D28 only for employees.
+- GenAI already diffused in 2024 → 2024 autonomy is not a clean pre-period.
+- Contribution: Fed and others published the headline shares; novelty rests on the linked-autonomy design.
 
-### D. Verdict: **AUDIT FURTHER**
-Kill (→ NO-GO) if: (i) AI item not in public file or user N < ~1,500 employees; (ii) neither skills-match nor training-need item present; (iii) fewer than ~3 usable job-autonomy items; (iv) UKDS licence bars the intended use or approval cannot clear by ~mid-Nov.
+### D. Verdict: **GO — narrow scope**
+Conditions before committing: (i) compare linked vs unlinked 2025 respondents on observables; (ii) recode `ppcm0160`/`ind1` to a single scheme; (iii) pre-specify that D52 is analysed separately for users and non-users. Kill if the linked users' autonomy association is not estimable at a usable precision once (i)–(ii) are done (suggested floor: 400 linked users).
 
 ---
 
-## 4. Rankings (provisional; conditional on kill-checks)
+## 3. Eurofound EWCS 2024 (priority 3) — documentation only
 
-| Criterion | 1st | 2nd | 3rd | One-line reason |
+### What I could and could not do
+- **Microdata not obtained.** The 2024 cross-section is UK Data Service **SN 9511** (cited as such in the arXiv paper; DOI 10.5255/UKDA-SN-9511-1 from search [S]). Access requires a UKDS login and licence acceptance; the licence tier is **not verified**. The UKDS catalogue is a JavaScript shell I could not read, and `eurofound.europa.eu` returns an anti-bot challenge (HTTP 429) to scripted requests. A CESSDA record (search summary [S]) says the **online-mode data are not available until late 2026**.
+- The integrated 1991–2024 file is SN 7363 (9th release Mar 2026) [F].
+
+### Facts from documents
+| Item | Finding | Tier |
+|---|---|---|
+| Sample | Face-to-face **36,644** interviews, 35 countries; parallel **online** segment **15,250** [QA report Table 2b] | F |
+| Mode | Mixed: F2F main + online test. Online: full questionnaire for 50%, shortened M1/M2 for the rest; **routing error (Q53, Q63, Q66) caused missing data for ~2,000 online respondents** | F |
+| AI item | "At work, do you use artificial intelligence that simplifies complex mental tasks or makes recommendations (e.g. ChatGPT, LLAMA, DALL-E, Midjourney, Jasper)?" 1 Yes / 2 No — **broader than GenAI; binary; no frequency** (the paper itself says so). Country adoption 3%–25% | S (arXiv 2604.18849) |
+| Consequence items | "Technology has removed some of your tasks" / "…created new tasks for you" | S |
+| Skills / training | Workplace training (employer-provided or self-financed, last 12 months), task discretion index (order, methods, speed; α=.85), organisational-influence index (4 items), abstract/routine task factors (8 items), computer use, tenure, workplace size, 2-digit ISCO and NACE | S |
+| **Skills match / need for training** | **Not found** in the paper or reports. Eurofound's overview cites overskilling 30% / need more training 13% (survey-level), but whether those items are in SN 9511 with usable coding is **unverified** | S/U |
+| Weight | "EWCS calibrated survey weight"; no replicate weights known | S |
+| Earnings | Unknown | U |
+| Productivity / time-saving | **Not found** | — |
+| Employer AI policy | **Not found** | — |
+| Linkage | Harmonised 1990–2024 is repeated cross-sections; the AI item exists only in 2024 → no pre/post | S |
+
+### A. Variable dictionary
+All "usable N" cells: **NOT COMPUTED**. Wording/coding for the AI item and the paper's constructs as above; item names, universes, and missing codes are **U** until the codebook is opened. Skills-match / need-training items: **U** (see above).
+
+### B. Candidate estimands (conditional on the file)
+1. Association between AI use and **task discretion / organisational influence / task variety**, within country × 2-digit ISCO.
+2. Association between AI use and **training received and skills-match / training-need items** — only if the latter exist in SN 9511.
+
+### C. Fatal / major risks
+- **Prior art on the same file and item:** arXiv 2604.18849 (2026) already studies AI adoption × skills, training, task discretion and organisational influence, with occupational exposure and cross-country moderators. A new paper needs a different outcome (e.g. skills-match) or design, or it is a replication.
+- **Measurement:** the AI item is broader than GenAI, binary, and has no intensity or task information; no productivity measure.
+- **Mode:** F2F vs online with a split/short form and a known routing defect; online availability unclear.
+- **Skills-match / need-for-training items unconfirmed** — this is the theme-critical variable.
+- **Access:** UKDS login/licence unverified; I cannot rule out delay.
+- Single cross-section; country × occupation cells thin at 3–25% prevalence.
+
+### D. Verdict: **AUDIT FURTHER** (one decisive check)
+Open the SN 9511 codebook/questionnaire. **Kill (→ NO-GO)** if (i) no skills-match or need-for-training item is in the public file, because then the paper duplicates arXiv 2604.18849; (ii) AI-user N < ~1,500 employees; (iii) the licence or timing prevents access by mid-November.
+
+---
+
+## 4. Rankings
+
+| Criterion | 1st | 2nd | 3rd | Reason |
 |---|---|---|---|---|
-| Scientific contribution | EWCS | HTOPS | SHED | Only EWCS can speak to AI × skills/job design in a harmonised multi-country frame, **if** the file items exist; HTOPS adds task-level + time-saving but nothing on skills; SHED is thin beyond what the Fed published |
-| CJAS fit (management/admin, skills, productivity) | EWCS | SHED | HTOPS | work organisation + skills vs employer encouragement + perceived productivity vs household-survey tasks |
-| Feasibility by 15 Dec 2026 | SHED | HTOPS | EWCS | SHED: one file, simple weights; HTOPS: replicate-weight file + corrected-version handling; EWCS: registration/licence plus coding of mixed-mode, multi-country data |
+| Scientific contribution | **SHED** | EWCS | HTOPS | SHED: verified linked autonomy → GenAI adoption + intensity + employer encouragement; EWCS: strong constructs but direct prior art and unverified key item; HTOPS: nothing beyond published descriptives |
+| CJAS fit | **EWCS** | SHED | HTOPS | EWCS = work organisation/skills (if item exists); SHED = employer encouragement + autonomy, no skills; HTOPS has neither. None is Canadian |
+| Feasibility by 15 Dec | **SHED** | HTOPS | EWCS | SHED and HTOPS are downloaded and audited; EWCS needs UKDS registration and codebook check |
 
-None of the three is a GO until its kill-checks pass. If the one-hour file checks must be spent on only one dataset first, **SHED (fastest to kill or confirm), then EWCS (highest upside)**; HTOPS is the likeliest to be killed on content (no employer/skills variables).
-A combined design (SHED/HTOPS for US task-and-time descriptives; EWCS for skills/job design) is *not* assessed here: the three surveys have non-overlapping populations and constructs, and I would not recommend pooling.
+Rankings for EWCS rest on documents, not the file.
 
-## 5. Checks that fill the empty cells (in order)
-1. `00_fetch.py` → read landing pages → fix `config/sources.yaml` file names → download PUF/dictionary/questionnaire/weights; record SHA-256 & date.
-2. `run_audit.py --file …` stage 1 → `*_inventory.csv`: confirm which constructs have any candidate variable at all.
-3. Fill `config/*_map.yaml` from the official dictionary (variable names, codes, missing codes, weights, ρ/R).
-4. Stage 2 → `*_audit_log.json`, `*_analytic_n.csv`: N, eligible N, AI-user N, weighted prevalence (+BRR SE for HTOPS), raw missing-code tabs, analytic N for AI × outcome.
-5. Reconcile against published figures (HTOPS 56%/51%; SHED ≈25% and 81%/52%/55%/44%; EWCS ≈12%). A mismatch in universe or weights is itself a finding.
-
-## Sources (search-surfaced; none fetched in full)
-- [Census HTOPS PUF page 2026](https://www.census.gov/programs-surveys/household-pulse-survey/data/datasets.2026.html), [Tip Sheet 13](https://www.census.gov/newsroom/tip-sheets/2026/tp26-13.html), [Census story: AI use at work](https://www.census.gov/library/stories/2026/08/ai-use-at-work.html), [HTOPS user notes 2026](https://www.census.gov/programs-surveys/household-pulse-survey/technical-documentation/user-notes/2026.html), [May 2026 user notes PDF](https://www2.census.gov/programs-surveys/demo/technical-documentation/hhp/2605_HTOPS_Household_Pulse_User_Notes_09102026.pdf)
-- [SHED 2025 Appendix A](https://www.federalreserve.gov/publications/2026-supplemental-appendixes-report-economic-well-being-us-households-2025-appendix-a.htm), [Employment and Job Quality](https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-employment-and-job-quality.htm), [Fact sheet](https://www.federalreserve.gov/newsevents/pressreleases/files/other20260513a1.pdf)
-- [EWCS 2024 page](https://www.eurofound.europa.eu/en/surveys-and-data/surveys/european-working-conditions-survey/ewcs-2024), [First findings](https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-first-findings), [Overview report](https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-overview-report), [UKDS 7363](https://doc.ukdataservice.ac.uk/doc/7363/mrdoc/UKDA/UKDA_Study_7363_Information.htm), [CESSDA record](https://datacatalogue.cessda.eu/detail/31741ebe15b48694177b7274afa2b7af5a7ec43d10bfdb5c172eed6bc69002cf?lang=en), [arXiv 2604.18849](https://arxiv.org/html/2604.18849)
+## 5. What I need from you
+1. **EWCS:** register at the UK Data Service, download SN 9511 (and its questionnaire/codebook), place them in `audit/data/raw/ewcs/`, tell me — I will run the stage-1 inventory and fill the map. (Eurofound's site blocks scripts.)
+2. **Decision:** SHED as the lead dataset (GO, narrow scope), EWCS as a conditional second, HTOPS dropped or used only as a US descriptive benchmark.

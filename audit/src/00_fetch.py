@@ -28,4 +28,4 @@ for ds in want:
             rec["error"] = repr(e)
         log.append(rec); print(rec["status"], url)
         time.sleep(1)
-dump("fetch_log.json", log)
+dump(f"fetch_log_{'_'.join(want)}.json", log)

@@ -1,0 +1,816 @@
+var,label,n_nonmissing,value_labels
+shedid,SHEDID,12934,{}
+duration,Duration (in seconds),12934,{}
+weight,Post-stratification weight - Main qualified respondents scaled to sample size (n,12934,{}
+weight_pop,Post-stratification weight - Main qualified respondents scaled to U.S. populatio,12934,{}
+panel_weight,Post-stratification weight - Main recontact respondents scaled to sample size (n,4419,{}
+panel_weight_pop,Post-stratification weight - Main recontact respondents scaled to U.S. populatio,4419,{}
+xlaptop,Is R a KP laptop user?,12934,"{1: 'Yes', 2: 'No'}"
+L0_a,"My spouse or partner - First, do each of the following people currently live wit",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0_b,"My child(ren) under age 18 - First, do each of the following people currently li",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0_c,"My adult child(ren) age 18 or older - First, do each of the following people cur",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0_d,"My parent(s) - First, do each of the following people currently live with you?",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0_e,"Other individuals - First, do each of the following people currently live with y",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0B_a,"Your brother(s) or sister(s) - [Other than your spouse or partner, children, or",1754,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0B_b,"Other relatives - [Other than your spouse or partner, children, or parents, are/",1754,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0B_c,"Other people not related to you - [Other than your spouse or partner, children,",1754,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+L0C,How many children do you have who are under age 18 and currently live with you?,3024,"{-1: 'Refused', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5 or more'}"
+L0E,How old is your [youngest] child that lives with you?,3024,"{-1: 'Refused', 1: '0 to 2 years old', 2: '3 to 5', 3: '6 to 12', 4: '13 to 17'}"
+B2,"Overall, which one of the following best describes how well you are managing fin",12934,"{-1: 'Refused', 1: 'Finding it difficult to get by', 2: 'Just getting by', 3: 'Doing okay', 4: 'Living comfortably'}"
+B3,"Compared to 12 months ago, would you say that you (and your family) are better o",12934,"{-1: 'Refused', 1: 'Much worse off', 2: 'Somewhat worse off', 3: 'About the same', 4: 'Somewhat better off', 5: 'Much better off'}"
+B3A_a,Lower income or job loss - You said that you (and your family) are (somewhat/muc,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3A_b,My expenses are higher - You said that you (and your family) are somewhat worse,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3A_c,The value of my assets decreased- You said that you (and your family) are somewh,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3A_d,I have more debt - You said that you (and your family) are somewhat worse off fi,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3A_e,Other (please specify) - You said that you (and your family) are somewhat worse,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3A_f,You said that you (and your family) are somewhat worse off financially compared,3612,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_a,Higher income or new job - You said that you (and your family) are (somewhat/muc,2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_b,Expenses are lower - You said that you (and your family) are (somewhat/much) bet,2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_c,The value of your assets increased - You said that you (and your family) are (so,2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_d,You have less debt - You said that you (and your family) are somewhat better off,2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_e,Prices for things you (and your family) buy have decreased - You said that you (,2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B3B_f,Other (please specify) - You said that you (and your family) are (somewhat/much),2976,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+B7_a,In your community -  How would you rate economic conditions today,12934,"{-1: 'Refused', 1: 'Poor', 2: 'Only fair', 3: 'Good', 4: 'Excellent'}"
+B7_b,In this country -  How would you rate economic conditions today,12934,"{-1: 'Refused', 1: 'Poor', 2: 'Only fair', 3: 'Good', 4: 'Excellent'}"
+X11_none,X11 None selected,6467,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+X12_a,Finding or keeping a job -  Are each of the following a financial challenge or c,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_b,Increases in prices for things you buy -  Are each of the following a financial,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_c,Housing costs or availability -  Are each of the following a financial challenge,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_d,Retirement savings - Are each of the following a financial challenge or concern,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_e,Making ends meet -  Are each of the following a financial challenge or concern f,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_f,Medical debt or affording medical care -  Are each of the following a financial,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X12_g,Student loans or education costs -  Are each of the following a financial challe,6467,"{-1: 'Refused', 0: 'Not a concern', 1: 'Minor concern', 2: 'Major concern'}"
+X13,In the prior question you indicated that finding or keeping a job and increases,1386,"{-1: 'Refused', 1: 'More concerned about finding or keeping a job', 2: 'More concerned about increases in prices for things you buy', 3: 'Both are of equal concern'}"
+CG0,"In the past week, did you use any paid childcare?",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG1A,"In the past week, how many hours did you use paid childcare?",529,"{-1: 'Refused', 0: 'None', 1: '1 to 9 hours', 2: '10 to 19 hours', 3: '20 to 39 hours', 4: '40 hours or more'}"
+CG2,How much do you pay per week for childcare in total for all of your children?,529,{-1: 'Refused'}
+CG7_a,"Child's grandparent - In the past week, did you use any of the following forms o",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_b,"Child's sibling - In the past week, did you use any of the following forms of un",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_c,"Another relative other than the parent - In the past week, did you use any of th",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_d,"A nonrelative such as a friend or neighbor - In the past week, did you use any o",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_e,"Headstart or another preschool that you don't pay for - In the past week, did yo",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_f,"Other unpaid childcare (please specify) - In the past week, did you use any of t",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG7_g,"Did not use unpaid childcare - In the past week, did you use any of the followin",2184,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG8,"In the past week, how many hours did you use the unpaid childcare you just menti",963,"{-1: 'Refused', 1: '1 to 9 hours', 2: '10 to 19 hours', 3: '20 to 39 hours', 4: '40 hours or more'}"
+CG3,"When it comes to taking care of your children when they are at home, which of th",1856,"{-1: 'Refused', 1: 'I am usually the primary caretaker', 2: 'My spouse/partner is usually the primary caretaker', 3: 'My spouse/partner and I equally share caretaking responsibilities'}"
+CG4,Do you regularly provide unpaid help or care to an adult relative or friend who,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_a,Your parent - Do you regularly provide unpaid help or care to each of the follow,2349,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_b,Your spouse's or partner's parent - Do you regularly provide unpaid help or care,1544,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_c,Your spouse or partner- Do you regularly provide unpaid help or care to each of,1544,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_d,An adult child (age 18 or older) - Do you regularly provide unpaid help or care,2349,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_e,Another relative - Do you regularly provide unpaid help or care to each of the f,2349,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG5_f,A friend or neighbor - Do you regularly provide unpaid help or care to each of t,2349,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+CG6,About how often do you provide unpaid help or care to an adult relative or frien,2349,"{-1: 'Refused', 1: 'Daily', 2: 'Several days per week', 3: 'Several days per month', 4: 'Once per month', 5: 'Less than once per month'}"
+D1A,"Last month, did you do any work for either pay or profit?",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D4,"Last month, did you have more than one job, including part time, evening or week",7488,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D48,"Thinking about all your jobs, do/Do you usually work 35 hours or more per week?",7488,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D3B,"Thinking about your main job (where you earn the most money), do you usually wor",1212,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D1E,"At any time during the past month, did you want to work [more hours]?",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D22_a,Could not find (more) work - Did each of the following contribute to you not wor,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_b,Full-time workweek less than 35 hours - Did each of the following contribute to,1644,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_c,Childcare - Did each of the following contribute to you not working/working less,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_d,"Caregiving for an elderly, disabled, or sick adult - Did each of the following c",7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_e,Other family or personal obligations - Did each of the following contribute to y,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_f,Would lose access to unemployment benefits or other government programs - Did ea,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_g,Health limitations or disability- Did each of the following contribute to you no,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_h,In school or training - Did each of the following contribute to you not working/,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D22_i,Retired - Did each of the following contribute to you not working/working less t,7090,"{-1: 'Refused', 0: 'No', 1: 'Yes', 4: 'No'}"
+D3A,Think about your main job (the job from which you earned the most money in the p,7488,"{-1: 'Refused', 0: 'Working for someone else', 1: 'Self-employed (working for myself)', 2: 'Other work arrangement'}"
+D3E,You indicated that you are [self-employed/do not work for someone else]. Do you,1203,"{-1: 'Refused', 0: 'No', 1: 'Yes', 2: 'Unsure. Please explain'}"
+D28_a,I can choose what tasks I work on - How often do each of these statements descri,6285,"{-1: 'Refused', 1: 'Never', 2: 'Rarely', 3: 'Sometimes', 4: 'Often', 5: 'Always'}"
+D28_b,I can choose how I complete tasks at work - How often do each of these statement,6285,"{-1: 'Refused', 1: 'Never', 2: 'Rarely', 3: 'Sometimes', 4: 'Often', 5: 'Always'}"
+D50,"Generative AI is a type of artificial intelligence that creates text, images, au",7488,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D51,"Last month, about how often did you use Generative AI at your job?",1850,"{-1: 'Refused', 1: 'Multiple times per day', 2: 'Daily', 3: 'Several days per week', 4: 'Weekly', 5: 'Less than one day per week'}"
+D52_a,It saves time - Do you agree or disagree with the following statements about usi,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D52_b,It improves quality - Do you agree or disagree with the following statements abo,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D52_c, It enables me to do new tasks - Do you agree or disagree with the following sta,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D52_d,  My employer encourages me to use it - Do you agree or disagree with the follow,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D52_e, Having it available will improve my career - Do you agree or disagree with the,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D52_f,I am worried about AI replacing my job - Do you agree or disagree with the follo,7488,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+D30,"Still thinking about your main job, do/Do you normally start and end work around",6285,"{-1: 'Refused', 1: 'Normally work the same hours', 2: 'Schedule varies, primarily at my request', 3: 'Schedule varies, primarily based on my employer’s needs'}"
+D34A,"Thinking about the work you did last week, how much of it did you do by telecomm",7488,"{-1: 'Refused', 0: 'None', 1: 'Some', 2: 'All'}"
+D34D,"Last week, how many days did you telecommute or work from home?",1726,"{-1: 'Refused', 0: 'None', 1: '1 or 2 days', 2: '3 or 4 days', 3: '5 or more days'}"
+D36B,How likely would you be to actively look for another job or leave your job if yo,6285,"{-1: 'Refused', 1: 'Very likely', 2: 'Somewhat likely', 3: 'Not that likely', 4: 'Not at all likely'}"
+D44_f,"Think about any job in the past 12 months, not just your main job. In the past 1",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D44_a,Asked for a raise or a promotion - [Think about any job in the past 12 months.],7488,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D44_b,Received a raise or a promotion - [Think about any job in the past 12 months.] I,7488,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D44_c,Applied for a new job - [Think about any job in the past 12 months.] In the past,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D44_d,Started a new job - [Think about any job in the past 12 months.] In the past 12,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D44_e,Voluntarily left a job - [Think about any job in the past 12 months.] In the pas,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D37A,You indicated that you started a new job in the past 12 months. Is your main job,1283,"{-1: 'Refused', 1: 'Different main job – new employer', 2: 'Different main job – same employer', 3: 'Same main job – started a second job', 4: 'Was not working a year ago', 5: 'Other'}"
+D38_a,"Pay or benefits - Are each of the following better, the same, or worse at the ma",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D38_b,"Opportunities for advancement - Are each of the following better, the same, or w",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D38_c,"Your interest in the work - Are each of the following better, the same, or worse",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D38_d,"Physical demands of the job - Are each of the following better, the same, or wor",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D38_f,"Work-life balance - Are each of the following better, the same, or worse at the",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D39,"Overall, is the main job you have now better, the same, or worse than the one yo",877,"{-1: 'Refused', 1: 'Better', 2: 'About the same', 3: 'Worse'}"
+D1B,"If you wanted to, how confident are you that you could get a [new] job in the ne",12934,"{-1: 'Refused', 0: 'Not confident', 1: 'Somewhat confident', 2: 'Very confident', 999: 'Not working and not interested in working right now'}"
+D5,"Last month, did your spouse or partner do any work for either pay or profit?",8332,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D49,Does your spouse or partner usually work 35 hours or more per week?,5118,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+GH1,This section will ask some questions about your home. Do you (and/or your spouse,12934,"{-1: 'Refused', 1: 'Own your home with a mortgage or loan', 2: 'Own your home free and clear (without a mortgage or loan)', 3: 'Pay rent', 4: 'Neither own nor pay rent'}"
+GH12,Do you have either a homeowners insurance or a condo insurance policy for your p,8500,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+GH12A,What is the main reason you do not have homeowners insurance?,523,"{-1: 'Refused', 1: 'I can’t afford it', 2: 'It is not worth the cost', 3: 'I self-insure or prefer not to buy insurance', 4: 'No insurance company will insure my home', 5: 'Other (please specify)'}"
+GH14,"Still thinking about homeowners insurance for your primary residence, how much d",7977,{-1: 'Refused'}
+GH14A,Time period for homeowners insurance payment reported in GH14,7977,"{-1: 'Refused', 1: 'Year', 2: '6 months', 3: '3 months', 4: 'Month'}"
+GH15,Have you or someone in your household shopped around for homeowners insurance in,8500,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+GH16_a,It's worth the cost - Do you agree or disagree with the following statements abo,7977,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH16_b,I struggle to afford the premiums - Do you agree or disagree with the following,7977,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH16_c,Cost has gone up more than I was expecting in recent years - Do you agree or dis,7977,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH16_d,I would prefer more coverage but can't afford it - Do you agree or disagree with,7977,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH16_e,I'm satisfied with what my policy covers - Do you agree or disagree with the fol,7977,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH16_f,I only have it because my lender requires it - Do you agree or disagree with the,5034,"{-1: 'Refused', 1: 'Agree', 2: 'Neither agree nor disagree', 3: 'Disagree'}"
+GH2,When did you move into your current home?,12934,"{-1: 'Refused', 1: 'Before 2024', 2: '2024', 3: '2025'}"
+R4,"Before your most recent move, did you own your previous home?",927,"{-1: 'Refused', 0: 'No', 1: 'Yes, and I still own that home', 2: 'Yes, and I no longer own that home'}"
+R5B_a,Evicted or received an eviction notice - Did each of the following contribute to,705,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5B_b,"Landlord told you, or a person you were staying with, to leave - Did each of the",705,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5B_c,You missed a rent payment and thought you would be evicted - Did each of the fol,705,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5B_d,City condemned the property and forced you to leave - Did each of the following,705,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5C_a,Bank took possession of your home in foreclosure - Did each of the following con,161,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5C_b,Received a notice from bank that they planned to foreclose - Did each of the fol,161,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5C_c,Missed mortgage payments and thought bank would foreclose - Did each of the foll,161,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R5C_d,City condemned the property and forced you to leave - Did each of the following,161,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R3,Approximately how much do you and/or your spouse or partner pay for rent each mo,3426,{-1: 'Refused'}
+R11,Have you been behind on your rent at any time in the past year?,3426,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+R18,Some people have their rent payments reported to credit bureaus to help them bui,3426,"{-2: ""Don't know"", -1: 'Refused', 0: 'No', 1: 'Yes'}"
+M4,Approximately how much is your total monthly mortgage payment (i.e. the amount y,5176,{-1: 'Refused'}
+ND0,"In the past year, have you been financially affected by natural disasters or sev",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes, slightly', 2: 'Yes, moderately', 3: 'Yes, substantially'}"
+ND1_a,"Income loss or work disruption - In the past year, have natural disasters or sev",1828,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND1_b,"Property damage - In the past year, have natural disasters or severe weather eve",1828,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND1_c,"Needed to evacuate temporarily - In the past year, have natural disasters or sev",1828,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND1_d,"Longer-term displacement from home - In the past year, have natural disasters or",1828,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND1_e,"Other (please specify) - In the past year, have natural disasters or severe weat",1828,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND4_a,"Investigated other places to live - In the past year, have you done each of the",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND4_b,"Improved your property to reduce risk - In the past year, have you done each of",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+ND4_c,"Purchased additional insurance - In the past year, have you done each of the fol",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK1,"Do you [and/or your spouse or partner] currently have a checking, savings, or mo",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_a,"Purchase a money order from a place other than a bank - In the past 12 months, d",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_b,"Cash a check at a place other than a bank - In the past 12 months, did you [and/",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_c,"Take out a payday loan or payday advance - In the past 12 months, did you [and/o",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_d,"Take out a pawn shop loan or an auto title loan - In the past 12 months, did you",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_e,Obtain a tax refund advance to receive your refund faster - In the past 12 month,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK2_f,"Pay an overdraft fee on a bank account - In the past 12 months, did you [and/or",12236,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK47_a,"Credit card fraud or scam - In the past year, have you personally experienced ei",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK47_b,"Another type of financial fraud or scam - In the past year, have you personally",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK48,"When answering the following questions, please think about the most recent finan",1093,"{-1: 'Refused', 1: 'I lost money, but all of it was recovered or refunded', 2: 'I lost money, and some of it was recovered or refunded', 3: 'I lost money, and none of it was recovered or refunded', 4: 'No money was ever transferred out of or taken from my account', 5: 'I don’t know'}"
+BK49A,Approximately how much money did you lose in the fraud or scam before any money,672,{-1: 'Refused'}
+BK49B,Approximately how much money did you recover or get refunded?,111,{-1: 'Refused'}
+BK53_a,Debit card - Still thinking about the most recent financial fraud or scam you ex,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Debit card'}"
+BK53_b,Cryptocurrency - Still thinking about the most recent financial fraud or scam yo,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Cryptocurrency'}"
+BK53_c,"Zelle, PayPal, Venmo, CashApp, or Apple Cash - Still thinking about the most rec",1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Zelle, PayPal, Venmo, CashApp, or Apple Cash'}"
+BK53_d,"Western Union, MoneyGram, Ria, or other money transfer service - Still thinking",1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Western Union, MoneyGram, Ria, or other money transfer service'}"
+BK53_e,Bank wire or other electronic transfer - Still thinking about the most recent fi,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Bank wire or other electronic transfer'}"
+BK53_f,"Prepaid, gift, or government benefit card - Still thinking about the most recent",1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Prepaid, gift, or government benefit card'}"
+BK53_g,Personal check - Still thinking about the most recent financial fraud or scam yo,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Personal check'}"
+BK53_h,Cashier's check or money order - Still thinking about the most recent financial,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Cashier’s check or money order'}"
+BK53_i,Other payment method (please specify) - Still thinking about the most recent fin,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Cash'}"
+BK53_j,Debit card - Still thinking about the most recent financial fraud or scam you ex,1093,"{-1: 'Refused', 0: 'Not selected', 1: 'Other payment method (please specify)'}"
+BK54_a,Zelle - Which of the following services was involved in the fraud or scam you ex,306,"{-1: 'Refused', 0: 'Not selected', 1: 'Zelle'}"
+BK54_b,PayPal - Which of the following services was involved in the fraud or scam you e,306,"{-1: 'Refused', 0: 'Not selected', 1: 'PayPal'}"
+BK54_c,Venmo - Which of the following services was involved in the fraud or scam you ex,306,"{-1: 'Refused', 0: 'Not selected', 1: 'Venmo'}"
+BK54_d,CashApp - Which of the following services was involved in the fraud or scam you,306,"{-1: 'Refused', 0: 'Not selected', 1: 'CashApp'}"
+BK54_e,Apple Cash - Which of the following services was involved in the fraud or scam y,306,"{-1: 'Refused', 0: 'Not selected', 1: 'Apple Cash'}"
+BK54_f, Other P2P service (please specify) - Which of the following services was involv,306,"{-1: 'Refused', 0: 'Not selected', 1: 'Other P2P service (please specify)'}"
+BK55,Did you communicate with your bank or financial services company for assistance,1093,"{-9: 'No institution/company was involved', -1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK56_a,Placed a freeze or temporary hold on my account - Did you or your bank do each o,1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK56_b,Closed my account - Did you or your bank do each of the following because of the,1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK56_c,I changed the banks or financial service companies that I use - Did you or your,1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK57_a,Police or another law enforcement agency - Did you notify any of the following o,1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK57_b,"Credit bureau (Equifax, Experian, Transunion) - Did you notify any of the follow",1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK57_c,Federal or state government agency that deals with consumer concerns/complaints,1093,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BK50,Still thinking about the most recent financial fraud or scam you experienced in,1093,"{-1: 'Refused', 1: 'less than 1 hour', 2: '1 to 9 hours', 3: '10 to 39 hours', 4: '40 to 79 hours', 5: '80 hours or more'}"
+BK58_no,BK58 No selected,1090,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A6,"If you were to apply for a credit card today, how confident are you that your ap",12934,"{-2: 'Don’t know', -1: 'Refused', 1: 'Very confident', 2: 'Somewhat confident', 3: 'Not confident'}"
+A0,"In the past 12 months have you applied for any credit (such as a credit card, hi",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_a,Credit card - Have you applied for each of the following types of credit in the,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_b,Car/auto loan - Have you applied for each of the following types of credit in th,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_c,Student loan - Have you applied for each of the following types of credit in the,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_d,Mortgage (purchase or refinance) - Have you applied for each of the following ty,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_e,Home equity loan or line of credit - Have you applied for each of the following,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A7_f,Other credit or loan - Have you applied for each of the following types of credi,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A0B,Was there a time in the past 12 months that you desired credit but chose not to,8658,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A1_a,"Turned down for credit - In the past 12 months, has each of the following happen",4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A1_b,"Approved for credit, but were not given as much credit as you applied for - In t",4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A1_c,Put off applying for credit because you thought you might be turned down - In th,4276,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_a,Credit card - Were you turned down or offered less credit than requested for the,1117,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_b,Car/auto loan - Were you turned down or offered less credit than requested for t,333,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_c,Student loan - Were you turned down or offered less credit than requested for th,122,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_d,Mortgage (purchase or refinance) - Were you turned down or offered less credit t,116,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_e,Home equity loan or line of credit - Were you turned down or offered less credit,126,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A8_f,Other credit or loan - Were you turned down or offered less credit than requeste,447,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+A2,You indicated that you desired credit in the past 12 months but did not submit a,932,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+C2A,Do you currently have at least one credit card? Please do not include debit card,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+C3P,"Last month, how did you handle your credit card bills?",10759,"{-9: 'Did not use any of my credit cards so had no balances', -1: 'Refused', 1: 'Paid at least the minimum payment on all credit cards', 2: 'Did not pay or paid less than the minimum payment on at least one card'}"
+C4A,"In the past 12 months, how frequently have you carried an unpaid balance on one",10759,"{-1: 'Refused', 0: 'Never carried an unpaid balance (always pay in full)', 1: 'Once', 2: 'Some of the time', 3: 'Most or all of the time'}"
+BNPL1,"In the past year, have you used a “Buy Now Pay Later” service to buy something?",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL3,"In the past year, have you ever been late making a payment for something you bou",2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL3A,"In the past year, have you been charged extra because you were late on a Buy Now",487,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL1A,"In the past year, did any of your BNPL payments trigger an overdraft or non-suff",542,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_a,Avoid interest charges - Thinking about the most recent time you used a Buy Now,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_b,Wanted to spread out payments - Thinking about the most recent time you used a B,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_c,Wanted a fixed number of payments - Thinking about the most recent time you used,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_d,Convenience - Thinking about the most recent time you used a Buy Now Pay Later s,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_e,Only way I could afford it  - Thinking about the most recent time you used a Buy,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_f,Only accepted payment method I had - Thinking about the most recent time you use,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL4_g,Did not want to use a credit card  - Thinking about the most recent time you use,2004,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+BNPL5,"Thinking about the most recent time you used a Buy Now Pay Later service, which",1935,"{-1: 'Refused', 1: 'Avoid interest charges', 2: 'Wanted to spread out payments', 3: 'Wanted a fixed number of payments', 4: 'Convenience', 5: 'Only way I could afford it', 6: 'Only accepted payment method I had', 7: 'Did not want to use a credit card'}"
+BNPL6_a,"Clothing or accessories - In the past year, when you have used Buy Now Pay Later",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Clothing or accessories'}"
+BNPL6_b,"Groceries or food delivery  - In the past year, when you have used Buy Now Pay L",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Groceries or food delivery'}"
+BNPL6_c,"Travel expenses (e.g. flights or hotels) - In the past year, when you have used",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Travel expenses (e.g. flights or hotels)'}"
+BNPL6_d,"Furniture or appliances  - In the past year, when you have used Buy Now Pay Late",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Furniture or appliances'}"
+BNPL6_e,"Electronics - In the past year, when you have used Buy Now Pay Later, which of t",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Electronics'}"
+BNPL6_f,"Medical or veterinary procedures - In the past year, when you have used Buy Now",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Medical or veterinary procedures'}"
+BNPL6_g,"Other (please specify) - In the past year, when you have used Buy Now Pay Later,",2004,"{-1: 'Refused', 0: 'Not selected', 1: 'Other (please specify)'}"
+BNPL7_a,It helps me build a credit history - Do you agree or disagree with the following,2004,"{-2: 'Not sure', -1: 'Refused', 0: 'Disagree', 1: 'Agree', 2: 'Unsure'}"
+BNPL7_b, Making payments on time helps my credit score - Do you agree or disagree with t,2004,"{-2: 'Not sure', -1: 'Refused', 0: 'Disagree', 1: 'Agree', 2: 'Unsure'}"
+S16_a,"Bought cryptocurrency or held as an investment - In the past year, have you done",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+S16_b,"Used cryptocurrency to buy something or make a payment - In the past year, have",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+S16_c,"Used cryptocurrency to send money to friends or family - In the past year, have",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+S18,Were any of the family or friends you sent cryptocurrency to living outside of t,140,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+S21,"What was the main reason you used cryptocurrency to buy something, make a paymen",279,"{-1: 'Refused', 1: 'Privacy', 2: 'To send the money faster', 3: 'Cheaper', 4: 'Safer', 5: 'Don’t trust banks', 6: 'Person or business receiving the money preferred cryptocurrency', 7: 'Other (please specify)'}"
+ED0,What is the highest level of school you have completed or the highest degree you,12934,"{-1: 'Refused', 1: 'Less than high school degree', 2: 'High school degree or GED', 3: 'Some college but no degree (including currently enrolled in college)', 4: 'Certificate or technical degree', 5: 'Associate degree', 6: 'Bachelor’s degree', 7: 'Master’s degree', 8: 'Professional degree (e.g., MBA,"
+D1G,Are you currently enrolled as a student?,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes, as a part-time student', 2: 'Yes, as a full-time student'}"
+ED0B,What type of program are you currently pursuing?,858,"{-1: 'Refused', 1: 'High school or GED program', 2: 'Non-degree training program', 3: 'Certificate or technical degree', 4: 'Associate degree', 5: 'Bachelor’s degree', 6: 'Master’s degree', 7: 'Professional degree (e.g., MBA, MD, JD)', 8: 'Doctoral degree'}"
+SL21,Do you have any student loans? These can be for your own education or someone el,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL22_a,Yours - Whose education were your student loans used for?,1972,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL22_b,Your spouse's/partner's - Whose education were your student loans used for?,1198,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL22_c,Your child's/grandchild's - Whose education were your student loans used for?,1382,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL22_d,Someone else's (please specify) - Whose education were your student loans used f,1972,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL23,"Last month, how did you handle your student loan payments?",1972,"{-9: 'I’m not currently required to make payments', -1: 'Refused', 1: 'Paid the full payment required', 2: 'Did not pay or paid less than the required amount'}"
+SL24,"In the past 12 months, did you have difficulty making payments on your student l",805,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL25_a,I had unexpected expenses - Which of the following contributed to why you most r,448,"{-1: 'Refused', 0: 'Not selected', 1: 'I had unexpected expenses'}"
+SL25_b,My income was less than my expenses - Which of the following contributed to why,448,"{-1: 'Refused', 0: 'Not selected', 1: 'My income was less than my expenses'}"
+SL25_c,I had an unexpected drop in income - Which of the following contributed to why y,448,"{-1: 'Refused', 0: 'Not selected', 1: 'I had an unexpected drop in income'}"
+SL25_d,I didn't know how to make payments - Which of the following contributed to why y,448,"{-1: 'Refused', 0: 'Not selected', 1: 'I didn’t know how to make payments'}"
+SL25_e,I didn't know I needed to make payments - Which of the following contributed to,448,"{-1: 'Refused', 0: 'Not selected', 1: 'I didn’t know I needed to make payments'}"
+SL25_f,I didn't want to make payments - Which of the following contributed to why you m,448,"{-1: 'Refused', 0: 'Not selected', 1: 'I didn’t want to make payments'}"
+SL25_g,None of the above - Which of the following contributed to why you most recently,448,"{-1: 'Refused', 0: 'Not selected', 1: 'None of the above'}"
+SL26_a,My student loans were assigned to a debt collector or collection agency - In the,448,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL26_b,"My federal income tax refund was withheld by the IRS - In the past 12 months, di",448,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL26_c,My Social Security retirement or disability benefits were withheld - In the past,448,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+SL26_d,"My wages were garnished - In the past 12 months, did you experience any of the f",448,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+D1I,Do you consider yourself to be retired?,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K0,Do you think that your retirement savings plan is currently on track?,8740,"{-2: 'Don’t know', -1: 'Refused', 0: 'No', 1: 'Yes'}"
+K8A,At what age did you retire?,4194,"{-2: 'Not Sure', -1: 'Refused', 1: '59 or younger', 2: '60 or 61', 3: '62, 63, or 64', 4: '65 or 66', 5: '67, 68, or 69', 6: '70 or older'}"
+K9_a,Health problem - Were each of the following important to your decision to retire,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K9_b,Wanted to do other things or spend time with family  - Were each of the followin,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K9_c,Didn't like the work - Were each of the following important to your decision to,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K9_d,Care for family members - Were each of the following important to your decision,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K9_e,Reached normal retirement age - Were each of the following important to your dec,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K9_f,Forced to retire or lack of available work - Were each of the following importan,4194,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K14_a,Financial reasons (such as earning money or keeping health insurance)  -  You in,643,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K14_b,Nonfinancial reasons (such as enjoy work/sense of purpose or social connections),643,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K15_a,I needed money to make ends meet  -  Were each of the following true about your,324,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K15_b,I wanted extra spending money  -  Were each of the following true about your dec,324,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K15_c,I worked because I needed to keep health insurance  -  Were each of the followin,324,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K15_d,"I worked to save more money, make retirement savings last longer, or delay claim",324,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K15_e,Working enabled me to give financial help to family members or friends  -  Were,324,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_a,"Retirement savings account, such as a 401(k) plan through an employer, IRA or Ro",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_b,Pension with a defined benefit through an employer that will pay a monthly amoun,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_c,"Stocks, bonds, ETFs, or mutual funds held outside a retirement account - Do you",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_d,"Savings account, money market account, or certificate of deposit (CD) - Do you c",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_e,Cash value in a life insurance policy - Do you Reduced your regular contribution,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K21_f,Business or real estate investment (other than your primary residence) - Do you,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K5A_a,"Borrowed money - In the past 12 months, have you done each of the following with",8740,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K5A_b,"Cashed out (permanently withdrawn) money - In the past 12 months, have you done",8740,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+K5A_c,"Reduced your regular contributions - In the past 12 months, have you done each o",8740,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+DC4,How comfortable are you with choosing and managing your investments?,12934,"{-1: 'Refused', 1: 'Very comfortable', 2: 'Mostly comfortable', 3: 'Slightly comfortable', 4: 'Not comfortable'}"
+FL0,"On a scale from zero to ten, where zero is not at all willing to take risks and",12934,"{-1: 'Refused', 0: '0. Not at all willing to take financial risks', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10. Very willing to take financial risks'}"
+I0_a,"Wages, salaries, or self-employment income - In the past 12 months, did you [and",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I0_b,"Interest, dividends, or rental income - In the past 12 months, did you [and/or y",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I0_c,"Social Security (including old age and DI) - In the past 12 months, did you [and",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I0_d,"Supplemental Security Income (SSI), TANF, or cash assistance from a welfare prog",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I0_e,"Unemployment income - In the past 12 months, did you [and/or your spouse or part",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I0_f,"Pension - In the past 12 months, did you [and/or your spouse or partner] receive",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I40,Which category represents your and your spouse/partner’s total combined income i,12934,"{-1: 'Refused', 1: 'Less than $5,000', 2: '$5,000 to $9,999', 3: '$10,000 to $14,999', 4: '$15,000 to $19,999', 5: '$20,000 to $24,999', 6: '$25,000 to $29,999', 7: '$30,000 to $34,999', 8: '$35,000 to $39,999', 9: '$40,000 to $49,999', 10: '$50,000 to $59,999', 11: '$60,000 to $74,999', 12: '$75,00"
+I41_a,"Earned Income Tax Credit (EITC) - In the past 12 months, did you [and/or your sp",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I41_b,Supplemental Nutrition Assistance Program (SNAP or food stamps) - In the past 12,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I41_c,"Women, Infants, and Children (WIC) nutrition program benefits  - In the past 12",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I41_d,"Housing assistance from government program - In the past 12 months, did you [and",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I41_e,"Free or reduced price school lunches for your children - In the past 12 months,",3024,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_a,"Rent, mortgage, utilities, or housing costs - In the past 12 months, has anyone",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_b,"Education expenses or student loans - In the past 12 months, has anyone outside",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_c,"Medical expenses/debt or health insurance - In the past 12 months, has anyone ou",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_d,"Car payment, insurance, or repairs - In the past 12 months, has anyone outside o",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_e,"Cell phone bill - In the past 12 months, has anyone outside of your household he",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_f,"Childcare or other expenses for children - In the past 12 months, has anyone out",3024,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+FS21_g,"Money for general expenses or anything else - In the past 12 months, has anyone",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I9,"In the past 12 months, which one of the following best describes your and your s",12934,"{-1: 'Refused', 1: 'Roughly the same amount each month', 2: 'Occasionally varies from month to month', 3: 'Varies quite often from month to month'}"
+I12,"Because your income varies, have you and your spouse or partner struggled to pay",3631,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+I20,"In the past month, would you say that your and your spouse’s or partner’s total",12934,"{-1: 'Refused', 1: 'Less than your income', 2: 'The same as your income', 3: 'More than your income'}"
+I21_a,"Total monthly income - Compared to a year ago, have each of the following [for y",12934,"{-1: 'Refused', 1: 'Decreased', 2: 'About the same', 3: 'Increased'}"
+I21_b,"Total monthly spending - Compared to a year ago, have each of the following [for",12934,"{-1: 'Refused', 1: 'Decreased', 2: 'About the same', 3: 'Increased'}"
+INF4,"Overall, have changes in the prices you pay compared to last year made your fina",12934,"{-1: 'Refused', 1: 'Much worse', 2: 'Somewhat worse', 3: 'Little or no effect', 4: 'Somewhat better', 5: 'Much better'}"
+INF3_a,Switched to cheaper products - Did you take any of the following actions because,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_b,Used less or stopped using products - Did you take any of the following actions,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_c,Reduced savings - Did you take any of the following actions because of increases,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_d,Increased borrowing - Did you take any of the following actions because of incre,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_e,Delayed a major purchase - Did you take any of the following actions because of,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_f,Worked more or got another job - Did you take any of the following actions becau,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF3_g,Asked for a raise - Did you take any of the following actions because of increas,1263,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+INF5,"In the past 12 months, did you make any large purchases sooner than you had plan",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF1,Have you set aside emergency or rainy day funds that would cover your expenses f,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF2,If you were to lose your main source of income (for example job or government be,5607,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_a,Put it on my credit card and pay it off in full at the next statement - Suppose,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_b,Put it on my credit card and pay it off over time - Suppose that you have an eme,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_c,With the money currently in my checking/savings account or with cash - Suppose t,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_d,Using money from a bank loan or line of credit - Suppose that you have an emerge,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_e,By borrowing from a friend or family member - Suppose that you have an emergency,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_f,"Using a payday loan, deposit advance, or overdraft - Suppose that you have an em",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_g,By selling something - Suppose that you have an emergency expense that costs $40,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF3_h,I wouldn't be able to pay for the expense right now - Suppose that you have an e,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF5C,"Other than any credit card bills you may have, did you pay all your bills in ful",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF5D,Did you have any bills that you had difficulty paying last month?,11135,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+EF8_a,"Paid a bill late - In addition to not paying a bill in full, did you do each of",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Paid a bill late'}"
+EF8_b, Negotiated a lower payment or more time to pay - In addition to not paying a bi,3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Negotiated a lower payment or more time to pay'}"
+EF8_c,"Cut back on other expenses  - In addition to not paying a bill in full, did you",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Cut back on other expenses'}"
+EF8_d,"Increased income, for example, by working overtime or taking an extra job - In a",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Increased income, for example, by working overtime or taking an extra job'}"
+EF8_e,Used money from savings or a retirement account - In addition to not paying a bi,3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Used money from savings or a retirement account'}"
+EF8_f,Used a credit card that I will pay off over time - In addition to not paying a b,3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Used a credit card that I will pay off over time'}"
+EF8_g,Borrowed or received money from friends or family - In addition to not paying a,3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Borrowed or received money from friends or family'}"
+EF8_h,"Took out another type of loan, such as a payday loan or personal loan  - In addi",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Took out another type of loan, such as a payday loan or personal loan'}"
+EF8_i,"Sold or pawned something - In addition to not paying a bill in full, did you do",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Sold or pawned something'}"
+EF8_j,"Other - In addition to not paying a bill in full, did you do each of the followi",3408,"{-1: 'Refused', 0: 'Not selected', 1: 'Other'}"
+dov_ef7,EF7 sample split,12934,"{0: '0', 1: '1'}"
+EF7,"Based on your current financial situation, what is the largest emergency expense",6453,"{-1: 'Refused', 1: 'Under $100', 2: '$100 to $499', 3: '$500 to $999', 4: '$1,000 to $1,999', 5: '$2,000 or more'}"
+EF7A,"Based on your current financial situation, what is the largest emergency expense",6481,"{-1: 'Refused', 1: 'Under $100', 2: '$100 to $499', 3: '$500 to $999', 4: '$1,000 to $1,999', 5: '$2,000 to $4,999', 6: '$5,000 or more'}"
+B0_a,"Because of my money situation, I feel like I will never have the things I want i",12934,"{-1: 'Refused', 1: 'Completely', 2: 'Very well', 3: 'Somewhat', 4: 'Very little', 5: 'Not at all'}"
+B0_b,I am just getting by financially - How well do each of these statements describe,12934,"{-1: 'Refused', 1: 'Completely', 2: 'Very well', 3: 'Somewhat', 4: 'Very little', 5: 'Not at all'}"
+B0_c,I am concerned that the money I have or will save won't last - How well do each,12934,"{-1: 'Refused', 1: 'Completely', 2: 'Very well', 3: 'Somewhat', 4: 'Very little', 5: 'Not at all'}"
+B1_a,I have money left over at the end of the month  -  How often do each of these st,12934,"{-1: 'Refused', 1: 'Always', 2: 'Often', 3: 'Sometimes', 4: 'Rarely', 5: 'Never'}"
+B1_b,My finances control my life  -  How often do each of these statements apply to y,12934,"{-1: 'Refused', 1: 'Always', 2: 'Often', 3: 'Sometimes', 4: 'Rarely', 5: 'Never'}"
+FD3,"In the past month, which of these statements best describes the food eaten in yo",12934,"{-1: 'Refused', 1: 'Enough of the kinds of food we wanted to eat', 2: 'Enough, but not always the kinds of food we wanted to eat', 3: 'Sometimes not enough to eat', 4: 'Often not enough to eat'}"
+E1_a,"Prescription medicine - During the past 12 months, was there a time when you nee",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E1_b,"Seeing a doctor or specialist - During the past 12 months, was there a time when",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E1_c,"Mental health care or counseling - During the past 12 months, was there a time w",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E1_d,"Dental care - During the past 12 months, was there a time when you needed each o",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E1_e,"Follow-up care - During the past 12 months, was there a time when you needed eac",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E2B,Do you currently have any debt from medical care you or your family members have,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_a,Insurance through an employer or union - Are you currently covered by any of the,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_b,Insurance purchased directly from an insurance company - Are you currently cover,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_c,Medicare or Medicaid - Are you currently covered by any of the following types o,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_d,"TRICARE, VA, or other military or veteran's health care - Are you currently cove",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_e,Insurance purchased through a health insurance exchange - Are you currently cove,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E4_f,Any other health insurance - Are you currently covered by any of the following t,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E2,"During the past 12 months, have you had any unexpected major medical expenses th",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_b,"A major vehicle repair or replacement - During the past 12 months, have you had",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_c,"A major house or appliance repair - During the past 12 months, have you had any",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_d,"A mobile phone or computer repair or replacement - During the past 12 months, ha",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_e,"Legal expenses, taxes, or fines - During the past 12 months, have you had any of",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_f,"Increases in childcare or dependent care expenses - During the past 12 months, h",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E11_g," Another major unexpected expense (please specify) - During the past 12 months,",12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+E12_a,Unexpected major medical expenses - Approximately how much did you pay for these,2860,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_b,A major vehicle repair or replacement- Approximately how much did you pay for th,3946,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_c,A major house or appliance repair - Approximately how much did you pay for these,2961,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_d,A mobile phone or computer repair or replacement - Approximately how much did yo,2331,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_e,"Legal expenses, taxes, or fines - Approximately how much did you pay for these u",1236,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_f,Increases in childcare or dependent care expenses - Approximately how much did y,381,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+E12_g,Other unexpected expenses - Approximately how much did you pay for these unexpec,805,"{-2: 'Don’t know', -1: 'Refused', 1: '$1 to $499', 2: '$500 to $999', 3: '$1,000 to $1,999', 4: '$2,000 to $4,999', 5: '$5,000 or higher'}"
+CH2A,We are interested in a few characteristics of your parents. Thinking about your,12912,"{-2: 'Don’t know', -1: 'Refused', 1: 'Less than high school degree', 2: 'High school degree or GED', 3: 'Some college but no degree', 4: 'Certificate or technical degree', 5: 'Associate degree', 6: 'Bachelor’s degree', 7: 'Graduate degree'}"
+DOV_X11,Flag - identifier for receiving X11 or not,12934,"{0: '0', 1: '1'}"
+DOV_D36_AMOUNT,Flag - amount of hypothetical pay change in question D36B,12934,"{1: 'decreased your pay by 10 percent', 2: 'decreased your pay by 5 percent', 3: 'decreased your pay by 1 percent', 4: 'kept your pay the same for a year'}"
+ppage,Age,12934,{}
+ppagecat,Age - 7 Categories,12934,"{1: '18-24', 2: '25-34', 3: '35-44', 4: '45-54', 5: '55-64', 6: '65-74', 7: '75+', 99: 'Under 18'}"
+ppagect4,Age - 4 Categories,12934,"{1: '18–29', 2: '30–44', 3: '45–59', 4: '60+'}"
+ppeduc5,Education (5 Categories),12934,"{1: 'No high school diploma or GED', 2: 'High school graduate (high school diploma or the equivalent GED)', 3: ""Some college or Associate's degree"", 4: ""Bachelor's degree"", 5: 'Master’s degree or higher'}"
+ppeducat,Education (4 Categories),12934,"{1: 'No high school diploma or GED', 2: 'High school graduate (high school diploma or the equivalent GED)', 3: ""Some college or Associate's degree"", 4: ""Bachelor's degree or higher""}"
+ppemploy,Current Employment Status,12934,"{1: 'Working full-time', 2: 'Working part-time', 3: 'Not working'}"
+ppethm,Race / Ethnicity,12934,"{1: 'White, Non-Hispanic', 2: 'Black, Non-Hispanic', 3: 'Other, Non-Hispanic', 4: 'Hispanic', 5: '2+ Races, Non-Hispanic'}"
+ppgender,Gender,12934,"{1: 'Male', 2: 'Female'}"
+pphhsize,Household Size,12934,{}
+pphouse4,Housing Type,12934,"{1: 'A one-family house detached from any other house', 2: 'One-family condo or townhouse attached to other units', 3: 'Building with 2 or more apartments', 4: 'Other (mobile home, boat, RV, van, etc.)'}"
+ppinc7,Household Income,12934,"{1: 'Less than $10,000', 2: '$10,000 to $24,999', 3: '$25,000 to $49,999', 4: '$50,000 to $74,999', 5: '$75,000 to $99,999', 6: '$100,000 to $149,999', 7: '$150,000 or more'}"
+ppmarit5,Marital Status,12934,"{1: 'Now married', 2: 'Widowed', 3: 'Divorced', 4: 'Separated', 5: 'Never married'}"
+ppmsacat,MSA Status,12934,"{0: 'Non-Metro', 1: 'Metro'}"
+ppreg4,Region 4 - Based on State of Residence,12934,"{1: 'Northeast', 2: 'Midwest', 3: 'South', 4: 'West'}"
+ppreg9,Region 9 - Based on State of Residence,12934,"{1: 'New England', 2: 'Mid-Atlantic', 3: 'East-North Central', 4: 'West-North Central', 5: 'South Atlantic', 6: 'East-South Central', 7: 'West-South Central', 8: 'Mountain', 9: 'Pacific'}"
+pprent,Ownership Status of Living Quarters,12934,"{1: 'Owned or being bought by you or someone in your household', 2: 'Rented for cash', 3: 'Occupied without payment of cash rent'}"
+ppstaten,State,12934,"{11: 'me', 12: 'nh', 13: 'vt', 14: 'ma', 15: 'ri', 16: 'ct', 21: 'ny', 22: 'nj', 23: 'pa', 31: 'oh', 32: 'in', 33: 'il', 34: 'mi', 35: 'wi', 41: 'mn', 42: 'ia', 43: 'mo', 44: 'nd', 45: 'sd', 46: 'ne', 47: 'ks', 51: 'de', 52: 'md', 53: 'dc', 54: 'va', 55: 'wv', 56: 'nc', 57: 'sc', 58: 'ga', 59: 'fl',"
+ppkid017,Presence of Household Members - Children 0-17,12934,{}
+ppt18ov,Presence of Household Members - Adults 18+,12934,{}
+ppcm0160,Q26: Occupation (tight scale) in current or main job,12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Management', 2: 'Business Operations (including Marketing)', 3: 'Computer and Mathematical (including Information Technology)', 4: 'Architecture and Engineering', 5: 'Life, Physical, and Social Sciences', 6: 'Community and Social Services', 7: 'Legal', 8: 'Teache"
+ind1,IND1: Industry (tight scale) in current or main job,12934,"{1: 'Farming/Agriculture, Forestry, Fishing and Hunting, and Animal Production', 2: 'Mining, Quarrying, and Oil and Gas Extraction', 3: 'Utilities, Waste Management, and Remediation Services', 4: 'Construction and Specialty Contractors (such as Plumbing and Electrical)', 5: 'Factory, Manufacturing, "
+ppcm1301,GOVEMP1: Employer type,12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Government', 2: 'Private-for-profit company', 3: 'Non-profit organization including tax exempt and charitable organizations', 4: 'Self-employed', 5: 'Working in the family business'}"
+UNION100,UNION100: Are you a member of a labor union or an employee association similar t,12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pph10001,"Q1: In general, would you say your health is. . .?",11295,"{-2: 'Not asked', -1: 'Refused', 1: 'Excellent', 2: 'Very good', 3: 'Good', 4: 'Fair', 5: 'Poor'}"
+ppfs0001,"Q1: When it comes to decisions regarding your household's financial activities,",10052,"{-2: 'Not asked', -1: 'Refused', 1: 'I make all or  most of the decisions', 2: 'Another household member and I share in the decisions', 3: 'Another household member makes all or most of the decisions'}"
+ppfsasset,Q22: What is the approximate total amount of your household's savings and invest,8493,"{-2: 'Not asked', -1: 'Refused', 1: 'Under $25,000', 2: '$25,000 - $49,999', 3: '$50,000 - $99,999', 4: '$100,000 - $249,999', 5: '$250,000 - $499,999', 6: '$500,000 - $999,999', 7: '$1,000,000 - $1,999,999', 8: '$2,000,000 or more', 9: 'Not sure'}"
+ppfs1482,Q108: Where do you think  your credit score falls,9988,"{-2: 'Not asked', -1: 'Refused', 1: 'Very poor', 2: 'Poor', 3: 'Fair', 4: 'Good', 5: 'Excellent', 6: 'Don’t know'}"
+pphi0001,Q0: What language do you usually speak at home?,1688,"{-2: 'Not asked', -1: 'Refused', 1: 'Only Spanish', 2: 'More Spanish than English', 3: 'Both Spanish and English equally', 4: 'More English than Spanish', 5: 'Only English', 6: 'Neither Spanish nor English'}"
+ppracem,"Race, Census categories",12933,"{1: 'White', 2: 'Black or African American', 3: 'American Indian or Alaska Native', 4: 'Asian', 5: 'Native Hawaiian/Pacific Islander', 6: '2+ races'}"
+pphispan,"Are you Spanish, Hispanic, or Latino?",12934,"{1: 'No, I am not', 2: 'Yes, Mexican, Mexican-American, Chicano', 3: 'Yes, Puerto Rican', 4: 'Yes, Cuban, Cuban American', 8: 'Yes, Other'}"
+pppa_lgb,Q230: Which of the following best describes how you think of yourself?,11655,"{-2: 'Not asked', -1: 'Refused', 1: 'Gay or lesbian', 2: 'Straight, that is, not gay', 3: 'Bisexual', 4: 'Something else'}"
+ppp20197,QEG22: Are you a citizen of the United States?,11866,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pph12003,Q190: Are you blind or do you have serious difficulty seeing even when wearing g,11317,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: ' Yes', 4: 'No'}"
+pph12004,Q190: Are you deaf or do you have serious difficulty hearing?,11289,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: ' Yes', 4: 'No'}"
+pph12005,Q190: Do you have serious difficulty walking or climbing stairs?,11287,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: ' Yes', 4: 'No'}"
+pph12006,"Q190: Because of a physical, mental, or emotional condition, do you have difficu",11308,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: ' Yes', 4: 'No'}"
+pph12007,Q190: Do you having difficulty dressing or bathing?,11303,"{-2: 'Not asked', -1: 'Refused', 1: ' Yes', 4: 'No'}"
+pppa1636,Q250: Did you ever serve on active duty in the U.S. Armed Forces?,11741,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pppa1637,Q251: Are you now in the U.S. Armed Forces?,1112,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pppa1640,Q254: Have you ever been a member of the Reserve or National Guard?,11740,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+ppcp0029,"Q300: How many automobiles, vans, and trucks are kept at home for use by members",11915,"{-2: 'Not asked', -1: 'Refused', 1: 'None', 2: '1', 3: '2', 4: '3', 5: '4', 6: '5', 7: '6 or more'}"
+ppsi2302,Q60: How many minutes did it usually take you to get to work LAST WEEK?,5338,"{-2: 'Not asked', -1: 'Refused'}"
+ppc21505,CU40: How concerned are you about providing personal information over the intern,10600,"{-2: 'Not asked', -1: 'Refused', 1: 'Not at all concerned', 2: 'Slightly concerned', 3: 'Somewhat concerned', 4: 'Very concerned'}"
+ACSNET2_mob,ACSNET2: Does anyone access the internet using ... [Cellular data plan],12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+ACSNET2_hi,ACSNET2: Does anyone access the internet using ... [Broadband],12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+ACSNET2_sat,ACSNET2: Does anyone access the internet using ... [Satellite],12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+ACSNET2_du,ACSNET2: Does anyone access the internet using ... [Dial-up],12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+ACSNET2_oth,ACSNET2: Does anyone access the internet using ... [Some other service],12934,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pppa1634,Q23B: What sex were you assigned at birth on your original birth certificate?,11687,"{-2: 'Not asked', -1: 'Refused', 1: 'Male', 2: 'Female'}"
+pph12002,"Q7a: During the past 12 months, have you been hospitalized overnight?",11307,"{-2: 'Not asked', -1: 'Refused', 1: 'Yes', 2: 'No'}"
+pph11402,Q7: Have you received care from a hospital emergency department or urgent care c,11297,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Yes, from an emergency department'}"
+pph11403,Q7: Have you received care from a hospital emergency department or urgent care c,11297,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Yes, from an urgent care center'}"
+pph11404,Q7: Have you received care from a hospital emergency department or urgent care c,11297,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'No, haven’t received care from either'}"
+ppfs1460,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'I do my own research and make my own trades'}"
+ppfs1461,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'I get information and trading support through a brokerage for a fee'}"
+ppfs1462,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'I rely upon a commissioned broker at a brokerage firm'}"
+ppfs1463,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'I use a financial planner for advice and guidance'}"
+ppfs1613,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'I use a robo-advisor'}"
+ppfs1464,"Q80: Thinking about investment decisions, which of the following best describes",8195,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Some other way'}"
+ppfs0549,Q8: Which of the following types of investment accounts do you have? [Retirement,8441,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Retirement investment accounts (for example, IRAs, 401(k), 403(b), 457)'}"
+ppfs1493,Q8: Which of the following types of investments accounts do you have? [Health Sa,8419,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Health Saving Account (HSA)'}"
+ppfs2342,Q8 Which of the following types of investments do you have? [Brokerage or adviso,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Brokerage or advisory account'}"
+ppfs2309,Q8: Which of the following types of investments accounts do you have? [An employ,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'An employer-provided pension plan (sometimes called a “defined benefit” plan and is often offered to employees of the state or federal government).'}"
+ppfs2340,Q8: Which of the following types of investments accounts do you have? [College i,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: ""College investment account which provides tax advantages (known as a ''529 Plan'')""}"
+ppfs2343,Q8: Which of the following types of investments do you have? [Financial investme,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Financial investment assets such as stocks, bonds, mutual funds, that you do not hold in an account (for example, because you purchased them directly from the company)'}"
+ppfs2344,Q8: Which of the following types of investments do you have? [Crypto exchange ac,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Crypto exchange account (e.g., Coinbase, Binance, Bit-Z)'}"
+ppfs2345,Q8: Which of the following types of investments do you have? [Other investment a,7255,"{-2: 'Not asked', -1: 'Refused', 0: 'No', 1: 'Other investment accounts (please specify):'}"
+ppcm0006,Q7: When it comes to grocery shopping for my household...,12934,"{-2: 'Not asked', -1: 'Refused', 1: 'You do all of it', 2: 'You do most of it', 3: 'You do about half of it', 4: 'Someone else does most of it, you do some of it', 5: 'Someone else does all of it'}"
+ppcmdate,Date member completed core adult survey,12934,{}
+ppp1date,Date member completed Public Affairs 1 survey,11880,{}
+ppp2date,Date member completed Public Affairs 2 survey,11737,{}
+pphidate,Date member completed Hispanic survey,1692,{}
+pph1date,Date member completed Health 1 survey,11359,{}
+ppfsdate,Date member completed Financial Services survey,10077,{}
+ppmpdate,Date member completed Military Profile survey,11757,{}
+ppcpdate,Date member completed Calibration profile survey,11968,{}
+ppsidate,Date member completed Lifestyle and Sports Interest Profile survey,10558,{}
+ppc2date,Date member completed Computer Usage 2 survey,10647,{}
+field_month,,12934,{}
+field_day,,12934,{}
+pphhsize5,,12934,{}
+L0_a_iflag,,12934,{}
+L0_b_iflag,,12934,{}
+L0_c_iflag,,12934,{}
+L0_d_iflag,,12934,{}
+L0_e_iflag,,12934,{}
+L0B_a_iflag,,12934,{}
+L0B_b_iflag,,12934,{}
+L0B_c_iflag,,12934,{}
+L0C_iflag,,12934,{}
+L0E_iflag,,12934,{}
+B2_iflag,,12934,{}
+B3_iflag,,12934,{}
+B3A_a_iflag,,12934,{}
+B3A_b_iflag,,12934,{}
+B3A_c_iflag,,12934,{}
+B3A_d_iflag,,12934,{}
+B3A_e_iflag,,12934,{}
+B3A_f_iflag,,12934,{}
+B3B_a_iflag,,12934,{}
+B3B_b_iflag,,12934,{}
+B3B_c_iflag,,12934,{}
+B3B_d_iflag,,12934,{}
+B3B_e_iflag,,12934,{}
+B3B_f_iflag,,12934,{}
+B7_a_iflag,,12934,{}
+B7_b_iflag,,12934,{}
+X12_a_iflag,,12934,{}
+X12_b_iflag,,12934,{}
+X12_c_iflag,,12934,{}
+X12_d_iflag,,12934,{}
+X12_e_iflag,,12934,{}
+X12_f_iflag,,12934,{}
+X12_g_iflag,,12934,{}
+X13_iflag,,12934,{}
+CG0_iflag,,12934,{}
+CG1A_iflag,,12934,{}
+CG2_iflag,,12934,{}
+CG7_a_iflag,,12934,{}
+CG7_b_iflag,,12934,{}
+CG7_c_iflag,,12934,{}
+CG7_d_iflag,,12934,{}
+CG7_e_iflag,,12934,{}
+CG7_f_iflag,,12934,{}
+CG7_g_iflag,,12934,{}
+CG8_iflag,,12934,{}
+CG3_iflag,,12934,{}
+CG4_iflag,,12934,{}
+CG5_a_iflag,,12934,{}
+CG5_b_iflag,,12934,{}
+CG5_c_iflag,,12934,{}
+CG5_d_iflag,,12934,{}
+CG5_e_iflag,,12934,{}
+CG5_f_iflag,,12934,{}
+CG6_iflag,,12934,{}
+D1A_iflag,,12934,{}
+D4_iflag,,12934,{}
+D48_iflag,,12934,{}
+D3B_iflag,,12934,{}
+D1E_iflag,,12934,{}
+D22_a_iflag,,12934,{}
+D22_b_iflag,,12934,{}
+D22_c_iflag,,12934,{}
+D22_d_iflag,,12934,{}
+D22_e_iflag,,12934,{}
+D22_f_iflag,,12934,{}
+D22_g_iflag,,12934,{}
+D22_h_iflag,,12934,{}
+D22_i_iflag,,12934,{}
+D3A_iflag,,12934,{}
+D3E_iflag,,12934,{}
+D28_a_iflag,,12934,{}
+D28_b_iflag,,12934,{}
+D50_iflag,,12934,{}
+D51_iflag,,12934,{}
+D52_a_iflag,,12934,{}
+D52_b_iflag,,12934,{}
+D52_c_iflag,,12934,{}
+D52_d_iflag,,12934,{}
+D52_e_iflag,,12934,{}
+D52_f_iflag,,12934,{}
+D30_iflag,,12934,{}
+D34A_iflag,,12934,{}
+D34D_iflag,,12934,{}
+D36B_iflag,,12934,{}
+D44_f_iflag,,12934,{}
+D44_a_iflag,,12934,{}
+D44_b_iflag,,12934,{}
+D44_c_iflag,,12934,{}
+D44_d_iflag,,12934,{}
+D44_e_iflag,,12934,{}
+D37A_iflag,,12934,{}
+D38_a_iflag,,12934,{}
+D38_b_iflag,,12934,{}
+D38_c_iflag,,12934,{}
+D38_d_iflag,,12934,{}
+D38_f_iflag,,12934,{}
+D39_iflag,,12934,{}
+D1B_iflag,,12934,{}
+D5_iflag,,12934,{}
+D49_iflag,,12934,{}
+GH1_iflag,,12934,{}
+GH12_iflag,,12934,{}
+GH12A_iflag,,12934,{}
+GH14_iflag,,12934,{}
+GH14A_iflag,,12934,{}
+GH15_iflag,,12934,{}
+GH16_a_iflag,,12934,{}
+GH16_b_iflag,,12934,{}
+GH16_c_iflag,,12934,{}
+GH16_d_iflag,,12934,{}
+GH16_e_iflag,,12934,{}
+GH16_f_iflag,,12934,{}
+GH2_iflag,,12934,{}
+R4_iflag,,12934,{}
+R5B_a_iflag,,12934,{}
+R5B_b_iflag,,12934,{}
+R5B_c_iflag,,12934,{}
+R5B_d_iflag,,12934,{}
+R5C_a_iflag,,12934,{}
+R5C_b_iflag,,12934,{}
+R5C_c_iflag,,12934,{}
+R5C_d_iflag,,12934,{}
+R3_iflag,,12934,{}
+R11_iflag,,12934,{}
+R18_iflag,,12934,{}
+M4_iflag,,12934,{}
+ND0_iflag,,12934,{}
+ND1_a_iflag,,12934,{}
+ND1_b_iflag,,12934,{}
+ND1_c_iflag,,12934,{}
+ND1_d_iflag,,12934,{}
+ND1_e_iflag,,12934,{}
+ND4_a_iflag,,12934,{}
+ND4_b_iflag,,12934,{}
+ND4_c_iflag,,12934,{}
+BK1_iflag,,12934,{}
+BK2_a_iflag,,12934,{}
+BK2_b_iflag,,12934,{}
+BK2_c_iflag,,12934,{}
+BK2_d_iflag,,12934,{}
+BK2_e_iflag,,12934,{}
+BK2_f_iflag,,12934,{}
+BK47_a_iflag,,12934,{}
+BK47_b_iflag,,12934,{}
+BK48_iflag,,12934,{}
+BK49A_iflag,,12934,{}
+BK49B_iflag,,12934,{}
+BK53_a_iflag,,12934,{}
+BK53_b_iflag,,12934,{}
+BK53_c_iflag,,12934,{}
+BK53_d_iflag,,12934,{}
+BK53_e_iflag,,12934,{}
+BK53_f_iflag,,12934,{}
+BK53_g_iflag,,12934,{}
+BK53_h_iflag,,12934,{}
+BK53_i_iflag,,12934,{}
+BK53_j_iflag,,12934,{}
+BK54_a_iflag,,12934,{}
+BK54_b_iflag,,12934,{}
+BK54_c_iflag,,12934,{}
+BK54_d_iflag,,12934,{}
+BK54_e_iflag,,12934,{}
+BK54_f_iflag,,12934,{}
+BK55_iflag,,12934,{}
+BK56_a_iflag,,12934,{}
+BK56_b_iflag,,12934,{}
+BK56_c_iflag,,12934,{}
+BK57_a_iflag,,12934,{}
+BK57_b_iflag,,12934,{}
+BK57_c_iflag,,12934,{}
+BK50_iflag,,12934,{}
+A6_iflag,,12934,{}
+A0_iflag,,12934,{}
+A7_a_iflag,,12934,{}
+A7_b_iflag,,12934,{}
+A7_c_iflag,,12934,{}
+A7_d_iflag,,12934,{}
+A7_e_iflag,,12934,{}
+A7_f_iflag,,12934,{}
+A0B_iflag,,12934,{}
+A1_a_iflag,,12934,{}
+A1_b_iflag,,12934,{}
+A1_c_iflag,,12934,{}
+A8_a_iflag,,12934,{}
+A8_b_iflag,,12934,{}
+A8_c_iflag,,12934,{}
+A8_d_iflag,,12934,{}
+A8_e_iflag,,12934,{}
+A8_f_iflag,,12934,{}
+A2_iflag,,12934,{}
+C2A_iflag,,12934,{}
+C3P_iflag,,12934,{}
+C4A_iflag,,12934,{}
+BNPL1_iflag,,12934,{}
+BNPL3_iflag,,12934,{}
+BNPL3A_iflag,,12934,{}
+BNPL1A_iflag,,12934,{}
+BNPL4_a_iflag,,12934,{}
+BNPL4_b_iflag,,12934,{}
+BNPL4_c_iflag,,12934,{}
+BNPL4_d_iflag,,12934,{}
+BNPL4_e_iflag,,12934,{}
+BNPL4_f_iflag,,12934,{}
+BNPL4_g_iflag,,12934,{}
+BNPL5_iflag,,12934,{}
+BNPL6_a_iflag,,12934,{}
+BNPL6_b_iflag,,12934,{}
+BNPL6_c_iflag,,12934,{}
+BNPL6_d_iflag,,12934,{}
+BNPL6_e_iflag,,12934,{}
+BNPL6_f_iflag,,12934,{}
+BNPL6_g_iflag,,12934,{}
+BNPL7_a_iflag,,12934,{}
+BNPL7_b_iflag,,12934,{}
+S16_a_iflag,,12934,{}
+S16_b_iflag,,12934,{}
+S16_c_iflag,,12934,{}
+S18_iflag,,12934,{}
+S21_iflag,,12934,{}
+ED0_iflag,,12934,{}
+D1G_iflag,,12934,{}
+ED0B_iflag,,12934,{}
+SL21_iflag,,12934,{}
+SL22_a_iflag,,12934,{}
+SL22_b_iflag,,12934,{}
+SL22_c_iflag,,12934,{}
+SL22_d_iflag,,12934,{}
+SL23_iflag,,12934,{}
+SL24_iflag,,12934,{}
+SL25_a_iflag,,12934,{}
+SL25_b_iflag,,12934,{}
+SL25_c_iflag,,12934,{}
+SL25_d_iflag,,12934,{}
+SL25_e_iflag,,12934,{}
+SL25_f_iflag,,12934,{}
+SL25_g_iflag,,12934,{}
+SL26_a_iflag,,12934,{}
+SL26_b_iflag,,12934,{}
+SL26_c_iflag,,12934,{}
+SL26_d_iflag,,12934,{}
+D1I_iflag,,12934,{}
+K0_iflag,,12934,{}
+K8A_iflag,,12934,{}
+K9_a_iflag,,12934,{}
+K9_b_iflag,,12934,{}
+K9_c_iflag,,12934,{}
+K9_d_iflag,,12934,{}
+K9_e_iflag,,12934,{}
+K9_f_iflag,,12934,{}
+K14_a_iflag,,12934,{}
+K14_b_iflag,,12934,{}
+K15_a_iflag,,12934,{}
+K15_b_iflag,,12934,{}
+K15_c_iflag,,12934,{}
+K15_d_iflag,,12934,{}
+K15_e_iflag,,12934,{}
+K21_a_iflag,,12934,{}
+K21_b_iflag,,12934,{}
+K21_c_iflag,,12934,{}
+K21_d_iflag,,12934,{}
+K21_e_iflag,,12934,{}
+K21_f_iflag,,12934,{}
+K5A_a_iflag,,12934,{}
+K5A_b_iflag,,12934,{}
+K5A_c_iflag,,12934,{}
+DC4_iflag,,12934,{}
+FL0_iflag,,12934,{}
+I0_a_iflag,,12934,{}
+I0_b_iflag,,12934,{}
+I0_c_iflag,,12934,{}
+I0_d_iflag,,12934,{}
+I0_e_iflag,,12934,{}
+I0_f_iflag,,12934,{}
+I40_iflag,,12934,{}
+I41_a_iflag,,12934,{}
+I41_b_iflag,,12934,{}
+I41_c_iflag,,12934,{}
+I41_d_iflag,,12934,{}
+I41_e_iflag,,12934,{}
+FS21_a_iflag,,12934,{}
+FS21_b_iflag,,12934,{}
+FS21_c_iflag,,12934,{}
+FS21_d_iflag,,12934,{}
+FS21_e_iflag,,12934,{}
+FS21_f_iflag,,12934,{}
+FS21_g_iflag,,12934,{}
+I9_iflag,,12934,{}
+I12_iflag,,12934,{}
+I20_iflag,,12934,{}
+I21_a_iflag,,12934,{}
+I21_b_iflag,,12934,{}
+INF4_iflag,,12934,{}
+INF3_a_iflag,,12934,{}
+INF3_b_iflag,,12934,{}
+INF3_c_iflag,,12934,{}
+INF3_d_iflag,,12934,{}
+INF3_e_iflag,,12934,{}
+INF3_f_iflag,,12934,{}
+INF3_g_iflag,,12934,{}
+INF5_iflag,,12934,{}
+EF1_iflag,,12934,{}
+EF2_iflag,,12934,{}
+EF3_a_iflag,,12934,{}
+EF3_b_iflag,,12934,{}
+EF3_c_iflag,,12934,{}
+EF3_d_iflag,,12934,{}
+EF3_e_iflag,,12934,{}
+EF3_f_iflag,,12934,{}
+EF3_g_iflag,,12934,{}
+EF3_h_iflag,,12934,{}
+EF5C_iflag,,12934,{}
+EF5D_iflag,,12934,{}
+EF8_a_iflag,,12934,{}
+EF8_b_iflag,,12934,{}
+EF8_c_iflag,,12934,{}
+EF8_d_iflag,,12934,{}
+EF8_e_iflag,,12934,{}
+EF8_f_iflag,,12934,{}
+EF8_g_iflag,,12934,{}
+EF8_h_iflag,,12934,{}
+EF8_i_iflag,,12934,{}
+EF8_j_iflag,,12934,{}
+EF7_iflag,,12934,{}
+EF7A_iflag,,12934,{}
+B0_a_iflag,,12934,{}
+B0_b_iflag,,12934,{}
+B0_c_iflag,,12934,{}
+B1_a_iflag,,12934,{}
+B1_b_iflag,,12934,{}
+FD3_iflag,,12934,{}
+E1_a_iflag,,12934,{}
+E1_b_iflag,,12934,{}
+E1_c_iflag,,12934,{}
+E1_d_iflag,,12934,{}
+E1_e_iflag,,12934,{}
+E2B_iflag,,12934,{}
+E4_a_iflag,,12934,{}
+E4_b_iflag,,12934,{}
+E4_c_iflag,,12934,{}
+E4_d_iflag,,12934,{}
+E4_e_iflag,,12934,{}
+E4_f_iflag,,12934,{}
+E2_iflag,,12934,{}
+E11_b_iflag,,12934,{}
+E11_c_iflag,,12934,{}
+E11_d_iflag,,12934,{}
+E11_e_iflag,,12934,{}
+E11_f_iflag,,12934,{}
+E11_g_iflag,,12934,{}
+E12_a_iflag,,12934,{}
+E12_b_iflag,,12934,{}
+E12_c_iflag,,12934,{}
+E12_d_iflag,,12934,{}
+E12_e_iflag,,12934,{}
+E12_f_iflag,,12934,{}
+E12_g_iflag,,12934,{}
+CH2A_iflag,,12934,{}
+race_5cat,Race/Ethnicity - 5 categories,12934,"{1: 'White', 2: 'Black', 3: 'Hispanic', 4: 'Asian', 5: 'Other'}"
+inc_4cat_50k,"Income (I40) - 4 cat - <25,25–49,50–99,100+",12934,"{-1: 'Refused', 1: 'Less than $25,000', 2: '$25,000–$49,999', 3: '$50,000–$99,999', 4: '$100,000 or more'}"
+educ_4cat,"Education - 4 categories, less than hs separate",12934,"{1: 'Less than a high school degree', 2: 'High school degree or GED', 3: 'Some college/technical or associates degree', 4: ""Bachelor's degree or more""}"
+pay_casheqv,Would handle $400 expense with cash or equivalent,12934,"{-1: 'Refused', 0: 'No', 1: 'Yes'}"
+atleast_okay,Doing okay financially,12934,"{0: 'No', 1: 'Yes'}"
+control,Control of institution (IPEDS),12934,{}
+malefemale,Male/Female,12934,"{1: 'Male', 2: 'Female'}"
+year,,12934,{}

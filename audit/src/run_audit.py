@@ -26,6 +26,7 @@ if m.get("repweight_file"):
     keys = m["merge_keys"]; assert keys, "merge_keys required with repweight_file"
     n0 = len(df); df = df.merge(rw, on=keys, how="left", validate="1:1", indicator="_rw_merge")
     print("replicate merge:", df["_rw_merge"].value_counts().to_dict(), "rows", n0, "->", len(df))
+    df = df.drop(columns="_rw_merge").copy()
 ds = a.dataset
 log = dict(dataset=ds, file=str(path), sha256=sha256(Path(path)), n_rows=len(df), n_cols=df.shape[1])
 
@@ -39,20 +40,26 @@ log["time_tabs"] = {c: tab(df[c]).to_dict()["n"] for c in m.get("time_cols", [])
 log["inventory_counts"] = inv.groupby("construct").size().to_dict() if len(inv) else {}
 
 # ---------- Stage 2 ----------
-need = [m.get(k) for k in ("weight",)] + [m.get("eligible", {}).get("var"), m.get("ai_user", {}).get("var")]
+aiu = m.get("ai_user", {})
+need = [m.get("weight"), m.get("eligible", {}).get("var"), aiu.get("var") or aiu.get("any_of")]
 if not m or any(x is None for x in need):
     log["stage2"] = "SKIPPED: map incomplete (weight / eligible.var / ai_user.var)"
 else:
     miss = m.get("missing_codes", [])
     D = df.copy()
     num = D.select_dtypes("number").columns
-    D[num] = D[num].replace(miss, np.nan)               # recode special codes to NaN (raw tabs below use df, not D)
+    D[num] = D[num].where(~D[num].isin(miss))               # recode special codes to NaN (raw tabs below use df, not D)
     w = D[m["weight"]]
     el = D[m["eligible"]["var"]].isin(m["eligible"]["codes"])
-    ai = D[m["ai_user"]["var"]].isin(m["ai_user"]["codes"])
-    ai_valid = D[m["ai_user"]["var"]].notna()
     log["raw_tab_eligible_var"] = tab(df[m["eligible"]["var"]]).to_dict()["n"]
-    log["raw_tab_ai_var"] = tab(df[m["ai_user"]["var"]]).to_dict()["n"]
+    if aiu.get("var"):
+        ai = D[aiu["var"]].isin(aiu["codes"]); ai_valid = D[aiu["var"]].notna()
+        log["raw_tab_ai_var"] = tab(df[aiu["var"]]).to_dict()["n"]
+    else:   # AI user = yes on at least one item; non-user = valid "no" on ALL items; otherwise missing/ambiguous
+        items = D[aiu["any_of"]]; yes = items.isin(aiu["codes"]).any(axis=1)
+        ai = yes; ai_valid = yes | items.notna().all(axis=1)
+        log["ai_ambiguous_N_among_eligible"] = int((el & ~ai_valid & items.notna().any(axis=1)).sum())  # no 'yes', some item missing
+        log["ai_all_items_missing_N_among_eligible"] = int((el & items.isna().all(axis=1)).sum())
     # any-task AI use as alternative AI definition
     if m.get("ai_task_vars"):
         t = D[m["ai_task_vars"]].isin(m["ai_task_yes_codes"])
@@ -60,6 +67,8 @@ else:
         log["ai_any_task_N_among_eligible"] = int((anyt & el).sum())
         log["ai_task_all_missing_among_eligible"] = int((allmiss & el).sum())
         log["ai_task_item_yes_N"] = {v: int((D[v].isin(m["ai_task_yes_codes"]) & el).sum()) for v in m["ai_task_vars"]}
+    if int(el.sum()) == 0 or int((el & ai).sum()) == 0:
+        sys.exit(f"ABORT: eligible N={int(el.sum())}, AI-user N={int((el & ai).sum())}. Check codes/dtype (CSV exports may store labels as strings: {df[m['eligible']['var']].unique()[:5]}).")
     log.update(N_total=len(D), N_eligible=int(el.sum()), N_eligible_ai_valid=int((el & ai_valid).sum()),
                N_ai_user=int((el & ai).sum()), N_ai_nonuser=int((el & ai_valid & ~ai).sum()),
                prevalence_unweighted=float((el & ai).sum() / (el & ai_valid).sum()),

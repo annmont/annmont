@@ -1,0 +1,25 @@
+# HTOPS March 2026 (HTOPS_HPS_2603). Names/codes from "HTOPS_HPS_2603_PUF Data Dictionary_CSV.xlsx"; variance from Source & Accuracy (SDR, 80 reps, Var = 4/80 * sum).
+data_file: audit/data/x/htops/HTOPS_HPS_2603_PUF.csv
+repweight_file: audit/data/x/htops/HTOPS_HPS_2603_REPWGT_PUF.csv
+merge_keys: [SCRAMID]
+missing_codes: [-99, -88]          # -99 did not answer, -88 not in universe
+weight: PWEIGHT                    # equals PWEIGHT0 (verified)
+rep_prefix: 'PWEIGHT([1-9]|[1-7][0-9]|80)'
+fay_rho: 0.5                       # 1/(R(1-rho)^2) with R=80, rho=.5 == 4/80
+eligible: {var: ANYWORK, codes: [1]}          # did any paid/profit work in last 7 days
+ai_user:
+  any_of: [AIWRK_ADMIN, AIWRK_CODE, AIWRK_CUSTSUPP, AIWRK_DATAVIS, AIWRK_GENIDEA, AIWRK_INTERP, AIWRK_LOG, AIWRK_MED, AIWRK_SEARCH, AIWRK_TUTOR, AIWRK_COMM]
+  codes: [1]
+ai_task_vars: [AIWRK_ADMIN, AIWRK_CODE, AIWRK_CUSTSUPP, AIWRK_DATAVIS, AIWRK_GENIDEA, AIWRK_INTERP, AIWRK_LOG, AIWRK_MED, AIWRK_SEARCH, AIWRK_TUTOR, AIWRK_COMM]
+ai_task_yes_codes: [1]
+outcomes:
+  freq_last_week:   {var: AIWRK_FREQ,  universe: ai_users}
+  hours_saved:      {var: AIWRK_HOURS, universe: ai_users}
+  occupation_AI_OCC: {var: AI_OCC,     universe: all_eligible}
+  telework_days:    {var: TWDAYS,      universe: all_eligible}
+  class_worker:     {var: CLASS_WORKER, universe: all_eligible}
+  education:        {var: REDUC,       universe: all_eligible}
+  hh_income_bin:    {var: RHHINCOME,   universe: all_eligible}
+  age:              {var: TAGE,        universe: all_eligible}
+id_cols: [SCRAMID]
+time_cols: []

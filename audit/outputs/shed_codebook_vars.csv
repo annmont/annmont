@@ -1,0 +1,106 @@
+var,label_first_line,line
+------------------------------------------------------------------------------------,,2
+CODEBOOK,FOR 2025 SURVEY OF HOUSEHOLD ECONOMICS AND DECISIONMAKING,5
+------------------------------------------------------------------------------------,,8
+ANALYSIS,WEIGHTS,34
+DEMOGRAPHIC,PROFILE VARIABLES,56
+VARIABLE,DEFINITIONS,72
+shedid,SHED ID,77
+duration,Duration (in seconds),87
+xlaptop,Is R a KP laptop user?,166
+L0E,How old is your [youngest] child that lives with you?,324
+B7_a,In your community - How would you rate economic conditions today:,606
+B7_b,In this country - How would you rate economic conditions today:,622
+X11_none,X11 None selected,638
+CG0,"In the past week, did you use any paid childcare?",801
+CG1A,"In the past week, how many hours did you use paid childcare?",816
+CG2,How much do you pay per week for childcare in total for all of your children?,833
+D1A,"Last month, did you do any work for either pay or profit?",1153
+D1E,"At any time during the past month, did you want to work [more hours]?",1215
+D51,"Last month, about how often did you use Generative AI at your job?",1484
+D34D,"Last week, how many days did you telecommute or work from home?",1649
+D5,"Last month, did your spouse or partner do any work for either pay or profit?",1940
+D49,Does your spouse or partner usually work 35 hours or more per week?,1955
+GH12A,What is the main reason you do not have homeowners insurance?,2007
+GH2,When did you move into your current home?,2192
+R4,"Before your most recent move, did you own your previous home?",2207
+R11,Have you been behind on your rent at any time in the past year?,2376
+BK48,Did you lose any money to the fraud or scam?,2738
+BK49B,Approximately how much money did you recover or get refunded?,2777
+BK58_no,BK58 No selected,3247
+C3P,"Last month, how did you handle your credit card bills?",3610
+D1G,Are you currently enrolled as a student?,4149
+ED0B,What type of program are you currently pursuing?,4164
+SL22_a,Yours - Whose education were your student loans used for?,4201
+SL22_b,Your spouse's/partner's - Whose education were your student loans used for?,4216
+SL23,"Last month, how did you handle your student loan payments?",4263
+D1I,Do you consider yourself to be retired?,4501
+K0,Do you think that your retirement savings plan is currently on track?,4515
+K8A,At what age did you retire?,4531
+DC4,How comfortable are you with choosing and managing your investments?,4933
+EF5D,Did you have any bills that you had difficulty paying last month?,5729
+dov_ef7,EF7 sample split,5932
+DOV_X11,Flag - identifier for receiving X11 or not,6595
+DOV_D36_AMOUNT,Flag - amount of hypothetical pay change in question D36B,6609
+ppage,Age,6627
+ppagecat,Age - 7 Categories,6641
+ppagect4,Age - 4 Categories,6660
+ppeduc5,Education (5 Categories),6676
+ppeducat,Education (4 Categories),6696
+ppemploy,Current Employment Status,6715
+ppethm,Race / Ethnicity,6730
+ppgender,Gender,6747
+pphhsize,Household Size,6761
+pphouse4,Housing Type,6776
+ppinc7,Household Income,6796
+ppmarit5,Marital Status,6815
+ppmsacat,MSA Status,6832
+ppreg4,Region 4 - Based on State of Residence,6846
+ppreg9,Region 9 - Based on State of Residence,6862
+pprent,Ownership Status of Living Quarters,6883
+ppstaten,State,6900
+ppkid017,Presence of Household Members - Children 0-17,6915
+ppt18ov,Presence of Household Members - Adults 18+,6930
+ppcm0160,Q26: Occupation (tight scale) in current or main job,6945
+ind1,IND1: Industry (tight scale) in current or main job,6960
+ppcm1301,GOVEMP1: Employer type,6975
+pph10001,"Q1: In general, would you say your health is. . .?",7014
+ppfs1482,Q108: Where do you think your credit score falls?,7079
+pphi0001,Q0: What language do you usually speak at home?,7098
+ppracem,"Race, Census categories",7118
+pphispan,"Are you Spanish, Hispanic, or Latino?",7138
+pppa_lgb,Q230: Which of the following best describes how you think of yourself?,7156
+ppp20197,QEG22: Are you a citizen of the United States?,7173
+pph12004,Q190: Are you deaf or do you have serious difficulty hearing?,7203
+pph12005,Q190: Do you have serious difficulty walking or climbing stairs?,7218
+pph12007,Q190: Do you have difficulty dressing or bathing?,7250
+pppa1636,Q250: Did you ever serve on active duty in the U.S. Armed Forces?,7264
+pppa1637,Q251: Are you now in the U.S. Armed Forces?,7279
+pppa1640,Q254: Have you ever been a member of the Reserve or National Guard?,7294
+ppsi2302,Q60: How many minutes did it usually take you to get to work LAST WEEK?,7330
+ACSNET2_hi,ACSNET2: Does anyone access the internet using ... [Broadband],7379
+ACSNET2_sat,ACSNET2: Does anyone access the internet using ... [Satellite],7395
+ACSNET2_du,ACSNET2: Does anyone access the internet using ... [Dial-up],7411
+pph12002,"Q7a: During the past 12 months, have you been hospitalized overnight?",7460
+ppcm0006,Q7: When it comes to grocery shopping for my household...,7795
+ppcmdate,Date member completed core adult survey,7814
+ppp1date,Date member completed Public Affairs 1 survey,7829
+ppp2date,Date member completed Public Affairs 2 survey,7844
+pphidate,Date member completed Hispanic survey,7859
+pph1date,Date member completed Health 1 survey,7874
+ppfsdate,Date member completed Financial Services survey,7889
+ppmpdate,Date member completed Military Profile survey,7904
+ppcpdate,Date member completed Calibration profile survey,7919
+ppsidate,Date member completed Lifestyle and Sports Interest Profile survey,7934
+ppc2date,Date member completed Computer Usage 2 survey,7949
+field_month,(unlabeled),7963
+field_day,(unlabeled),7975
+pphhsize5,Household size,7990
+[variablename_iflag],variable imputation flag,8007
+race_5cat,Race/Ethnicity - 5 categories,8021
+inc_4cat_50k,"Income (I40) - 4 cat - <25,25–49,50–99,100+",8037
+educ_4cat,"Education - 4 categories, less than hs separate",8053
+pay_casheqv,Would handle $400 expense with cash or equivalent,8070
+atleast_okay,Doing okay financially,8084
+control,Control of institution (IPEDS),8098
+year,Year,8130

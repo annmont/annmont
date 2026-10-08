@@ -1,0 +1,60 @@
+{
+  "dataset": "htops",
+  "file": "audit/data/x/htops/HTOPS_HPS_2603_PUF.csv",
+  "sha256": "50856a45097a4f326b3bee76da13559535d41c367a9cc76d150edd79d68b7d44",
+  "n_rows": 12521,
+  "n_cols": 381,
+  "id_checks": {
+    "SCRAMID": {
+      "n_nonmissing": 12521,
+      "n_unique": 12521,
+      "n_duplicated_values": 0
+    }
+  },
+  "time_tabs": {},
+  "inventory_counts": {
+    "ai_frequency": 3,
+    "ai_task": 4,
+    "demographics": 24,
+    "earnings": 1,
+    "employer": 1,
+    "employment": 1,
+    "ids": 7,
+    "productivity": 1,
+    "time": 3,
+    "weights": 164
+  },
+  "raw_tab_eligible_var": {
+    "-99.0": 148,
+    "1.0": 6680,
+    "2.0": 5693
+  },
+  "ai_ambiguous_N_among_eligible": 296,
+  "ai_all_items_missing_N_among_eligible": 107,
+  "ai_any_task_N_among_eligible": 4091,
+  "ai_task_all_missing_among_eligible": 107,
+  "ai_task_item_yes_N": {
+    "AIWRK_ADMIN": 2182,
+    "AIWRK_CODE": 838,
+    "AIWRK_CUSTSUPP": 830,
+    "AIWRK_DATAVIS": 1693,
+    "AIWRK_GENIDEA": 2359,
+    "AIWRK_INTERP": 2466,
+    "AIWRK_LOG": 260,
+    "AIWRK_MED": 462,
+    "AIWRK_SEARCH": 3110,
+    "AIWRK_TUTOR": 1244,
+    "AIWRK_COMM": 2635
+  },
+  "N_total": 12521,
+  "N_eligible": 6680,
+  "N_eligible_ai_valid": 6277,
+  "N_ai_user": 4091,
+  "N_ai_nonuser": 2186,
+  "prevalence_unweighted": 0.6517444639158834,
+  "prevalence_weighted": 0.5556630369008744,
+  "weight_missing_among_eligible": 0,
+  "weight_zero_among_eligible": 0,
+  "n_rep_weights_found": 80,
+  "prevalence_weighted_BRR_se": 0.020707046259448462
+}

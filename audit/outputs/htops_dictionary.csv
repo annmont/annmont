@@ -1,0 +1,906 @@
+var,universe,question,label,values
+SCRAMID,All respondents,,Unique identifier,
+PWEIGHT,All respondents,,Person weight,
+HWEIGHT,All respondents,,Household weight,
+REGION,All respondents,,Census Region,"1) Northeast
+2) Midwest
+3) South
+4) West"
+METRO,All respondents,,Metropolitan Statistical Area - Recoded,"1) New York-Newark-Jersey City, NY-NJ Metro Area
+2) Los Angeles-Long Beach-Anaheim, CA Metro Area
+3) Chicago-Naperville-Elgin, IL-IN Metro Area
+4) Dallas-Fort Worth-Arlington, TX Metro Area
+5) Houston-Pasadena-The Woodlands, TX Metro Area
+6) Atlanta–Sandy Springs–Roswell, GA Metro Area
+7) Washington–Arlington–Alexandria, DC–VA–MD–WV Metro Area
+8) Miami–Fort Lauderdale–West Palm Beach, FL Metro Area
+9) Philadelphia–Camden–Wilmington, PA–NJ–DE–MD Metro Area
+10) Phoenix–Mesa–Chandler, AZ Metro Area
+-88) Does not live in Top 10 Metropolitan Statistical Area"
+METRO_STATUS,All respondents,,Metropolitan Statistical Area  - Recoded,"1) Lives in Metropolitan Statistical Area
+2) Does not live in Metropolitan Statistical Area"
+THHLD_NUMPER,All respondents,"How many total people – adults and children – currently live in your household, including yourself? Please DON'T count anyone who lives most of their time somewhere else, even if they are currently staying here.
+Please enter a number.",Number of people living in household - Topcoded,1 to 7
+THHLD_NUMKID,All respondents,"How many people under 18 years-old currently live in your household? Please DON'T count anyone who lives most of their time somewhere else, even if they are currently staying here. Please enter a number.",Number of children under 18 - Topcoded,0 to 4
+THHLD_NUMADULT,All respondents,,Calculated total number of adults in the household - Topcoded,1 to 7
+TBIRTH_YEAR,All respondents,What is your date of birth?,Year of Birth - Topcoded,1938 to 2001
+TAGE,All respondents,Please verify or enter correct age.,Age - Topcoded,25 to 88
+ESEX,All respondents,Are you male or female?,Sex - Edited,"1) Male
+2) Female"
+SEX_ORNT,All respondents,Which of the following best represents how you think of yourself?,Sexual orientation,"1) Gay or lesbian
+2) Straight, that is not gay or lesbian
+3) Bisexual
+4) I use a different term
+-99) Did not answer"
+RRACETH,All respondents,What is your race and/or ethnicity?  Select all that apply.,Race and/or ethnicity - Recoded,"1) White alone
+2) Hispanic or Latino alone
+3) Black alone
+4) Asian alone
+5) All additional race and/or ethnicity groups"
+MS,All respondents,What is your marital status? ,Marital status,"1) Married
+2) Widowed
+3) Divorced
+4) Separated
+5) Never married
+-99) Did not answer"
+REDUC,All respondents,"What is the highest degree or level of school you have completed? If currently enrolled, select the previous grade or highest degree received.",Highest degree or level of school completed - Recoded,"1) Less than grade school
+2) Less than high school diploma
+3) High school graduate or equivalent
+4) Some college, no degree
+5) Associate's degree
+6) Bachelor's degree
+7) Graduate degree"
+AF_NO,All respondents,"Are you or your spouse currently serving in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Reserve and Guard members or spouses who are full-time active duty (AGR/FTS/AR) or currently “activated” should select the “Reserve or National Guard” response(s). Select all that apply.  No",Currently serving in the U.S. Armed Forces - No,"1) Selected
+2) Not selected
+-99) Did not answer"
+AF_ACTDUTY_SELF,All respondents,"Are you or your spouse currently serving in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Reserve and Guard members or spouses who are full-time active duty (AGR/FTS/AR) or currently “activated” should select the “Reserve or National Guard” response(s). Select all that apply. Yes, I'm serving on active duty","Currently serving in the U.S. Armed Forces - Yes, I'm serving on active duty","1) Selected
+2) Not selected
+-99) Did not answer"
+AF_RESNG_SELF,All respondents,"Are you or your spouse currently serving in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Reserve and Guard members or spouses who are full-time active duty (AGR/FTS/AR) or currently “activated” should select the “Reserve or National Guard” response(s). Select all that apply. Yes, I'm serving in the Reserve or National Guard","Currently serving in the U.S. Armed Forces - Yes, I'm serving in the Reserve or National Guard","1) Selected
+2) Not selected
+-99) Did not answer"
+AF_ACTDUTY_SP,All respondents,"Are you or your spouse currently serving in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Reserve and Guard members or spouses who are full-time active duty (AGR/FTS/AR) or currently “activated” should select the “Reserve or National Guard” response(s). Select all that apply. Yes, my spouse is serving on active duty","Currently serving in the U.S. Armed Forces -  Yes, my spouse is serving on active duty","1) Selected
+2) Not selected
+-99) Did not answer"
+AF_RESNG_SP,All respondents,"Are you or your spouse currently serving in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Reserve and Guard members or spouses who are full-time active duty (AGR/FTS/AR) or currently “activated” should select the “Reserve or National Guard” response(s). Select all that apply. Yes, my spouse is serving in the Reserve or National Guard","Currently serving in the U.S. Armed Forces - Yes, my spouse is serving in the Reserve or National Guard","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+AFEVER_NO,Self or spouse not currently serving in the U.S. Armed Forces (AF_NO=1),"Have you or your spouse ever served in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Select all that apply. No",Ever served in the U.S. Armed Forces - No,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+AFEVER_ACTDUTY_SELF,Self or spouse not currently serving in the U.S. Armed Forces (AF_NO=1),"Have you or your spouse ever served in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Select all that apply. Yes, I served on active duty","Ever served in the U.S. Armed Forces - Yes, I served on active duty","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+AFEVER_RESNG_SELF,Self or spouse not currently serving in the U.S. Armed Forces (AF_NO=1),"Have you or your spouse ever served in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Select all that apply. Yes, I served in the Reserve or National Guard","Ever served in the U.S. Armed Forces - Yes, I served in the Reserve or National Guard","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+AFEVER_ACTDUTY_SP,Self or spouse not currently serving in the U.S. Armed Forces (AF_NO=1),"Have you or your spouse ever served in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Select all that apply. Yes, my spouse served on active duty","Ever served in the U.S. Armed Forces -  Yes, my spouse served on active duty","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+AFEVER_RESNG_SP,Self or spouse not currently serving in the U.S. Armed Forces (AF_NO=1),"Have you or your spouse ever served in the U.S. Armed Forces (Active Duty, Reserve, or National Guard)? Select all that apply. Yes, my spouse served in the Reserve or National Guard","Ever served in the U.S. Armed Forces - Yes, my spouse served in the Reserve or National Guard","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+LANG_OTHER_HOME,All respondents,"Including you and the adults regularly living with you, does anyone primarily speak a language other than [Field-Lang_fill] at home?",Speaks language other than English/Spanish at home,"1) Yes
+2) No
+-99) Did not answer"
+RLANG_HOME,Respondents who speak a language other than English/Spanish at home (LANG_OTHER_HOME=1),"What language is regularly spoken at home? If more than one, select the language spoken most often.",Language spoken at home - Recoded,"1) Spanish or Spanish Creole
+2) Other Indo-European languages
+3) Asian or Pacific Island languages
+4) All other languages
+-99) Did not answer
+-88) Not in universe"
+ENGLISH_PROF,"Respondents who speak a language other than English at home and completing the survey in English (LANG_OTHER_HOME=1 and SURVEY_LANG=""en"") or completing the survey in Spanish (SURVEY_LANG=""es"")",How well do you speak English?,English proficiency,"1) Very well
+2) Well
+3) Not well
+4) Not at all
+-99) Did not answer
+-88) Not in universe"
+SATISFACTION,All respondents,Overall how satisfied are you with life as a whole these days?,Overall satisfaction,"1) 0 (Not satisfied at all)
+2) 1
+3) 2
+4) 3
+5) 4
+6) 5
+7) 6
+8) 7
+9) 8
+10) 9
+11) 10 (Completely satisfied)
+-99) Did not answer"
+KIDS_LT1Y,Children under 18 live in the household (HHLD_NUMKID>0),"In your household, are there… Select all that apply. Children under 1 year old?",Children under 1 year old,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+KIDS_1_4Y,Children under 18 live in the household (HHLD_NUMKID>0),"In your household, are there… Select all that apply. Children 1 through 4 years old?",Children 1 through 4 years old,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+KIDS_5_11Y,Children under 18 live in the household (HHLD_NUMKID>0),"In your household, are there… Select all that apply. Children 5 through 11 years old?",Children 5 through 11 years old,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+KIDS_12_17Y,Children under 18 live in the household (HHLD_NUMKID>0),"In your household, are there… Select all that apply. Children 12 through 17 years old?",Children 12 through 17 years old,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+ENRPUBCHK,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number enrolled in a public school (checkbox)",Enrolled in a public school (checkbox),"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+ENRPRVCHK,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number enrolled in a private school (checkbox)",Enrolled in a private school (checkbox),"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+ENRHMSCHK,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number homeschooled, that is not enrolled in public or private school (checkbox)","Homeschooled, that is not enrolled in public or private school (checkbox)","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+ENROLLNONE,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. None (checkbox)",Children are not enrolled in any of the school types (checkbox),"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TENROLLPUB,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number enrolled in a public school (write-in)",Number enrolled in a public school - Recoded,"0 to 4
+-99) Did not answer
+-88) Not in universe"
+TENROLLPRV,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number enrolled in a private school (write-in)",Number enrolled in a private school - Recoded,"0 to 2
+-99) Did not answer
+-88) Not in universe"
+TENROLLHMSCH,Children living in the household that are ages 5 to 17 (KIDS_5_11Y =1 or KIDS_12_17Y=1),"During the school year that began in the Summer / Fall of 2025, how many children in this household are enrolled in Kindergarten through 12th grade or grade equivalent? Enter whole numbers for all that apply. Number homeschooled, that is not enrolled in public or private school (write-in)","Number homeschooled, that is not enrolled in public or private school","0 to 2
+-99) Did not answer
+-88) Not in universe"
+CHILDCARE,Children under 18 live in the household (HHLD_NUMKID>0),"Next, we are going to ask about the childcare arrangements for children in the household. At any time in the last 4 weeks, were any children in the household unable to attend daycare or another childcare arrangement as a result of child care being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care?",Childcare arrangement,"1) Yes
+2) No
+3) Not applicable
+-99) Did not answer
+-88) Not in universe"
+RCHILDCARE_RSLT1,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) took unpaid leave to care for the children",Result of no childcare - You (or another adult) took unpaid leave to care for the children - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT2,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) used vacation, or sick days, or other paid leave in order to care for the children","Result of no childcare - You (or another adult) used vacation, or sick days, or other paid leave in order to care for the children - Recoded","1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT3,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) cut your work hours in order to care for the children",Result of no childcare - You (or another adult) cut your work hours in order to care for the children - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT4,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) left a job in order to care for the children",Result of no childcare - You (or another adult) left a job in order to care for the children - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT5,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) lost a job because of time away to care for the children",Result of no childcare - You (or another adult) lost a job because of time away to care for the children - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT6,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) did not look for a job in order to care for the children",Result of no childcare - You (or another adult) did not look for a job in order to care for the children - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT7,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. You (or another adult) supervised one or more children while working",Result of no childcare - You (or another adult) supervised one or more children while working - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT8,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. Other (specify)",Result of no childcare - Other (specify) - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+RCHILDCARE_RSLT9,Children unable to attend child care in the last 4 week (CHILDCARE=1),"Which if any of the following occurred in the last 4 weeks as a result of childcare being closed, unavailable, unaffordable, or because you are concerned about your child’s safety in care? Select all that apply. None of the above",Result of no childcare - None of the above - Recoded,"1) Selected
+2) Not selected
+-88) Not in universe"
+FORMULA_AGE,Children living in the household under 1 year old (KIDS_LT1Y=1),"How many months old is the baby or infant in your household? If there is more than one, please report the age of the youngest.",Age of youngest infant in household,"1) Under 6 months
+2) Between 6 months and 9 months
+3) Between 9 months and 12 months
+-99) Did not answer
+-88) Not in universe"
+BABY_FED,Children living in the household under 1 year old (KIDS_LT1Y=1),"How is the baby in your household fed (in addition to any solid foods the baby may be consuming)? If there is more than one baby, please report on the youngest.",How is the baby in your household fed,"1) Breastfeeding (or pumped breastmilk) only
+2) Sometimes breastfeeding (or pumped breastmilk) and sometimes infant formula
+3) Infant formula only
+4) Baby isn’t fed breastmilk OR infant formula
+-99) Did not answer
+-88) Not in universe"
+RFORMULA_DIFFICULT,"Baby in the household fed using infant formula (BABY_FED=2,3)","In the last 4 weeks, did you have difficulty getting infant formula?",Formula difficult to obtain past month - Recoded,"1) Yes, in the last 7 days
+2) Yes, more than 7 days ago but within the last 4 weeks
+3) No, did not have trouble getting infant formula in the last 4 weeks
+-88) Not in universe"
+WORKLOSS,All respondents,"Have you, or has anyone in your household, experienced a loss of employment income in the last 4 weeks?",Recent household job loss,"1) Yes
+2) No
+-99) Did not answer"
+ANYWORK,All respondents,"In the last 7 days, did you do ANY work for either pay or profit?",Employment status for last 7 days,"1) Yes
+2) No
+-99) Did not answer"
+CLASS_WORKER,Worked for pay in last 7 days (ANYWORK=1),"Are you employed by the government, by a private company, a nonprofit organization or are you self-employed or working in a family business?",Sector of employment,"1) Government
+2) Private company
+3) Non-profit organization including tax exempt and charitable organizations
+4) Self-employed
+5) Working in a family business
+-99) Did not answer
+-88) Not in universe"
+REASON_NOWORK,Did not work for pay in the last 7 days (ANYWORK=2),"What is your main reason for not working for pay or profit? I did not work because: Other reason, please specify",Main reason for not working for pay or profit,"1) I did not want to be employed at this time
+2) I am/was caring for children not in school or daycare
+3) I am/was caring for an elderly person
+4) I am/was sick or disabled
+5) I am retired
+6) I am/was laid off or furloughed
+7) My employer closed temporarily or went out of business
+8) I do/did not have transportation to work
+9) I am/was unable to find work
+10) Other reasons (specify)
+-99) Did not answer
+-88) Not in universe"
+TWDAYS,Worked for pay in last 7 days (ANYWORK=1),"In the last 7 days, have you teleworked or worked from home?",Number of telework days in past week - respondent,"1) Yes, for 1-2 days
+2) Yes, for 3-4 days
+3) Yes, for 5 or more days
+4) No
+-99) Did not answer
+-88) Not in universe"
+AI_OCC,Worked for pay in last 7 days (ANYWORK=1),What is your occupation?,Occupation,"1)	 Computer occupations (for example, computer support specialists, software developers, data scientists)
+2)	 Construction and skilled trades, production, transportation, and material moving occupations
+3) 	Education and social services and arts, design, entertainment, and media occupations
+4) Engineering, architecture, and life, physical, and social sciences occupations
+5) Farming, fishing, and forestry
+6) Healthcare practitioners and healthcare support occupations
+7) Management, business operations, financial, and legal occupations
+8) Office and administrative support occupations
+9) Sales occupations
+10) Security, safety, food, cleaning, groundskeeping, and personal care services occupations
+-99) Did not answer
+-88) Not in universe"
+AIWRK_ADMIN,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Administrative tasks",Use of AI at work - Administrative tasks,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_CODE,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each Coding or modeling",Use of AI at work - Coding or modeling,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_CUSTSUPP,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Customer support",Use of AI at work - Customer support,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_DATAVIS,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Data analysis and visualization",Use of AI at work - Data analysis and visualization,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_GENIDEA,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Generating ideas",Use of AI at work - Generating ideas,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_INTERP,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Interpreting, translating, or summarizing","Use of AI at work - Interpreting, translating, or summarizing","1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_LOG,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Managing logistics or supply chains",Use of AI at work - Managing logistics or supply chains,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_MED,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Medical care",Use of AI at work - Medical care,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_SEARCH,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Searching for information or technical help",Use of AI at work - Searching for information or technical help,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_TUTOR,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Tutoring, training, or educational assistance","Use of AI at work - Tutoring, training,  or educational assistance","1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_COMM,Worked for pay in last 7 days (ANYWORK=1),"Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) IN YOUR WORK, have you used AI to do any of the following tasks? Select Yes or No for each. Writing communications, documentation, or instructions","Use of AI at work - Writing communications, documentation, or instructions","1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+AIWRK_FREQ,If used AI at work for at least one task (AIWRK_ADMIN=1 or AIWRK_CODE=1 or AIWRK_CUSTSUPP=1 or AIWRK_DATAVIS=1 or AIWRK_GENIDEA=1 or AIWRK_INTERP=1 or AIWRK_LOG=1 or AIWRK_MED=1 or AIWRK_SEARCH=1 or AIWRK_TUTOR=1 or AIWRK_COMM=1),"AT WORK, how often did you use AI last week?",Use of AI at work - Frequency,"1) 	Used every day last week
+2) 	Used at least 1 day last week, but not every day
+3)	 Used, but not last week
+-99) Did not answer
+-88) Not in universe"
+AIWRK_HOURS,"Used AI at work at least 1 day last week (AIWRK_FREQ=1,2)","If you had NOT been able to use AI at work last week, how many additional hours would you have needed to complete the same amount of work?",Use of AI at work - time saved (hours),"1) 	Less than 1 hour
+2) 	1 hour
+3) 	2 hours
+4) 	3 hours
+5)	 4 hours
+6)	 More than 4 hours
+7) 	No time savings
+8) Required additional time
+-99) Did not answer
+-88) Not in universe"
+SEEING,All respondents,"Do you have difficulty seeing, even when wearing glasses?",Limitations in seeing,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+HEARING,All respondents,"Do you have difficulty hearing, even when using a hearing aid?",Limitations in hearing,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+MOBILITY,All respondents,Do you have difficulty walking or climbing stairs?,Limitations in mobility,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+REMEMBERING,All respondents,Do you have difficulty remembering or concentrating?,Limitations in remembering or concentrating,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+SELFCARE,All respondents,"Do you have difficulty with self-care, such as washing all over or dressing?",Limitations in self-care,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+UNDERSTAND,All respondents,"Using your usual language, do you have difficulty communicating, for example understanding or being understood?",Limitations in understanding or being understood,"1) No - no difficulty
+2) Yes - some difficulty
+3) Yes - a lot of difficulty
+4) Cannot do at all
+-99) Did not answer"
+ANXIOUS,All respondents,"Feeling nervous, anxious, or on edge?",Frequency of anxiety over previous 2 weeks,"1) Not at all
+2) Several days
+3) More than half the days
+4) Nearly every day
+-99) Did not answer"
+WORRY,All respondents,Not being able to stop or control worrying?,Frequency of worry over previous 2 weeks,"1) Not at all
+2) Several days
+3) More than half the days
+4) Nearly every day
+-99) Did not answer"
+INTEREST,All respondents,Having little interest or pleasure in doing things?,Frequency of having little interest in things over previous 2 weeks,"1) Not at all
+2) Several days
+3) More than half the days
+4) Nearly every day
+-99) Did not answer"
+DOWN,All respondents,"Feeling down, depressed, or hopeless?",Frequency of feeling depressed over previous 2 weeks,"1) Not at all
+2) Several days
+3) More than half the days
+4) Nearly every day
+-99) Did not answer"
+MHLTH_NEED,Children living in the household under 1 year old (KIDS_LT1Y=1),"During the last 4 weeks, did any children in your household need mental health treatment? Mental health treatment includes health services like counseling or medication.",Children's need for mental health treatment,"1) Yes, all children needed mental health treatment
+2) Yes, some but not all children needed mental health treatment
+3) No, none of the children needed mental health treatment
+-99) Did not answer
+-88) Not in universe"
+MHLTH_GET,"At least some children living in the household needed mental health treatment (MHLTH_NEED=1,2)",Did the children who needed mental health treatment receive it?,Children received mental health treatment,"1) Yes, all children who needed treatment received it
+2) Yes, but only some children who needed treatment received it
+3) No, none of the children who needed treatment received it
+-99) Did not answer
+-88) Not in universe"
+RMHLTH_SATISFIED,"At least some children living in the household needed mental health treatment and received it (MHLTH_GET=1,2)","Were you satisfied with the type, quality, and quantity of mental health treatment the children received?",Satisfaction with mental health treatment - Recoded,"1) Satisfied with all of the mental health treatment the children received
+2) Satisfied with some but not all of the mental health treatment the children received
+3) Not satisfied with the mental health treatment the children received
+-88)Not in universe"
+MHLTH_DIFFICULT,"At least some children living in the household needed mental health treatment (MHLTH_NEED=1,2)",How difficult was it to get mental health treatment for the children?,Difficulty obtaining mental health treatment,"1) Not difficult
+2) Somewhat difficult
+3) Very difficult
+4) Unable to get treatment due to difficulty
+5) Did not try to get treatment
+-99) Did not answer
+-88) Not in universe"
+HLTHINS_EMP,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Insurance through a current or former employer or union (through yourself or another family member)",Currently covered by Insurance through a current or former employer,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_MEDICARE,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Medicare, for people 65 and older, or people with certain disabilities","Currently covered by Medicare, for people 65 and older, or people with certain disabilities","1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_MEDICAID,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Medicaid, Children's Health Insurance Program (CHIP), or any kind of government assistance plan for those with low incomes or a disability","Currently covered by Medicaid, Children's Health Insurance Program (CHIP), or any kind of government-assistance plan","1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_PURCH,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Insurance purchased directly from an insurance company, including marketplace coverage (through yourself or another family member)",Currently covered by Insurance purchased directly from an insurance company,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_VA,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Veteran's health care (enrolled for VA)",Currently covered by VA,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_TRICARE,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. TRICARE or other military health care",Currently covered by TRICARE or other military health care,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_IHS,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Indian Health Service",Currently covered by Indian Health Service,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_OTH,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. Any other type of health insurance or health coverage plan, specify:",Currently covered by Other insurance,"1) Selected
+2) Not selected
+-99) Did not answer"
+HLTHINS_NO,All respondents,"Are you CURRENTLY covered by any of the following types of health insurance or health coverage plans? Do NOT include plans that cover only one type of service, such as dental, drug, or vision plans. Select all that apply. None",Currently covered by: None,"1) Selected
+2) Not selected
+-99) Did not answer"
+SOC_LONELY,All respondents,How often do you feel lonely?,Frequency of Loneliness,"1) Always
+2) Usually
+3) Sometimes
+4) Rarely
+5) Never
+-99) Did not answer"
+SOC_SUPPORT,All respondents,How often do you get the social and emotional support you need?,Social and emotional support,"1) Always
+2) Usually
+3) Sometimes
+4) Rarely
+5) Never
+-99) Did not answer"
+SOC_TOGETHER,All respondents,"In a typical week, and not including people you live with, how many times do you get together with people that you care about and feel close to?","Gets together with family, friends, or neighbors","1) Never or less than once a week
+2) 1 or 2 times
+3) 3 or 4 times
+4) 5 or more times a week
+-99) Did not answer"
+SOC_TALK,All respondents,"In a typical week, and not including people you live with, how many times do you talk on the telephone or by video with the people that you care about and feel close to?","Talks with family, friends, or neighbors on phone or by video","1) Never or less than once a week
+2) 1 or 2 times
+3) 3 or 4 times
+4) 5 or more times a week
+-99) Did not answer"
+SOC_RELSERVICES,All respondents,"During the past 12 months, how many times did you attend religious services?",Attends religious services,"1) Zero
+2) 1 to 3 times
+3) 4 to 11 times
+4) 12 or more times
+-99) Did not answer"
+SOC_CLUBS,All respondents,"During the past 12 months, how many times did you attend meetings of clubs or organizations you belong to? Examples include community groups, unions, athletic groups, or school groups",Attends meetings of clubs or organizations,"1) Zero/do not belong to a group
+2) 1 to 3 times
+3) 4 to 11 times
+4) 12 or more times
+-99) Did not answer"
+VOL_ANY,All respondents,"During the PAST 12 MONTHS, did you spend any time volunteering for any organization or association?",Volunteered in past 12 months,"1) Yes
+2) No
+-99) Did not answer"
+VOL_FREQ,Volunteered in the past 12 month (VOL_ANY=1),"During the PAST 12 MONTHS, how often did you volunteer?",Frequency of volunteering in the past 12 months,"1) Less than once a month
+2) Once a month
+3) 2 - 4 times a month
+4) 2 - 4 times a week
+5) More than 4 times a week
+6) Not at all
+-99) Did not answer
+-88) Not in universe"
+HELP_NEIGHBORS,All respondents,"During the PAST 12 MONTHS, how often did you and your neighbors do favors for each other such as house sitting, watching each other’s children, and lending tools?",Frequency of helping neighbors in the past 12 months,"1) Less than once a month
+2) Once a month
+3) 2 - 4 times a month
+4) 2 - 4 times a week
+5) More than 4 times a week
+6) Not at all
+-99) Did not answer"
+VAC_COVID,All respondents,"Have you received the following vaccines THIS SEASON (that is, since August 2025)? COVID",Received fall 2025 vaccination - Covid,"1) Yes
+2) No
+-99) Did not answer"
+VAC_FLU,All respondents,"Have you received the following vaccines THIS SEASON (that is, since August 2025) Flu?",Received fall 2025 vaccination - Flu,"1) Yes
+2) No
+-99) Did not answer"
+VAC_RSV,All respondents,There is a vaccine that became available in the Fall of 2023 that helps prevent the respiratory virus called RSV.  Have you ever received a vaccine for RSV?,Ever received RSV vaccine,"1) Yes
+2) No
+-99) Did not answer"
+NARCAN_CARRY,All respondents,Naloxone (Narcan) is a medication which can be used to reverse an opioid overdose. Have you ever carried naloxone in case of an emergency?,Ever carry Narcan,"1) Yes
+2) No
+-99) Did not answer"
+RNARCAN_EVERUSE,Carried Naloxone in case of emergency (NARCAN_CARRY=1),Have you ever used naloxone to reverse an opioid overdose?,Ever use Narcan,"1) Yes
+2) No
+-88) Not in universe"
+RNARCAN_USEPAST30,Used Naloxone to reverse opioid overdose (NARCAN_EVERUSE=1),Have you used naloxone in the PAST 30 DAYS to reverse an opioid overdose?,Used Narcan in past 30 days,"1) Yes
+2) No
+-88) Not in universe"
+MEDSHORT_PRESC,All respondents,"In the LAST 4 WEEKS, have you or a member of your household been directly affected by a shortage of the following? Select all that apply. A medicine or medication that requires a prescription or is given by provider, pharmacist, or hospital","Medication shortage - A medicine or medication that requires a prescription or is given by provider, pharmacist, or hospital","1) Selected
+2) Not selected
+-99) Did not answer"
+MEDSHORT_OTC,All respondents,"In the LAST 4 WEEKS, have you or a member of your household been directly affected by a shortage of the following? Select all that apply. A medicine or medication that is sold over the counter (without a prescription)",Medication shortage - A medicine or medication that is sold over the counter (without a prescription),"1) Selected
+2) Not selected
+-99) Did not answer"
+MEDSHORT_SUPPLIES,All respondents,"In the LAST 4 WEEKS, have you or a member of your household been directly affected by a shortage of the following? Select all that apply. A medical equipment or supplies used at home such as infusion pumps, glucose monitors, home ventilators, masks, gloves, etc.","Medication shortage - Medical equipment or supplies used at home such as infusion pumps, glucose monitors, home ventilators, masks, gloves, etc.","1) Selected
+2) Not selected
+-99) Did not answer"
+MEDSHORT_OTH,All respondents,"In the LAST 4 WEEKS, have you or a member of your household been directly affected by a shortage of the following? Select all that apply. Other critical medical products, please specify","Medication shortage - Other critical medical products, please specify","1) Selected
+2) Not selected
+-99) Did not answer"
+MEDSHORT_NONE,All respondents,"In the LAST 4 WEEKS, have you or a member of your household been directly affected by a shortage of the following? Select all that apply. My household has not been affected by any of these shortages",Medication shortage - My household has not been affected by any of these shortages,"1) Selected
+2) Not selected
+-99) Did not answer"
+MEDRES_ALT,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Changed to a substitute or alternative medication, equipment, or medical product","Response to Medication shortage - Changed to a substitute or alternative medication, equipment, or medical product","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_SPEND,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Spent more money or time to find the medication, equipment, or medical products","Response to Medication shortage - Spent more money or time to find the medication, equipment, or medical products","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_REDUCE,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Delayed, stopped, rationed or re-used medication, equipment, or medical products","Response to Medication shortage - Delayed, stopped, rationed or re-used medication, equipment, or medical products","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_PROC,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Delayed or canceled a medical procedure or treatment because medication, equipment or products needed for care were not available to me or a prov","Response to Medication shortage - Delayed or canceled a medical procedure or treatment because medication, equipment or products needed for care were not available to me or a provider","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_HELP,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Consulted a medical professional or other sources to help me get medication, equipment, or medical products","Response to Medication shortage - Consulted a medical professional or other sources to help me get medication, equipment, or medical products","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_NEG,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),How did you or a member of your household respond to the shortage? Select all that apply. Experienced negative physical health impacts,Response to Medication shortage - Experienced negative physical health impacts,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_NEGHLTH,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),How did you or a member of your household respond to the shortage? Select all that apply. Experienced negative mental health impacts,Response to Medication shortage - Experienced negative mental health impacts,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_DK,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),How did you or a member of your household respond to the shortage? Select all that apply. I don't know,Response to Medication shortage - I don't know,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+MEDRES_OTH,Reported a shortage of medicine or medical supplies in the last 4 weeks (MEDSHORT_PRESC=1 or MEDSHORT_OTC=1 or MEDSHORT_SUPPLIES=1 or MEDSHORT_OTH=1),"How did you or a member of your household respond to the shortage? Select all that apply. Other, specify","Response to Medication shortage - Other, specify","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+FD_SUFF,All respondents,"Getting enough food can be a problem for some people. In the LAST 7 DAYS, which of these statements best describes the food eaten in your household?",Household food sufficiency for last 7 days,"1) Enough of the kinds of food (I/we) wanted to eat
+2) Enough, but not always the kinds of food (I/we) wanted to eat
+3) Sometimes not enough to eat
+4) Often not enough to eat
+-99) Did not answer
+-88) Not in universe"
+FD_CHILD,"Did not report getting enough of the kinds of food they want to each (FD_SUFF=2,3, 4) and have at least one child under 18 in the household (HHLD_NUMKID>0)","Please indicate whether the next statement was often true, sometimes true, or never true in the LAST 7 DAYS for the children living in your household who are under 18 years old. ""The children were not eating enough because we just couldn't afford enough food.""",Children not eating enough because we couldn't afford enough food,"1) Often true
+2) Sometimes true
+3) Never true
+-99) Did not answer
+-88) Not in universe"
+FDRSN_AFFORD,"Did not report getting enough of the kinds of food they want to each (FD_SUFF=2,3, 4)",Why did you not have enough to eat (or not what you wanted to eat)? Select all that apply. Couldn’t afford to buy more food,Why not enough to eat - Couldn't afford to buy more food,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+FDRSN_GETSTORE,"Did not report getting enough of the kinds of food they want to each (FD_SUFF=2,3, 4)","Why did you not have enough to eat (or not what you wanted to eat)? Select all that apply. Couldn’t get to store to buy food (for example, didn’t have transportation, have mobility or health limitations that prevent you from getting out)",Why not enough to eat - Couldn’t get out to buy food,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+FDRSN_SAFETY,"Did not report getting enough of the kinds of food they want to each (FD_SUFF=2,3, 4)",Why did you not have enough to eat (or not what you wanted to eat)? Select all that apply. Couldn’t go to store due to safety concerns,Why not enough to eat - Couldn’t go to store due to safety concerns,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+FDRSN_NONE,"Did not report getting enough of the kinds of food they want to each (FD_SUFF=2,3, 4)",Why did you not have enough to eat (or not what you wanted to eat)? Select all that apply. None of the above,Why not enough to eat - No reason,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+FD_FREE,All respondents,"During the LAST 7 DAYS, did you or anyone in your household get free groceries from a food pantry, food bank, church, or other place that provides free food?","Got free groceries from a food pantry, food bank, church, or other place that provides free food","1) Yes
+2) No
+-99) Did not answer"
+FDBEN_SNAP,All respondents,Do you or does anyone in your household currently receive benefits from… Select all that apply. Supplemental Nutrition Assistance Program (SNAP) or Food Stamp Program,Currently received benefits from: Supplemental Nutrition Assistance Program (SNAP) or Food Stamp Program,"1) Selected
+2) Not selected
+-99) Did not answer"
+FDBEN_WIC,All respondents,"Do you or does anyone in your household currently receive benefits from… Select all that apply. WIC (Special Supplemental Nutrition Program for Women, Infants, and Children)","Currently received benefits from: WIC (Special Supplemental Nutrition Program for Women, Infants, and Children)","1) Selected
+2) Not selected
+-99) Did not answer"
+FDBEN_NSLPRED,All respondents,Do you or does anyone in your household currently receive benefits from… Select all that apply. Free or reduced-price meals at school through NSLP (National School Lunch Program),Currently received benefits from: Free or reduced-price meals at school through NSLP (National School Lunch Program),"1) Selected
+2) Not selected
+-99) Did not answer"
+FDBEN_NONE,All respondents,Do you or does anyone in your household currently receive benefits from… Select all that apply. None of these,Currently received benefits from: None of these,"1) Selected
+2) Not selected
+-99) Did not answer"
+FDSCHL_EXPNSDIF,Children ages 5 to 17 living in the household (KIDS_5_11Y =1 or KIDS_12_17Y=1),Does having to pay for the food children eat at school make it difficult for your household to pay for other expenses?,Difficulty with expense due to needing to pay for food children eat at school,"1) Yes
+2) No
+3) Not Applicable/don’t have to pay for food at school
+-99) Did not answer
+-88) Not in universe"
+EXPENSE_DIFFICULT,All respondents,"In the LAST 2 MONTHS, how difficult has it been for your household to pay for usual household expenses, including but not limited to food, rent or mortgage, car payments, medical expenses, student loans, and so on?",Difficulty with expenses,"1) Not at all difficult
+2) A little difficult
+3) Somewhat difficult
+4) Very difficult
+-99) Did not answer"
+PRICECHANGE,All respondents,"In the area where you live and shop, do you think prices in general have changed in the LAST 2 MONTHS?",Perception of price changes,"1) I think prices have increased
+2) I do not think prices have changed
+3) I think prices have decreased
+4) I do not know
+-99) Did not answer"
+PRICESTRESS,Reported prices have increased in the last 12 months (PRICECHANGE=1),"How stressful, if at all, has the increase in prices in the LAST 2 MONTHS been for you?",Stress of price changes,"1) Very stressful
+2) Moderately stressful
+3) A little stressful
+4) Not at all stressful
+-99) Did not answer
+-88) Not in universe"
+PRICECONCERN,All respondents,"In the area you live and shop, how concerned are you, if at all, that prices will increase in the NEXT 6 MONTHS?",Concern of price changes,"1) Very concerned
+2) Somewhat concerned
+3) A little concerned
+4) Not at all concerned
+-99) Did not answer"
+TENURE,All respondents,The next questions ask about housing.Is your house or apartment…?,Housing owned or rented,"1) Owned by you or someone in this household free and clear
+2) Owned by you or someone in this household with a mortgage or loan (including home equity loans)
+3) Rented
+4) Occupied without payment of rent
+-99) Did not answer"
+RENTCUR,Reported home is rented  (TENURE=3),Is this household CURRENTLY caught up on rent payments?,Caught up on rent,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+MORTCUR,Home owned by respondent or someone in the household with a mortgage or loan (TENURE=2),Is this household CURRENTLY caught up on mortgage payments?,Caught up on mortgage,"1) Yes
+2) No
+-99) Did not answer
+-88) Not in universe"
+TMONTHSBEHIND,Household not currently caught up with rent or mortgage payments (RENTCUR=2 or MORTCUR=2),How many months behind is this household in paying your rent or mortgage?,Months behind in rent or mortgage - Topcoded,"0 to 8
+-99) Did not answer
+-88) Not in universe"
+EVICT,Household not currently caught up with rent payments (RENTCUR=2),How likely is it that your household will have to leave this home or apartment within the NEXT 2 MONTHS because of eviction?,Eviction in next two months,"1) Very likely
+2) Somewhat likely
+3) Not very likely
+4) Not likely at all
+-99) Did not answer
+-88) Not in universe"
+RFORECLOSE,Household not currently caught up with mortgage payments (MORTCUR=2),How likely is it that your household will have to leave this home within the NEXT 2 MONTHS because of foreclosure?,Foreclose in next two months - Recoded,"1) Very or somewhat likely
+3) Not very likely
+4) Not likely at all
+-88) Not in universe"
+LIVEARRANGEPLAN,"At least somewhat likely to leave home within next 2 months due to eviction or foreclosure (EVICT=1,2 or FORECLOSE=1,2)","If you (and your household) did have to leave, where do you think you would go? Select only one answer.",Living arrangement plan in case of eviction or foreclosure,"1) Get a different place of your/their own to live in
+2) Move in with friends
+3) Move in with family
+4) Household would split up and go to different places
+5) Would probably go to a homeless shelter
+6) Move into vehicle
+7) Live outside
+-99) Did not answer
+-88) Not in universe"
+EH,All respondents,At any time in the last 12 months did you or a person that currently lives with you experience homelessness?,Experienced any homelessness,"1) Yes
+2) No
+-99) Did not answer"
+EH_SHELTER,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),Where did you or that person live or stay when experiencing homelessness? Select all that apply. In a homeless shelter,Living arrangement during homelessness: Homeless shelter,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EH_STREET,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),Where did you or that person live or stay when experiencing homelessness? Select all that apply. On the streets/tent/car/abandoned building,Living arrangement during homelessness: Streets/tent/car/abandoned building,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EH_COUCH,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),Where did you or that person live or stay when experiencing homelessness? Select all that apply. Sleeping temporarily on someone's couch,Living arrangement during homelessness: Sleeping temporarily on someone's couch,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EH_OTHER,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),Where did you or that person live or stay when experiencing homelessness? Select all that apply. Other,Living arrangement during homelessness: Other,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EH_DK,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),Where did you or that person live or stay when experiencing homelessness? Select all that apply. Don't know,Living arrangement during homelessness: Don't know,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_SELF,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. It was me",Who experienced homelessness - It was me,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_SPOUSE,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. My spouse/partner",Who experienced homelessness - My spouse/partner,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_ADULTCHILD,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. My child 18 or older",Who experienced homelessness - My child 18 or older,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_CHILDU18,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. My child under age 18",Who experienced homelessness - My child under age 18,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_PARENT,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. Parent",Who experienced homelessness - Parent,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_SIBLING,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. Sibling",Who experienced homelessness - Sibling,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_OTHERFAM,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. Other family member",Who experienced homelessness - Other family member,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+EHWHO_NONRELATIVE,Respondent or someone living with respondent experienced homelessness in last 12 months (EH=1),"Were you the person who experienced homelessness? If not, how is that person related to you? Select all that apply. Unrelated person",Who experienced homelessness - Unrelated person,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+ENERGY,All respondents,"In the LAST 2 MONTHS, did your household reduce or forego expenses for basic household necessities, such as medicine or food, in order to pay an energy bill?",Trouble paying energy bill,"1) Yes
+2) No
+-99) Did not answer"
+HSE_TEMP,All respondents,"In the LAST 2 MONTHS, did your household keep your home at a temperature that you felt was unsafe or unhealthy?",Kept household at unsafe temp because of cost,"1) Yes
+2) No
+-99) Did not answer"
+ENERGY_BILL,All respondents,"In the LAST 2 MONTHS, was your household unable to pay an energy bill or unable to pay the full bill amount?",Unable to pay full energy bill,"1) Yes
+2) No
+-99) Did not answer"
+TP_WALK,All respondents,"Currently, which of the following transportation options do you have access to:
+
+Select all that apply. Walk",Available transportation options - Walk,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_BIKE,All respondents,"Currently, which of the following transportation options do you have access to:
+
+Select all that apply. Bike or e-scooter",Available transportation options - Bike or e-scooter,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_MOTORCYCLE,All respondents,"Currently, which of the following transportation options do you have access to:
+
+Select all that apply. Motorcycle or moped",Available transportation options - Motorcycle or moped,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_VEHOWN,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Your own personal vehicle (e.g., car, truck, SUV)","Available transportation options - Your own personal vehicle (e.g., car, truck, SUV)","1) Selected
+2) Not selected
+-99) Did not answer"
+TP_VEHBOR,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. A personal vehicle borrowed from a friend, family member, neighbor, coworker, or acquaintance (including carpooling)","Available transportation options - A personal vehicle borrowed from a friend, family member, neighbor, coworker, or acquaintance (including carpooling)","1) Selected
+2) Not selected
+-99) Did not answer"
+TP_VEHRENT,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Rental car or carsharing service (e.g., Zipcar)","Available transportation options - Rental car or carsharing service (e.g., Zipcar)","1) Selected
+2) Not selected
+-99) Did not answer"
+TP_TAXI,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Taxi service or rideshare (e.g., Uber, Lyft)","Available transportation options - Taxi service or rideshare (e.g., Uber, Lyft)","1) Selected
+2) Not selected
+-99) Did not answer"
+TP_BUS,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Bus",Available transportation options - Bus,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_RAIL,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Rail transit (subway, light rail, streetcar, commuter rail)","Available transportation options - Rail transit (subway, light rail, streetcar, commuter rail)","1) Selected
+2) Not selected
+-99) Did not answer"
+TP_FERRY,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Ferryboat",Available transportation options - Ferryboat,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_PARA,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Paratransit (that is, specialized, door-to-door transport service for people with disabilities)",Available transportation options - Paratransit,"1) Selected
+2) Not selected
+-99) Did not answer"
+TP_OTH,All respondents,"Currently, which of the following transportation options do you have access to: Select all that apply. Other methods, please specify","Available transportation options - Other methods, please specify","1) Selected
+2) Not selected
+-99) Did not answer"
+TPACCESS,All respondents,Which one of the following statements best describes your access to transportation in the last 4 weeks:,Access to transportation in the last 4 weeks,"1) Enough transportation to meet your needs
+2) Enough transportation, but not always the kinds you want to use
+3) Sometimes not enough transportation to meet your needs
+4) Often not enough transportation to meet your needs
+5) Always not enough transportation to meet your needs
+-99) Did not answer"
+TPNEED_NOTAVAIL,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): My transportation options are not available when I need them",Reason for unmet transportation needs - My transportation options are not available when I need them,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_MORETIME,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): My transportation options require more travel time than I have available",Reason for unmet transportation needs - My transportation options require more travel time than I have available,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_UNPRED,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): My transportation options are unpredictable (travel time, availability)","Reason for unmet transportation needs - My transportation options are unpredictable (travel time, availability)","1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_AFFORD,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): My transportation options cost more than I can afford",Reason for unmet transportation needs - My transportation options cost more than I can afford,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_UNSAFE,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): My transportation options feel unsafe",Reason for unmet transportation needs - My transportation options feel unsafe,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_DISAB,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): I have a disability that limits my travel options or makes travel challenging",Reason for unmet transportation needs - I have a disability that limits my travel options or makes travel challenging,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+TPNEED_NONE,"Does not have enough transportation to meet needs at least sometimes (TPACCESS=3,4,5)","If you do not have enough transportation to meet your needs, which of the following reasons explain why (select all that apply): None of the above",Reason for unmet transportation needs - None of the above,"1) Selected
+2) Not selected
+-99) Did not answer
+-88) Not in universe"
+LIVE_ENTERTAINMENT,All respondents,"During the last 4 weeks, did you attend any live music, dance, or theater performances in person?",Attended live entertainment in person,"1) Yes
+2) No
+-99) Did not answer"
+ARTEXHIBIT,All respondents,"During the last 4 weeks, did you go in person to an art exhibit, such as paintings, sculpture, textiles, graphic design, or photography?",Attended art exhibit,"1) Yes
+2) No
+-99) Did not answer"
+MOVIES,All respondents,"During the last 4 weeks, did you go to the movies?",Went to the movies,"1) Yes
+2) No
+-99) Did not answer"
+CREATEART,All respondents,"During the last 4 weeks, did you create, practice, or perform art of your own? 
+This may have included music, dance, or theater; creative writing; crafts or visual arts; digital art; or film or photography done for artistic purposes.","Created, practiced, or performed own art","1) Yes
+2) No
+-99) Did not answer"
+PARTINARTS,All respondents,"Please indicate whether you strongly agree, agree, disagree, or strongly disagree with the next statement.
+
+
+""There are plenty of opportunities for me to take part in arts and cultural activities in my neighborhood or community.""",Opportunity to take part in neighborhood or community arts and cultural activities,"1) Strongly agree
+2) Agree
+3) Disagree
+4) Strongly Disagree
+-99) Did not answer"
+VOTE_PRES2024,All respondents,"Did you vote in the 2024 Presidential Election held on November 5, 2024?",Voted in 2024 Presidential election,"1) Yes
+2) No
+3) Don’t Remember
+4) Not eligible to vote
+-99) Did not answer"
+VOTE_CON2022,All respondents,"Did you vote in the 2022 Congressional Election held on November 8, 2022?",Voted in 2022 Congressional election,"1) Yes
+2) No
+3) Don’t Remember
+4) Not eligible to vote
+-99) Did not answer"
+VOTE_PRES2020,All respondents,"Did you vote in the 2020 Presidential Election held on November 3, 2020?",Voted in 2020 Presidential election,"1) Yes
+2) No
+3) Don’t Remember
+4) Not eligible to vote
+-99) Did not answer"
+VOTE_CON2018,All respondents,"Did you vote in the 2018 Congressional Election held on November 6, 2018?",Voted in 2018 Congressional election,"1) Yes
+2) No
+3) Don’t Remember
+4) Not eligible to vote
+-99) Did not answer"
+REG_PRES2024,Respondent did not report voting in 2024 presidential election and did not report not being eligible to vote (VOTE_PRES2024  ne 1 or 4),"Were you registered to vote in the 2024 Presidential Election held on November 5, 2024?",Registered to vote in 2024 Presidential election,"1) Yes
+2) No
+3) Don’t Remember
+-99) Did not answer"
+REG_CON2022,Respondent did not report voting in 2024 congressional election and did not report not being eligible to vote (VOTE_CON2022  ne 1 or 4),"Were you registered to vote in the 2022 Congressional Election held on November 8, 2022?",Registered to vote in 2022 Congressional election,"1) Yes
+2) No
+3) Don’t Remember
+-99) Did not answer"
+REG_PRES2020,Respondent did not report voting in 2020 presidential election and did not report not being eligible to vote (VOTE_PRES2020  ne 1 or 4),"Were you registered to vote in the 2020 Presidential Election held on November 3, 2020?",Registered to vote in 2020 Presidential election,"1) Yes
+2) No
+3) Don’t Remember
+-99) Did not answer"
+REG_CON2018,Respondent did not report voting in 2018 congressional election and did not report not being eligible to vote (VOTE_CON2018  ne 1 or 4),"Were you registered to vote in the 2018 Congressional Election held on November 6, 2018?",Registered to vote in 2018 Congressional election,"1) Yes
+2) No
+3) Don’t Remember
+-99) Did not answer"
+ATTENDMEETING,All respondents,"In the PAST 12 MONTHS, did you attend a public meeting such as a zoning or school board meeting to discuss a local issue?",Attended public meeting for local issue in past 12 months,"1) Yes
+2) No
+-99) Did not answer"
+PUBOFFICAL,All respondents,"In the PAST 12 MONTHS, did you contact or visit a public official – at any level of government – to express your opinion?",Contacted public official to express opinion in past 12 months,"1) Yes
+2) No
+-99) Did not answer"
+TRUST_FEDSTAT,All respondents,"The population count, the crime rate, and the unemployment rate are examples of statistics produced by the federal government. Personally, how much trust do you have in federal statistics in the United States? Would you say that you tend to trust federal statistics or you tend not to trust them?",Trust in federal statistics,"1) Tend to trust federal statistics
+2) Tend not to trust federal statistics
+-99) Did not answer"
+TRUST_MILITARY,All respondents,"How much confidence do you, yourself, have in the military?",Confidence in the military,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_POLICE,All respondents,"How much confidence do you, yourself, have in the police?",Confidence in the police,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_SUPREME,All respondents,"How much confidence do you, yourself, have in the U.S. Supreme Court?",Confidence in the U.S. Supreme Court,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_PRESIDENCY,All respondents,"How much confidence do you, yourself, have in the presidency?",Confidence in the presidency,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_SCHOOLS,All respondents,"How much confidence do you, yourself, have in public schools?",Confidence in public schools,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_CRIMJUST,All respondents,"How much confidence do you, yourself, have in the criminal justice system?",Confidence in the criminal justice system,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_CONGRESS,All respondents,"How much confidence do you, yourself, have in Congress?",Confidence in Congress,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_CENSUS,All respondents,"How much confidence do you, yourself, have in the U.S. Census Bureau?",Confidence in U.S. Census Bureau,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+TRUST_STATISTICAL,All respondents,"How much confidence do you, yourself, have in U.S. statistical agencies?",Confidence in U.S. statistical agencies,"1) A great deal
+2) Quite a lot
+3) Some
+4) Very little
+-99) Did not answer"
+FEDSTAT_NEED,All respondents,"To what extent do you agree or disagree with the following statement? 
+
+Policy makers need federal statistics to make good decisions about things like federal funding.",Agree or disagree that: Policy makers need federal statistics to make good decisions about things like federal funding.,"1) Strongly agree
+2) Somewhat agree
+3) Neither agree nor disagree
+4) Somewhat disagree
+5) Strongly disagree
+-99) Did not answer"
+RHHINCOME,All respondents,In 2025 what was your total household income before taxes?,Household income - Recoded,"1) Less than $25,000
+2) $25,000 - $34,999
+3) $35,000 - $49,999
+4) $50,000 - $74,999
+5) $75,000 - $99,999
+6) $100,000 - $149,000
+7) $150,000 and above
+-99) Did not answer"
+A_THHLD_NUMPER,All respondents,Allocation flag for THHLD_NUMPER,Allocation flag for THHLD_NUMPER,"1) Imputed
+2) Not imputed"
+A_THHLD_NUMKID,All respondents,Allocation flag for THHLD_NUMKID,Allocation flag for THHLD_NUMKID,"1) Imputed
+2) Not imputed"
+A_TAGE,All respondents,Allocation flag for TAGE,Allocation flag for TAGE,"1) Imputed
+2) Not imputed"
+A_TBIRTH_YEAR,All respondents,Allocation flag for TBIRTH_YEAR,Allocation flag for TBIRTH_YEAR,"1) Imputed
+2) Not imputed"
+A_ESEX,All respondents,Allocation flag for ESEX,Allocation flag for ESEX,"1) Imputed
+2) Not imputed"
+A_RRACETH,All respondents,Allocation flag for RRACETH,Allocation flag for RRACETH,"1) Imputed
+2) Not imputed"
+A_REDUC,All respondents,Allocation flag for A_REDUC,Allocation flag for A_REDUC,"1) Imputed
+2) Not imputed"

@@ -1,4 +1,5 @@
-data/raw/
+data/
 tests/fixtures/
 __pycache__/
 outputs/synthetic_*
+outputs/*.txt

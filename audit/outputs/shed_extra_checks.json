@@ -1,0 +1,144 @@
+{
+  "D52_a": {
+    "all_workers_wt": 0.4372642739918297,
+    "users_wt": 0.8097487466219847,
+    "nonusers_wt": 0.31481203326551127
+  },
+  "D52_b": {
+    "all_workers_wt": 0.24401803036118835,
+    "users_wt": 0.5184333631641687,
+    "nonusers_wt": 0.15380548497879862
+  },
+  "D52_c": {
+    "all_workers_wt": 0.2842921429301783,
+    "users_wt": 0.5547609106177429,
+    "nonusers_wt": 0.19537700932482882
+  },
+  "D52_d": {
+    "all_workers_wt": 0.18965026295013493,
+    "users_wt": 0.5077680821004089,
+    "nonusers_wt": 0.08507076331392047
+  },
+  "D52_e": {
+    "all_workers_wt": 0.20177404821600847,
+    "users_wt": 0.4813223700647476,
+    "nonusers_wt": 0.10987406065424793
+  },
+  "D52_f": {
+    "all_workers_wt": 0.20286703477103096,
+    "users_wt": 0.22101550179472043,
+    "nonusers_wt": 0.1969008251271593
+  },
+  "D50_given_D1A": {
+    "-9.0": {
+      "0": 5446,
+      "1": 0
+    },
+    "0.0": {
+      "0": 0,
+      "1": 5638
+    },
+    "1.0": {
+      "0": 0,
+      "1": 1850
+    }
+  },
+  "D51_given_D50": {
+    "-9.0": {
+      "-9.0": 5446,
+      "0.0": 5638,
+      "1.0": 0
+    },
+    "1.0": {
+      "-9.0": 0,
+      "0.0": 0,
+      "1.0": 270
+    },
+    "2.0": {
+      "-9.0": 0,
+      "0.0": 0,
+      "1.0": 269
+    },
+    "3.0": {
+      "-9.0": 0,
+      "0.0": 0,
+      "1.0": 441
+    },
+    "4.0": {
+      "-9.0": 0,
+      "0.0": 0,
+      "1.0": 326
+    },
+    "5.0": {
+      "-9.0": 0,
+      "0.0": 0,
+      "1.0": 544
+    }
+  },
+  "autonomy_universe_D28_a_nonmissing_by_D3A": {
+    "false": {
+      "-9.0": 5446,
+      "0.0": 0,
+      "1.0": 935,
+      "2.0": 268
+    },
+    "true": {
+      "-9.0": 0,
+      "0.0": 6285,
+      "1.0": 0,
+      "2.0": 0
+    }
+  },
+  "n_with_panel_weight": 4419,
+  "shedid_2024_n": 12295,
+  "shedid_overlap_2025_2024": 4420,
+  "overlap_among_panel_weight_nonmissing": 4419,
+  "2024_has_genai_items": [],
+  "linkage_2024_2025": {
+    "n_linked": 4420,
+    "ppgender_same_share": 0.9986425339366516,
+    "ppeducat_same_share": 0.9246606334841629,
+    "ppethm_same_share": 0.9766968325791855,
+    "ppstaten_same_share": 0.9735294117647059,
+    "age_diff_counts": {
+      "1": 4241,
+      "0": 87,
+      "2": 72,
+      "-5": 3,
+      "3": 2
+    },
+    "linked_workers_2025": 2727,
+    "linked_genai_users_2025": 662,
+    "linked_D51_nonmissing": 662,
+    "2024_has_D1A": true,
+    "2024_has_D3A": true,
+    "2024_has_D28_a": true,
+    "2024_has_D28_b": true,
+    "2024_has_ppcm0160": true,
+    "2024_has_ind1": true,
+    "2024_has_ppinc7": true,
+    "2024_has_D34A": true,
+    "2024_has_D44_b": true,
+    "linked_workers_in_BOTH_2024_and_2025": 2478,
+    "linked_users_who_were_workers_2024": 610,
+    "linked_2025workers_with_2024_autonomy": 2194
+  },
+  "linked_design_N": {
+    "label_equal_D28_a": true,
+    "label_equal_D28_b": true,
+    "valuelabels_equal_D28_a": true,
+    "label_equal_ppcm0160": false,
+    "linked_2025_employees_with_2024_D28_and_2025_D50": 2117,
+    "... of which GenAI users": 534,
+    "... with panel_weight_pop": 2117,
+    "... D51 valid": 534,
+    "2024_D28_values_in_linked_sample": {
+      "1.0": 248,
+      "2.0": 406,
+      "3.0": 722,
+      "4.0": 578,
+      "5.0": 163
+    },
+    "2024_fieldwork_has_D3A": true
+  }
+}

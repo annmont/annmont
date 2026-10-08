@@ -1,0 +1,96 @@
+[
+  {
+    "dataset": "ewcs",
+    "url": "https://www.eurofound.europa.eu/en/surveys-and-data/surveys/european-working-conditions-survey/ewcs-2024",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_landing.html",
+    "kind": "landing_2024",
+    "status": null,
+    "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.eurofound.europa.eu', port=443): Max retries exceeded with url: /en/surveys-and-data/surveys/european-working-conditions-survey/ewcs-2024 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))\"))"
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-first-findings",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_first_findings.html",
+    "kind": "first_findings",
+    "status": 429,
+    "last_modified": null,
+    "bytes": 33944
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-overview-report",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_overview.html",
+    "kind": "overview",
+    "status": 429,
+    "last_modified": null,
+    "bytes": 33949
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-data-validation-and-editing-report",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_validation.html",
+    "kind": "validation",
+    "status": 429,
+    "last_modified": null,
+    "bytes": 33940
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-coding-report",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_coding.html",
+    "kind": "coding",
+    "status": 429,
+    "last_modified": null,
+    "bytes": 33948
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://doc.ukdataservice.ac.uk/doc/7363/mrdoc/UKDA/UKDA_Study_7363_Information.htm",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ukds_7363_info.html",
+    "kind": "ukds_1991_2024",
+    "status": 200,
+    "last_modified": "Tue, 10 Mar 2026 11:47:37 GMT",
+    "bytes": 2664,
+    "sha256": "0e5e769e5ded4eff761280a8e8c80c86d1389462346461f900e08986844a2eca"
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://datacatalogue.cessda.eu/detail/31741ebe15b48694177b7274afa2b7af5a7ec43d10bfdb5c172eed6bc69002cf?lang=en",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/cessda_ewcs2024.html",
+    "kind": "cessda_2024",
+    "status": 200,
+    "last_modified": null,
+    "bytes": 14801,
+    "sha256": "c9c932c72cae90218fc50423ce4af0214340f31ea35c2bc40aa755f0fb09c49e"
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://doc.ukdataservice.ac.uk/doc/7363/mrdoc/pdf/7363_ewcs_2024_coding_report_final.pdf",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_coding_report.pdf",
+    "kind": "coding_report_pdf",
+    "status": 200,
+    "last_modified": "Thu, 05 Mar 2026 11:12:11 GMT",
+    "bytes": 3874191,
+    "sha256": "57ea9c8ee460c3ade63bbc3d3cada2a441bef74e3d2f8c96749397a0bbac0b41"
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://doc.ukdataservice.ac.uk/doc/7363/mrdoc/pdf/7363_ewcs_2024_quality_assurance_report_final.pdf",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/ewcs2024_quality_assurance_report.pdf",
+    "kind": "qa_report_pdf",
+    "status": 200,
+    "last_modified": "Thu, 05 Mar 2026 11:31:16 GMT",
+    "bytes": 658765,
+    "sha256": "e1f4cab2b0f7640b3c6c976bc4249d449bf9f85051fdd5adc13ad30d8b46271b"
+  },
+  {
+    "dataset": "ewcs",
+    "url": "https://arxiv.org/html/2604.18849",
+    "dest": "/home/user/annmont/audit/data/raw/ewcs/arxiv_2604_18849.html",
+    "kind": "arxiv_paper",
+    "status": 200,
+    "last_modified": "Mon, 24 Aug 2026 19:09:49 GMT",
+    "bytes": 381773,
+    "sha256": "0182bf0169c78f7d48a9b5ece1ca9cdfa467bd31e3e17728acab1a77114e6072"
+  }
+]

@@ -1,0 +1,816 @@
+variable,label,dtype,n_nonmissing
+shedid,SHEDID,str,12934
+duration,Duration (in seconds),int64,12934
+weight,Post-stratification weight - Main qualified respondents scaled to sample size (n,float64,12934
+weight_pop,Post-stratification weight - Main qualified respondents scaled to U.S. populatio,float64,12934
+panel_weight,Post-stratification weight - Main recontact respondents scaled to sample size (n,float64,4419
+panel_weight_pop,Post-stratification weight - Main recontact respondents scaled to U.S. populatio,float64,4419
+xlaptop,Is R a KP laptop user?,int64,12934
+L0_a,"My spouse or partner - First, do each of the following people currently live wit",int64,12934
+L0_b,"My child(ren) under age 18 - First, do each of the following people currently li",int64,12934
+L0_c,"My adult child(ren) age 18 or older - First, do each of the following people cur",int64,12934
+L0_d,"My parent(s) - First, do each of the following people currently live with you?",int64,12934
+L0_e,"Other individuals - First, do each of the following people currently live with y",int64,12934
+L0B_a,"Your brother(s) or sister(s) - [Other than your spouse or partner, children, or",object,1754
+L0B_b,"Other relatives - [Other than your spouse or partner, children, or parents, are/",object,1754
+L0B_c,"Other people not related to you - [Other than your spouse or partner, children,",object,1754
+L0C,How many children do you have who are under age 18 and currently live with you?,object,3024
+L0E,How old is your [youngest] child that lives with you?,object,3024
+B2,"Overall, which one of the following best describes how well you are managing fin",int64,12934
+B3,"Compared to 12 months ago, would you say that you (and your family) are better o",int64,12934
+B3A_a,Lower income or job loss - You said that you (and your family) are (somewhat/muc,object,3612
+B3A_b,My expenses are higher - You said that you (and your family) are somewhat worse,object,3612
+B3A_c,The value of my assets decreased- You said that you (and your family) are somewh,object,3612
+B3A_d,I have more debt - You said that you (and your family) are somewhat worse off fi,object,3612
+B3A_e,Other (please specify) - You said that you (and your family) are somewhat worse,object,3612
+B3A_f,You said that you (and your family) are somewhat worse off financially compared,object,3612
+B3B_a,Higher income or new job - You said that you (and your family) are (somewhat/muc,object,2976
+B3B_b,Expenses are lower - You said that you (and your family) are (somewhat/much) bet,object,2976
+B3B_c,The value of your assets increased - You said that you (and your family) are (so,object,2976
+B3B_d,You have less debt - You said that you (and your family) are somewhat better off,object,2976
+B3B_e,Prices for things you (and your family) buy have decreased - You said that you (,object,2976
+B3B_f,Other (please specify) - You said that you (and your family) are (somewhat/much),object,2976
+B7_a,In your community -  How would you rate economic conditions today,int64,12934
+B7_b,In this country -  How would you rate economic conditions today,int64,12934
+X11_none,X11 None selected,object,6467
+X12_a,Finding or keeping a job -  Are each of the following a financial challenge or c,object,6467
+X12_b,Increases in prices for things you buy -  Are each of the following a financial,object,6467
+X12_c,Housing costs or availability -  Are each of the following a financial challenge,object,6467
+X12_d,Retirement savings - Are each of the following a financial challenge or concern,object,6467
+X12_e,Making ends meet -  Are each of the following a financial challenge or concern f,object,6467
+X12_f,Medical debt or affording medical care -  Are each of the following a financial,object,6467
+X12_g,Student loans or education costs -  Are each of the following a financial challe,object,6467
+X13,In the prior question you indicated that finding or keeping a job and increases,object,1386
+CG0,"In the past week, did you use any paid childcare?",object,2184
+CG1A,"In the past week, how many hours did you use paid childcare?",object,529
+CG2,How much do you pay per week for childcare in total for all of your children?,object,529
+CG7_a,"Child's grandparent - In the past week, did you use any of the following forms o",object,2184
+CG7_b,"Child's sibling - In the past week, did you use any of the following forms of un",object,2184
+CG7_c,"Another relative other than the parent - In the past week, did you use any of th",object,2184
+CG7_d,"A nonrelative such as a friend or neighbor - In the past week, did you use any o",object,2184
+CG7_e,"Headstart or another preschool that you don't pay for - In the past week, did yo",object,2184
+CG7_f,"Other unpaid childcare (please specify) - In the past week, did you use any of t",object,2184
+CG7_g,"Did not use unpaid childcare - In the past week, did you use any of the followin",object,2184
+CG8,"In the past week, how many hours did you use the unpaid childcare you just menti",object,963
+CG3,"When it comes to taking care of your children when they are at home, which of th",object,1856
+CG4,Do you regularly provide unpaid help or care to an adult relative or friend who,int64,12934
+CG5_a,Your parent - Do you regularly provide unpaid help or care to each of the follow,object,2349
+CG5_b,Your spouse's or partner's parent - Do you regularly provide unpaid help or care,object,1544
+CG5_c,Your spouse or partner- Do you regularly provide unpaid help or care to each of,object,1544
+CG5_d,An adult child (age 18 or older) - Do you regularly provide unpaid help or care,object,2349
+CG5_e,Another relative - Do you regularly provide unpaid help or care to each of the f,object,2349
+CG5_f,A friend or neighbor - Do you regularly provide unpaid help or care to each of t,object,2349
+CG6,About how often do you provide unpaid help or care to an adult relative or frien,object,2349
+D1A,"Last month, did you do any work for either pay or profit?",int64,12934
+D4,"Last month, did you have more than one job, including part time, evening or week",object,7488
+D48,"Thinking about all your jobs, do/Do you usually work 35 hours or more per week?",object,7488
+D3B,"Thinking about your main job (where you earn the most money), do you usually wor",object,1212
+D1E,"At any time during the past month, did you want to work [more hours]?",int64,12934
+D22_a,Could not find (more) work - Did each of the following contribute to you not wor,object,7090
+D22_b,Full-time workweek less than 35 hours - Did each of the following contribute to,object,1644
+D22_c,Childcare - Did each of the following contribute to you not working/working less,object,7090
+D22_d,"Caregiving for an elderly, disabled, or sick adult - Did each of the following c",object,7090
+D22_e,Other family or personal obligations - Did each of the following contribute to y,object,7090
+D22_f,Would lose access to unemployment benefits or other government programs - Did ea,object,7090
+D22_g,Health limitations or disability- Did each of the following contribute to you no,object,7090
+D22_h,In school or training - Did each of the following contribute to you not working/,object,7090
+D22_i,Retired - Did each of the following contribute to you not working/working less t,object,7090
+D3A,Think about your main job (the job from which you earned the most money in the p,object,7488
+D3E,You indicated that you are [self-employed/do not work for someone else]. Do you,object,1203
+D28_a,I can choose what tasks I work on - How often do each of these statements descri,object,6285
+D28_b,I can choose how I complete tasks at work - How often do each of these statement,object,6285
+D50,"Generative AI is a type of artificial intelligence that creates text, images, au",object,7488
+D51,"Last month, about how often did you use Generative AI at your job?",object,1850
+D52_a,It saves time - Do you agree or disagree with the following statements about usi,object,7488
+D52_b,It improves quality - Do you agree or disagree with the following statements abo,object,7488
+D52_c, It enables me to do new tasks - Do you agree or disagree with the following sta,object,7488
+D52_d,  My employer encourages me to use it - Do you agree or disagree with the follow,object,7488
+D52_e, Having it available will improve my career - Do you agree or disagree with the,object,7488
+D52_f,I am worried about AI replacing my job - Do you agree or disagree with the follo,object,7488
+D30,"Still thinking about your main job, do/Do you normally start and end work around",object,6285
+D34A,"Thinking about the work you did last week, how much of it did you do by telecomm",object,7488
+D34D,"Last week, how many days did you telecommute or work from home?",object,1726
+D36B,How likely would you be to actively look for another job or leave your job if yo,object,6285
+D44_f,"Think about any job in the past 12 months, not just your main job. In the past 1",int64,12934
+D44_a,Asked for a raise or a promotion - [Think about any job in the past 12 months.],object,7488
+D44_b,Received a raise or a promotion - [Think about any job in the past 12 months.] I,object,7488
+D44_c,Applied for a new job - [Think about any job in the past 12 months.] In the past,int64,12934
+D44_d,Started a new job - [Think about any job in the past 12 months.] In the past 12,int64,12934
+D44_e,Voluntarily left a job - [Think about any job in the past 12 months.] In the pas,int64,12934
+D37A,You indicated that you started a new job in the past 12 months. Is your main job,object,1283
+D38_a,"Pay or benefits - Are each of the following better, the same, or worse at the ma",object,877
+D38_b,"Opportunities for advancement - Are each of the following better, the same, or w",object,877
+D38_c,"Your interest in the work - Are each of the following better, the same, or worse",object,877
+D38_d,"Physical demands of the job - Are each of the following better, the same, or wor",object,877
+D38_f,"Work-life balance - Are each of the following better, the same, or worse at the",object,877
+D39,"Overall, is the main job you have now better, the same, or worse than the one yo",object,877
+D1B,"If you wanted to, how confident are you that you could get a [new] job in the ne",int64,12934
+D5,"Last month, did your spouse or partner do any work for either pay or profit?",object,8332
+D49,Does your spouse or partner usually work 35 hours or more per week?,object,5118
+GH1,This section will ask some questions about your home. Do you (and/or your spouse,int64,12934
+GH12,Do you have either a homeowners insurance or a condo insurance policy for your p,object,8500
+GH12A,What is the main reason you do not have homeowners insurance?,object,523
+GH14,"Still thinking about homeowners insurance for your primary residence, how much d",float64,7977
+GH14A,Time period for homeowners insurance payment reported in GH14,object,7977
+GH15,Have you or someone in your household shopped around for homeowners insurance in,object,8500
+GH16_a,It's worth the cost - Do you agree or disagree with the following statements abo,object,7977
+GH16_b,I struggle to afford the premiums - Do you agree or disagree with the following,object,7977
+GH16_c,Cost has gone up more than I was expecting in recent years - Do you agree or dis,object,7977
+GH16_d,I would prefer more coverage but can't afford it - Do you agree or disagree with,object,7977
+GH16_e,I'm satisfied with what my policy covers - Do you agree or disagree with the fol,object,7977
+GH16_f,I only have it because my lender requires it - Do you agree or disagree with the,object,5034
+GH2,When did you move into your current home?,int64,12934
+R4,"Before your most recent move, did you own your previous home?",object,927
+R5B_a,Evicted or received an eviction notice - Did each of the following contribute to,object,705
+R5B_b,"Landlord told you, or a person you were staying with, to leave - Did each of the",object,705
+R5B_c,You missed a rent payment and thought you would be evicted - Did each of the fol,object,705
+R5B_d,City condemned the property and forced you to leave - Did each of the following,object,705
+R5C_a,Bank took possession of your home in foreclosure - Did each of the following con,object,161
+R5C_b,Received a notice from bank that they planned to foreclose - Did each of the fol,object,161
+R5C_c,Missed mortgage payments and thought bank would foreclose - Did each of the foll,object,161
+R5C_d,City condemned the property and forced you to leave - Did each of the following,object,161
+R3,Approximately how much do you and/or your spouse or partner pay for rent each mo,object,3426
+R11,Have you been behind on your rent at any time in the past year?,object,3426
+R18,Some people have their rent payments reported to credit bureaus to help them bui,object,3426
+M4,Approximately how much is your total monthly mortgage payment (i.e. the amount y,object,5176
+ND0,"In the past year, have you been financially affected by natural disasters or sev",int64,12934
+ND1_a,"Income loss or work disruption - In the past year, have natural disasters or sev",object,1828
+ND1_b,"Property damage - In the past year, have natural disasters or severe weather eve",object,1828
+ND1_c,"Needed to evacuate temporarily - In the past year, have natural disasters or sev",object,1828
+ND1_d,"Longer-term displacement from home - In the past year, have natural disasters or",object,1828
+ND1_e,"Other (please specify) - In the past year, have natural disasters or severe weat",object,1828
+ND4_a,"Investigated other places to live - In the past year, have you done each of the",int64,12934
+ND4_b,"Improved your property to reduce risk - In the past year, have you done each of",int64,12934
+ND4_c,"Purchased additional insurance - In the past year, have you done each of the fol",int64,12934
+BK1,"Do you [and/or your spouse or partner] currently have a checking, savings, or mo",int64,12934
+BK2_a,"Purchase a money order from a place other than a bank - In the past 12 months, d",int64,12934
+BK2_b,"Cash a check at a place other than a bank - In the past 12 months, did you [and/",int64,12934
+BK2_c,"Take out a payday loan or payday advance - In the past 12 months, did you [and/o",int64,12934
+BK2_d,"Take out a pawn shop loan or an auto title loan - In the past 12 months, did you",int64,12934
+BK2_e,Obtain a tax refund advance to receive your refund faster - In the past 12 month,int64,12934
+BK2_f,"Pay an overdraft fee on a bank account - In the past 12 months, did you [and/or",object,12236
+BK47_a,"Credit card fraud or scam - In the past year, have you personally experienced ei",int64,12934
+BK47_b,"Another type of financial fraud or scam - In the past year, have you personally",int64,12934
+BK48,"When answering the following questions, please think about the most recent finan",object,1093
+BK49A,Approximately how much money did you lose in the fraud or scam before any money,object,672
+BK49B,Approximately how much money did you recover or get refunded?,object,111
+BK53_a,Debit card - Still thinking about the most recent financial fraud or scam you ex,object,1093
+BK53_b,Cryptocurrency - Still thinking about the most recent financial fraud or scam yo,object,1093
+BK53_c,"Zelle, PayPal, Venmo, CashApp, or Apple Cash - Still thinking about the most rec",object,1093
+BK53_d,"Western Union, MoneyGram, Ria, or other money transfer service - Still thinking",object,1093
+BK53_e,Bank wire or other electronic transfer - Still thinking about the most recent fi,object,1093
+BK53_f,"Prepaid, gift, or government benefit card - Still thinking about the most recent",object,1093
+BK53_g,Personal check - Still thinking about the most recent financial fraud or scam yo,object,1093
+BK53_h,Cashier's check or money order - Still thinking about the most recent financial,object,1093
+BK53_i,Other payment method (please specify) - Still thinking about the most recent fin,object,1093
+BK53_j,Debit card - Still thinking about the most recent financial fraud or scam you ex,object,1093
+BK54_a,Zelle - Which of the following services was involved in the fraud or scam you ex,object,306
+BK54_b,PayPal - Which of the following services was involved in the fraud or scam you e,object,306
+BK54_c,Venmo - Which of the following services was involved in the fraud or scam you ex,object,306
+BK54_d,CashApp - Which of the following services was involved in the fraud or scam you,object,306
+BK54_e,Apple Cash - Which of the following services was involved in the fraud or scam y,object,306
+BK54_f, Other P2P service (please specify) - Which of the following services was involv,object,306
+BK55,Did you communicate with your bank or financial services company for assistance,object,1093
+BK56_a,Placed a freeze or temporary hold on my account - Did you or your bank do each o,object,1093
+BK56_b,Closed my account - Did you or your bank do each of the following because of the,object,1093
+BK56_c,I changed the banks or financial service companies that I use - Did you or your,object,1093
+BK57_a,Police or another law enforcement agency - Did you notify any of the following o,object,1093
+BK57_b,"Credit bureau (Equifax, Experian, Transunion) - Did you notify any of the follow",object,1093
+BK57_c,Federal or state government agency that deals with consumer concerns/complaints,object,1093
+BK50,Still thinking about the most recent financial fraud or scam you experienced in,object,1093
+BK58_no,BK58 No selected,object,1090
+A6,"If you were to apply for a credit card today, how confident are you that your ap",int64,12934
+A0,"In the past 12 months have you applied for any credit (such as a credit card, hi",int64,12934
+A7_a,Credit card - Have you applied for each of the following types of credit in the,object,4276
+A7_b,Car/auto loan - Have you applied for each of the following types of credit in th,object,4276
+A7_c,Student loan - Have you applied for each of the following types of credit in the,object,4276
+A7_d,Mortgage (purchase or refinance) - Have you applied for each of the following ty,object,4276
+A7_e,Home equity loan or line of credit - Have you applied for each of the following,object,4276
+A7_f,Other credit or loan - Have you applied for each of the following types of credi,object,4276
+A0B,Was there a time in the past 12 months that you desired credit but chose not to,object,8658
+A1_a,"Turned down for credit - In the past 12 months, has each of the following happen",object,4276
+A1_b,"Approved for credit, but were not given as much credit as you applied for - In t",object,4276
+A1_c,Put off applying for credit because you thought you might be turned down - In th,object,4276
+A8_a,Credit card - Were you turned down or offered less credit than requested for the,object,1117
+A8_b,Car/auto loan - Were you turned down or offered less credit than requested for t,object,333
+A8_c,Student loan - Were you turned down or offered less credit than requested for th,object,122
+A8_d,Mortgage (purchase or refinance) - Were you turned down or offered less credit t,object,116
+A8_e,Home equity loan or line of credit - Were you turned down or offered less credit,object,126
+A8_f,Other credit or loan - Were you turned down or offered less credit than requeste,object,447
+A2,You indicated that you desired credit in the past 12 months but did not submit a,object,932
+C2A,Do you currently have at least one credit card? Please do not include debit card,int64,12934
+C3P,"Last month, how did you handle your credit card bills?",object,10759
+C4A,"In the past 12 months, how frequently have you carried an unpaid balance on one",object,10759
+BNPL1,"In the past year, have you used a “Buy Now Pay Later” service to buy something?",int64,12934
+BNPL3,"In the past year, have you ever been late making a payment for something you bou",object,2004
+BNPL3A,"In the past year, have you been charged extra because you were late on a Buy Now",object,487
+BNPL1A,"In the past year, did any of your BNPL payments trigger an overdraft or non-suff",object,542
+BNPL4_a,Avoid interest charges - Thinking about the most recent time you used a Buy Now,object,2004
+BNPL4_b,Wanted to spread out payments - Thinking about the most recent time you used a B,object,2004
+BNPL4_c,Wanted a fixed number of payments - Thinking about the most recent time you used,object,2004
+BNPL4_d,Convenience - Thinking about the most recent time you used a Buy Now Pay Later s,object,2004
+BNPL4_e,Only way I could afford it  - Thinking about the most recent time you used a Buy,object,2004
+BNPL4_f,Only accepted payment method I had - Thinking about the most recent time you use,object,2004
+BNPL4_g,Did not want to use a credit card  - Thinking about the most recent time you use,object,2004
+BNPL5,"Thinking about the most recent time you used a Buy Now Pay Later service, which",object,1935
+BNPL6_a,"Clothing or accessories - In the past year, when you have used Buy Now Pay Later",object,2004
+BNPL6_b,"Groceries or food delivery  - In the past year, when you have used Buy Now Pay L",object,2004
+BNPL6_c,"Travel expenses (e.g. flights or hotels) - In the past year, when you have used",object,2004
+BNPL6_d,"Furniture or appliances  - In the past year, when you have used Buy Now Pay Late",object,2004
+BNPL6_e,"Electronics - In the past year, when you have used Buy Now Pay Later, which of t",object,2004
+BNPL6_f,"Medical or veterinary procedures - In the past year, when you have used Buy Now",object,2004
+BNPL6_g,"Other (please specify) - In the past year, when you have used Buy Now Pay Later,",object,2004
+BNPL7_a,It helps me build a credit history - Do you agree or disagree with the following,object,2004
+BNPL7_b, Making payments on time helps my credit score - Do you agree or disagree with t,object,2004
+S16_a,"Bought cryptocurrency or held as an investment - In the past year, have you done",int64,12934
+S16_b,"Used cryptocurrency to buy something or make a payment - In the past year, have",int64,12934
+S16_c,"Used cryptocurrency to send money to friends or family - In the past year, have",int64,12934
+S18,Were any of the family or friends you sent cryptocurrency to living outside of t,object,140
+S21,"What was the main reason you used cryptocurrency to buy something, make a paymen",object,279
+ED0,What is the highest level of school you have completed or the highest degree you,int64,12934
+D1G,Are you currently enrolled as a student?,int64,12934
+ED0B,What type of program are you currently pursuing?,object,858
+SL21,Do you have any student loans? These can be for your own education or someone el,int64,12934
+SL22_a,Yours - Whose education were your student loans used for?,object,1972
+SL22_b,Your spouse's/partner's - Whose education were your student loans used for?,object,1198
+SL22_c,Your child's/grandchild's - Whose education were your student loans used for?,object,1382
+SL22_d,Someone else's (please specify) - Whose education were your student loans used f,object,1972
+SL23,"Last month, how did you handle your student loan payments?",object,1972
+SL24,"In the past 12 months, did you have difficulty making payments on your student l",object,805
+SL25_a,I had unexpected expenses - Which of the following contributed to why you most r,object,448
+SL25_b,My income was less than my expenses - Which of the following contributed to why,object,448
+SL25_c,I had an unexpected drop in income - Which of the following contributed to why y,object,448
+SL25_d,I didn't know how to make payments - Which of the following contributed to why y,object,448
+SL25_e,I didn't know I needed to make payments - Which of the following contributed to,object,448
+SL25_f,I didn't want to make payments - Which of the following contributed to why you m,object,448
+SL25_g,None of the above - Which of the following contributed to why you most recently,object,448
+SL26_a,My student loans were assigned to a debt collector or collection agency - In the,object,448
+SL26_b,"My federal income tax refund was withheld by the IRS - In the past 12 months, di",object,448
+SL26_c,My Social Security retirement or disability benefits were withheld - In the past,object,448
+SL26_d,"My wages were garnished - In the past 12 months, did you experience any of the f",object,448
+D1I,Do you consider yourself to be retired?,int64,12934
+K0,Do you think that your retirement savings plan is currently on track?,object,8740
+K8A,At what age did you retire?,object,4194
+K9_a,Health problem - Were each of the following important to your decision to retire,object,4194
+K9_b,Wanted to do other things or spend time with family  - Were each of the followin,object,4194
+K9_c,Didn't like the work - Were each of the following important to your decision to,object,4194
+K9_d,Care for family members - Were each of the following important to your decision,object,4194
+K9_e,Reached normal retirement age - Were each of the following important to your dec,object,4194
+K9_f,Forced to retire or lack of available work - Were each of the following importan,object,4194
+K14_a,Financial reasons (such as earning money or keeping health insurance)  -  You in,object,643
+K14_b,Nonfinancial reasons (such as enjoy work/sense of purpose or social connections),object,643
+K15_a,I needed money to make ends meet  -  Were each of the following true about your,object,324
+K15_b,I wanted extra spending money  -  Were each of the following true about your dec,object,324
+K15_c,I worked because I needed to keep health insurance  -  Were each of the followin,object,324
+K15_d,"I worked to save more money, make retirement savings last longer, or delay claim",object,324
+K15_e,Working enabled me to give financial help to family members or friends  -  Were,object,324
+K21_a,"Retirement savings account, such as a 401(k) plan through an employer, IRA or Ro",int64,12934
+K21_b,Pension with a defined benefit through an employer that will pay a monthly amoun,int64,12934
+K21_c,"Stocks, bonds, ETFs, or mutual funds held outside a retirement account - Do you",int64,12934
+K21_d,"Savings account, money market account, or certificate of deposit (CD) - Do you c",int64,12934
+K21_e,Cash value in a life insurance policy - Do you Reduced your regular contribution,int64,12934
+K21_f,Business or real estate investment (other than your primary residence) - Do you,int64,12934
+K5A_a,"Borrowed money - In the past 12 months, have you done each of the following with",object,8740
+K5A_b,"Cashed out (permanently withdrawn) money - In the past 12 months, have you done",object,8740
+K5A_c,"Reduced your regular contributions - In the past 12 months, have you done each o",object,8740
+DC4,How comfortable are you with choosing and managing your investments?,int64,12934
+FL0,"On a scale from zero to ten, where zero is not at all willing to take risks and",int64,12934
+I0_a,"Wages, salaries, or self-employment income - In the past 12 months, did you [and",int64,12934
+I0_b,"Interest, dividends, or rental income - In the past 12 months, did you [and/or y",int64,12934
+I0_c,"Social Security (including old age and DI) - In the past 12 months, did you [and",int64,12934
+I0_d,"Supplemental Security Income (SSI), TANF, or cash assistance from a welfare prog",int64,12934
+I0_e,"Unemployment income - In the past 12 months, did you [and/or your spouse or part",int64,12934
+I0_f,"Pension - In the past 12 months, did you [and/or your spouse or partner] receive",int64,12934
+I40,Which category represents your and your spouse/partner’s total combined income i,int64,12934
+I41_a,"Earned Income Tax Credit (EITC) - In the past 12 months, did you [and/or your sp",int64,12934
+I41_b,Supplemental Nutrition Assistance Program (SNAP or food stamps) - In the past 12,int64,12934
+I41_c,"Women, Infants, and Children (WIC) nutrition program benefits  - In the past 12",int64,12934
+I41_d,"Housing assistance from government program - In the past 12 months, did you [and",int64,12934
+I41_e,"Free or reduced price school lunches for your children - In the past 12 months,",object,3024
+FS21_a,"Rent, mortgage, utilities, or housing costs - In the past 12 months, has anyone",int64,12934
+FS21_b,"Education expenses or student loans - In the past 12 months, has anyone outside",int64,12934
+FS21_c,"Medical expenses/debt or health insurance - In the past 12 months, has anyone ou",int64,12934
+FS21_d,"Car payment, insurance, or repairs - In the past 12 months, has anyone outside o",int64,12934
+FS21_e,"Cell phone bill - In the past 12 months, has anyone outside of your household he",int64,12934
+FS21_f,"Childcare or other expenses for children - In the past 12 months, has anyone out",object,3024
+FS21_g,"Money for general expenses or anything else - In the past 12 months, has anyone",int64,12934
+I9,"In the past 12 months, which one of the following best describes your and your s",int64,12934
+I12,"Because your income varies, have you and your spouse or partner struggled to pay",object,3631
+I20,"In the past month, would you say that your and your spouse’s or partner’s total",int64,12934
+I21_a,"Total monthly income - Compared to a year ago, have each of the following [for y",int64,12934
+I21_b,"Total monthly spending - Compared to a year ago, have each of the following [for",int64,12934
+INF4,"Overall, have changes in the prices you pay compared to last year made your fina",int64,12934
+INF3_a,Switched to cheaper products - Did you take any of the following actions because,int64,12934
+INF3_b,Used less or stopped using products - Did you take any of the following actions,int64,12934
+INF3_c,Reduced savings - Did you take any of the following actions because of increases,int64,12934
+INF3_d,Increased borrowing - Did you take any of the following actions because of incre,int64,12934
+INF3_e,Delayed a major purchase - Did you take any of the following actions because of,int64,12934
+INF3_f,Worked more or got another job - Did you take any of the following actions becau,int64,12934
+INF3_g,Asked for a raise - Did you take any of the following actions because of increas,object,1263
+INF5,"In the past 12 months, did you make any large purchases sooner than you had plan",int64,12934
+EF1,Have you set aside emergency or rainy day funds that would cover your expenses f,int64,12934
+EF2,If you were to lose your main source of income (for example job or government be,object,5607
+EF3_a,Put it on my credit card and pay it off in full at the next statement - Suppose,int64,12934
+EF3_b,Put it on my credit card and pay it off over time - Suppose that you have an eme,int64,12934
+EF3_c,With the money currently in my checking/savings account or with cash - Suppose t,int64,12934
+EF3_d,Using money from a bank loan or line of credit - Suppose that you have an emerge,int64,12934
+EF3_e,By borrowing from a friend or family member - Suppose that you have an emergency,int64,12934
+EF3_f,"Using a payday loan, deposit advance, or overdraft - Suppose that you have an em",int64,12934
+EF3_g,By selling something - Suppose that you have an emergency expense that costs $40,int64,12934
+EF3_h,I wouldn't be able to pay for the expense right now - Suppose that you have an e,int64,12934
+EF5C,"Other than any credit card bills you may have, did you pay all your bills in ful",int64,12934
+EF5D,Did you have any bills that you had difficulty paying last month?,object,11135
+EF8_a,"Paid a bill late - In addition to not paying a bill in full, did you do each of",object,3408
+EF8_b, Negotiated a lower payment or more time to pay - In addition to not paying a bi,object,3408
+EF8_c,"Cut back on other expenses  - In addition to not paying a bill in full, did you",object,3408
+EF8_d,"Increased income, for example, by working overtime or taking an extra job - In a",object,3408
+EF8_e,Used money from savings or a retirement account - In addition to not paying a bi,object,3408
+EF8_f,Used a credit card that I will pay off over time - In addition to not paying a b,object,3408
+EF8_g,Borrowed or received money from friends or family - In addition to not paying a,object,3408
+EF8_h,"Took out another type of loan, such as a payday loan or personal loan  - In addi",object,3408
+EF8_i,"Sold or pawned something - In addition to not paying a bill in full, did you do",object,3408
+EF8_j,"Other - In addition to not paying a bill in full, did you do each of the followi",object,3408
+dov_ef7,EF7 sample split,int64,12934
+EF7,"Based on your current financial situation, what is the largest emergency expense",object,6453
+EF7A,"Based on your current financial situation, what is the largest emergency expense",object,6481
+B0_a,"Because of my money situation, I feel like I will never have the things I want i",int64,12934
+B0_b,I am just getting by financially - How well do each of these statements describe,int64,12934
+B0_c,I am concerned that the money I have or will save won't last - How well do each,int64,12934
+B1_a,I have money left over at the end of the month  -  How often do each of these st,int64,12934
+B1_b,My finances control my life  -  How often do each of these statements apply to y,int64,12934
+FD3,"In the past month, which of these statements best describes the food eaten in yo",int64,12934
+E1_a,"Prescription medicine - During the past 12 months, was there a time when you nee",int64,12934
+E1_b,"Seeing a doctor or specialist - During the past 12 months, was there a time when",int64,12934
+E1_c,"Mental health care or counseling - During the past 12 months, was there a time w",int64,12934
+E1_d,"Dental care - During the past 12 months, was there a time when you needed each o",int64,12934
+E1_e,"Follow-up care - During the past 12 months, was there a time when you needed eac",int64,12934
+E2B,Do you currently have any debt from medical care you or your family members have,int64,12934
+E4_a,Insurance through an employer or union - Are you currently covered by any of the,int64,12934
+E4_b,Insurance purchased directly from an insurance company - Are you currently cover,int64,12934
+E4_c,Medicare or Medicaid - Are you currently covered by any of the following types o,int64,12934
+E4_d,"TRICARE, VA, or other military or veteran's health care - Are you currently cove",int64,12934
+E4_e,Insurance purchased through a health insurance exchange - Are you currently cove,int64,12934
+E4_f,Any other health insurance - Are you currently covered by any of the following t,int64,12934
+E2,"During the past 12 months, have you had any unexpected major medical expenses th",int64,12934
+E11_b,"A major vehicle repair or replacement - During the past 12 months, have you had",int64,12934
+E11_c,"A major house or appliance repair - During the past 12 months, have you had any",int64,12934
+E11_d,"A mobile phone or computer repair or replacement - During the past 12 months, ha",int64,12934
+E11_e,"Legal expenses, taxes, or fines - During the past 12 months, have you had any of",int64,12934
+E11_f,"Increases in childcare or dependent care expenses - During the past 12 months, h",int64,12934
+E11_g," Another major unexpected expense (please specify) - During the past 12 months,",int64,12934
+E12_a,Unexpected major medical expenses - Approximately how much did you pay for these,object,2860
+E12_b,A major vehicle repair or replacement- Approximately how much did you pay for th,object,3946
+E12_c,A major house or appliance repair - Approximately how much did you pay for these,object,2961
+E12_d,A mobile phone or computer repair or replacement - Approximately how much did yo,object,2331
+E12_e,"Legal expenses, taxes, or fines - Approximately how much did you pay for these u",object,1236
+E12_f,Increases in childcare or dependent care expenses - Approximately how much did y,object,381
+E12_g,Other unexpected expenses - Approximately how much did you pay for these unexpec,object,805
+CH2A,We are interested in a few characteristics of your parents. Thinking about your,object,12912
+DOV_X11,Flag - identifier for receiving X11 or not,int64,12934
+DOV_D36_AMOUNT,Flag - amount of hypothetical pay change in question D36B,int64,12934
+ppage,Age,int64,12934
+ppagecat,Age - 7 Categories,int64,12934
+ppagect4,Age - 4 Categories,int64,12934
+ppeduc5,Education (5 Categories),int64,12934
+ppeducat,Education (4 Categories),int64,12934
+ppemploy,Current Employment Status,int64,12934
+ppethm,Race / Ethnicity,int64,12934
+ppgender,Gender,int64,12934
+pphhsize,Household Size,int64,12934
+pphouse4,Housing Type,int64,12934
+ppinc7,Household Income,int64,12934
+ppmarit5,Marital Status,int64,12934
+ppmsacat,MSA Status,int64,12934
+ppreg4,Region 4 - Based on State of Residence,int64,12934
+ppreg9,Region 9 - Based on State of Residence,int64,12934
+pprent,Ownership Status of Living Quarters,int64,12934
+ppstaten,State,int64,12934
+ppkid017,Presence of Household Members - Children 0-17,int64,12934
+ppt18ov,Presence of Household Members - Adults 18+,int64,12934
+ppcm0160,Q26: Occupation (tight scale) in current or main job,int64,12934
+ind1,IND1: Industry (tight scale) in current or main job,int64,12934
+ppcm1301,GOVEMP1: Employer type,int64,12934
+UNION100,UNION100: Are you a member of a labor union or an employee association similar t,int64,12934
+pph10001,"Q1: In general, would you say your health is. . .?",object,11295
+ppfs0001,"Q1: When it comes to decisions regarding your household's financial activities,",object,10052
+ppfsasset,Q22: What is the approximate total amount of your household's savings and invest,object,8493
+ppfs1482,Q108: Where do you think  your credit score falls,object,9988
+pphi0001,Q0: What language do you usually speak at home?,object,1688
+ppracem,"Race, Census categories",object,12933
+pphispan,"Are you Spanish, Hispanic, or Latino?",int64,12934
+pppa_lgb,Q230: Which of the following best describes how you think of yourself?,object,11655
+ppp20197,QEG22: Are you a citizen of the United States?,object,11866
+pph12003,Q190: Are you blind or do you have serious difficulty seeing even when wearing g,object,11317
+pph12004,Q190: Are you deaf or do you have serious difficulty hearing?,object,11289
+pph12005,Q190: Do you have serious difficulty walking or climbing stairs?,object,11287
+pph12006,"Q190: Because of a physical, mental, or emotional condition, do you have difficu",object,11308
+pph12007,Q190: Do you having difficulty dressing or bathing?,object,11303
+pppa1636,Q250: Did you ever serve on active duty in the U.S. Armed Forces?,object,11741
+pppa1637,Q251: Are you now in the U.S. Armed Forces?,object,1112
+pppa1640,Q254: Have you ever been a member of the Reserve or National Guard?,object,11740
+ppcp0029,"Q300: How many automobiles, vans, and trucks are kept at home for use by members",object,11915
+ppsi2302,Q60: How many minutes did it usually take you to get to work LAST WEEK?,object,5338
+ppc21505,CU40: How concerned are you about providing personal information over the intern,object,10600
+ACSNET2_mob,ACSNET2: Does anyone access the internet using ... [Cellular data plan],int64,12934
+ACSNET2_hi,ACSNET2: Does anyone access the internet using ... [Broadband],int64,12934
+ACSNET2_sat,ACSNET2: Does anyone access the internet using ... [Satellite],int64,12934
+ACSNET2_du,ACSNET2: Does anyone access the internet using ... [Dial-up],int64,12934
+ACSNET2_oth,ACSNET2: Does anyone access the internet using ... [Some other service],int64,12934
+pppa1634,Q23B: What sex were you assigned at birth on your original birth certificate?,object,11687
+pph12002,"Q7a: During the past 12 months, have you been hospitalized overnight?",object,11307
+pph11402,Q7: Have you received care from a hospital emergency department or urgent care c,object,11297
+pph11403,Q7: Have you received care from a hospital emergency department or urgent care c,object,11297
+pph11404,Q7: Have you received care from a hospital emergency department or urgent care c,object,11297
+ppfs1460,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs1461,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs1462,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs1463,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs1613,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs1464,"Q80: Thinking about investment decisions, which of the following best describes",object,8195
+ppfs0549,Q8: Which of the following types of investment accounts do you have? [Retirement,object,8441
+ppfs1493,Q8: Which of the following types of investments accounts do you have? [Health Sa,object,8419
+ppfs2342,Q8 Which of the following types of investments do you have? [Brokerage or adviso,object,7255
+ppfs2309,Q8: Which of the following types of investments accounts do you have? [An employ,object,7255
+ppfs2340,Q8: Which of the following types of investments accounts do you have? [College i,object,7255
+ppfs2343,Q8: Which of the following types of investments do you have? [Financial investme,object,7255
+ppfs2344,Q8: Which of the following types of investments do you have? [Crypto exchange ac,object,7255
+ppfs2345,Q8: Which of the following types of investments do you have? [Other investment a,object,7255
+ppcm0006,Q7: When it comes to grocery shopping for my household...,int64,12934
+ppcmdate,Date member completed core adult survey,int64,12934
+ppp1date,Date member completed Public Affairs 1 survey,object,11880
+ppp2date,Date member completed Public Affairs 2 survey,object,11737
+pphidate,Date member completed Hispanic survey,object,1692
+pph1date,Date member completed Health 1 survey,object,11359
+ppfsdate,Date member completed Financial Services survey,object,10077
+ppmpdate,Date member completed Military Profile survey,object,11757
+ppcpdate,Date member completed Calibration profile survey,object,11968
+ppsidate,Date member completed Lifestyle and Sports Interest Profile survey,object,10558
+ppc2date,Date member completed Computer Usage 2 survey,object,10647
+field_month,,float64,12934
+field_day,,float64,12934
+pphhsize5,,float64,12934
+L0_a_iflag,,float64,12934
+L0_b_iflag,,float64,12934
+L0_c_iflag,,float64,12934
+L0_d_iflag,,float64,12934
+L0_e_iflag,,float64,12934
+L0B_a_iflag,,float64,12934
+L0B_b_iflag,,float64,12934
+L0B_c_iflag,,float64,12934
+L0C_iflag,,float64,12934
+L0E_iflag,,float64,12934
+B2_iflag,,float64,12934
+B3_iflag,,float64,12934
+B3A_a_iflag,,float64,12934
+B3A_b_iflag,,float64,12934
+B3A_c_iflag,,float64,12934
+B3A_d_iflag,,float64,12934
+B3A_e_iflag,,float64,12934
+B3A_f_iflag,,float64,12934
+B3B_a_iflag,,float64,12934
+B3B_b_iflag,,float64,12934
+B3B_c_iflag,,float64,12934
+B3B_d_iflag,,float64,12934
+B3B_e_iflag,,float64,12934
+B3B_f_iflag,,float64,12934
+B7_a_iflag,,float64,12934
+B7_b_iflag,,float64,12934
+X12_a_iflag,,float64,12934
+X12_b_iflag,,float64,12934
+X12_c_iflag,,float64,12934
+X12_d_iflag,,float64,12934
+X12_e_iflag,,float64,12934
+X12_f_iflag,,float64,12934
+X12_g_iflag,,float64,12934
+X13_iflag,,float64,12934
+CG0_iflag,,float64,12934
+CG1A_iflag,,float64,12934
+CG2_iflag,,float64,12934
+CG7_a_iflag,,float64,12934
+CG7_b_iflag,,float64,12934
+CG7_c_iflag,,float64,12934
+CG7_d_iflag,,float64,12934
+CG7_e_iflag,,float64,12934
+CG7_f_iflag,,float64,12934
+CG7_g_iflag,,float64,12934
+CG8_iflag,,float64,12934
+CG3_iflag,,float64,12934
+CG4_iflag,,float64,12934
+CG5_a_iflag,,float64,12934
+CG5_b_iflag,,float64,12934
+CG5_c_iflag,,float64,12934
+CG5_d_iflag,,float64,12934
+CG5_e_iflag,,float64,12934
+CG5_f_iflag,,float64,12934
+CG6_iflag,,float64,12934
+D1A_iflag,,float64,12934
+D4_iflag,,float64,12934
+D48_iflag,,float64,12934
+D3B_iflag,,float64,12934
+D1E_iflag,,float64,12934
+D22_a_iflag,,float64,12934
+D22_b_iflag,,float64,12934
+D22_c_iflag,,float64,12934
+D22_d_iflag,,float64,12934
+D22_e_iflag,,float64,12934
+D22_f_iflag,,float64,12934
+D22_g_iflag,,float64,12934
+D22_h_iflag,,float64,12934
+D22_i_iflag,,float64,12934
+D3A_iflag,,float64,12934
+D3E_iflag,,float64,12934
+D28_a_iflag,,float64,12934
+D28_b_iflag,,float64,12934
+D50_iflag,,float64,12934
+D51_iflag,,float64,12934
+D52_a_iflag,,float64,12934
+D52_b_iflag,,float64,12934
+D52_c_iflag,,float64,12934
+D52_d_iflag,,float64,12934
+D52_e_iflag,,float64,12934
+D52_f_iflag,,float64,12934
+D30_iflag,,float64,12934
+D34A_iflag,,float64,12934
+D34D_iflag,,float64,12934
+D36B_iflag,,float64,12934
+D44_f_iflag,,float64,12934
+D44_a_iflag,,float64,12934
+D44_b_iflag,,float64,12934
+D44_c_iflag,,float64,12934
+D44_d_iflag,,float64,12934
+D44_e_iflag,,float64,12934
+D37A_iflag,,float64,12934
+D38_a_iflag,,float64,12934
+D38_b_iflag,,float64,12934
+D38_c_iflag,,float64,12934
+D38_d_iflag,,float64,12934
+D38_f_iflag,,float64,12934
+D39_iflag,,float64,12934
+D1B_iflag,,float64,12934
+D5_iflag,,float64,12934
+D49_iflag,,float64,12934
+GH1_iflag,,float64,12934
+GH12_iflag,,float64,12934
+GH12A_iflag,,float64,12934
+GH14_iflag,,float64,12934
+GH14A_iflag,,float64,12934
+GH15_iflag,,float64,12934
+GH16_a_iflag,,float64,12934
+GH16_b_iflag,,float64,12934
+GH16_c_iflag,,float64,12934
+GH16_d_iflag,,float64,12934
+GH16_e_iflag,,float64,12934
+GH16_f_iflag,,float64,12934
+GH2_iflag,,float64,12934
+R4_iflag,,float64,12934
+R5B_a_iflag,,float64,12934
+R5B_b_iflag,,float64,12934
+R5B_c_iflag,,float64,12934
+R5B_d_iflag,,float64,12934
+R5C_a_iflag,,float64,12934
+R5C_b_iflag,,float64,12934
+R5C_c_iflag,,float64,12934
+R5C_d_iflag,,float64,12934
+R3_iflag,,float64,12934
+R11_iflag,,float64,12934
+R18_iflag,,float64,12934
+M4_iflag,,float64,12934
+ND0_iflag,,float64,12934
+ND1_a_iflag,,float64,12934
+ND1_b_iflag,,float64,12934
+ND1_c_iflag,,float64,12934
+ND1_d_iflag,,float64,12934
+ND1_e_iflag,,float64,12934
+ND4_a_iflag,,float64,12934
+ND4_b_iflag,,float64,12934
+ND4_c_iflag,,float64,12934
+BK1_iflag,,float64,12934
+BK2_a_iflag,,float64,12934
+BK2_b_iflag,,float64,12934
+BK2_c_iflag,,float64,12934
+BK2_d_iflag,,float64,12934
+BK2_e_iflag,,float64,12934
+BK2_f_iflag,,float64,12934
+BK47_a_iflag,,float64,12934
+BK47_b_iflag,,float64,12934
+BK48_iflag,,float64,12934
+BK49A_iflag,,float64,12934
+BK49B_iflag,,float64,12934
+BK53_a_iflag,,float64,12934
+BK53_b_iflag,,float64,12934
+BK53_c_iflag,,float64,12934
+BK53_d_iflag,,float64,12934
+BK53_e_iflag,,float64,12934
+BK53_f_iflag,,float64,12934
+BK53_g_iflag,,float64,12934
+BK53_h_iflag,,float64,12934
+BK53_i_iflag,,float64,12934
+BK53_j_iflag,,float64,12934
+BK54_a_iflag,,float64,12934
+BK54_b_iflag,,float64,12934
+BK54_c_iflag,,float64,12934
+BK54_d_iflag,,float64,12934
+BK54_e_iflag,,float64,12934
+BK54_f_iflag,,float64,12934
+BK55_iflag,,float64,12934
+BK56_a_iflag,,float64,12934
+BK56_b_iflag,,float64,12934
+BK56_c_iflag,,float64,12934
+BK57_a_iflag,,float64,12934
+BK57_b_iflag,,float64,12934
+BK57_c_iflag,,float64,12934
+BK50_iflag,,float64,12934
+A6_iflag,,float64,12934
+A0_iflag,,float64,12934
+A7_a_iflag,,float64,12934
+A7_b_iflag,,float64,12934
+A7_c_iflag,,float64,12934
+A7_d_iflag,,float64,12934
+A7_e_iflag,,float64,12934
+A7_f_iflag,,float64,12934
+A0B_iflag,,float64,12934
+A1_a_iflag,,float64,12934
+A1_b_iflag,,float64,12934
+A1_c_iflag,,float64,12934
+A8_a_iflag,,float64,12934
+A8_b_iflag,,float64,12934
+A8_c_iflag,,float64,12934
+A8_d_iflag,,float64,12934
+A8_e_iflag,,float64,12934
+A8_f_iflag,,float64,12934
+A2_iflag,,float64,12934
+C2A_iflag,,float64,12934
+C3P_iflag,,float64,12934
+C4A_iflag,,float64,12934
+BNPL1_iflag,,float64,12934
+BNPL3_iflag,,float64,12934
+BNPL3A_iflag,,float64,12934
+BNPL1A_iflag,,float64,12934
+BNPL4_a_iflag,,float64,12934
+BNPL4_b_iflag,,float64,12934
+BNPL4_c_iflag,,float64,12934
+BNPL4_d_iflag,,float64,12934
+BNPL4_e_iflag,,float64,12934
+BNPL4_f_iflag,,float64,12934
+BNPL4_g_iflag,,float64,12934
+BNPL5_iflag,,float64,12934
+BNPL6_a_iflag,,float64,12934
+BNPL6_b_iflag,,float64,12934
+BNPL6_c_iflag,,float64,12934
+BNPL6_d_iflag,,float64,12934
+BNPL6_e_iflag,,float64,12934
+BNPL6_f_iflag,,float64,12934
+BNPL6_g_iflag,,float64,12934
+BNPL7_a_iflag,,float64,12934
+BNPL7_b_iflag,,float64,12934
+S16_a_iflag,,float64,12934
+S16_b_iflag,,float64,12934
+S16_c_iflag,,float64,12934
+S18_iflag,,float64,12934
+S21_iflag,,float64,12934
+ED0_iflag,,float64,12934
+D1G_iflag,,float64,12934
+ED0B_iflag,,float64,12934
+SL21_iflag,,float64,12934
+SL22_a_iflag,,float64,12934
+SL22_b_iflag,,float64,12934
+SL22_c_iflag,,float64,12934
+SL22_d_iflag,,float64,12934
+SL23_iflag,,float64,12934
+SL24_iflag,,float64,12934
+SL25_a_iflag,,float64,12934
+SL25_b_iflag,,float64,12934
+SL25_c_iflag,,float64,12934
+SL25_d_iflag,,float64,12934
+SL25_e_iflag,,float64,12934
+SL25_f_iflag,,float64,12934
+SL25_g_iflag,,float64,12934
+SL26_a_iflag,,float64,12934
+SL26_b_iflag,,float64,12934
+SL26_c_iflag,,float64,12934
+SL26_d_iflag,,float64,12934
+D1I_iflag,,float64,12934
+K0_iflag,,float64,12934
+K8A_iflag,,float64,12934
+K9_a_iflag,,float64,12934
+K9_b_iflag,,float64,12934
+K9_c_iflag,,float64,12934
+K9_d_iflag,,float64,12934
+K9_e_iflag,,float64,12934
+K9_f_iflag,,float64,12934
+K14_a_iflag,,float64,12934
+K14_b_iflag,,float64,12934
+K15_a_iflag,,float64,12934
+K15_b_iflag,,float64,12934
+K15_c_iflag,,float64,12934
+K15_d_iflag,,float64,12934
+K15_e_iflag,,float64,12934
+K21_a_iflag,,float64,12934
+K21_b_iflag,,float64,12934
+K21_c_iflag,,float64,12934
+K21_d_iflag,,float64,12934
+K21_e_iflag,,float64,12934
+K21_f_iflag,,float64,12934
+K5A_a_iflag,,float64,12934
+K5A_b_iflag,,float64,12934
+K5A_c_iflag,,float64,12934
+DC4_iflag,,float64,12934
+FL0_iflag,,float64,12934
+I0_a_iflag,,float64,12934
+I0_b_iflag,,float64,12934
+I0_c_iflag,,float64,12934
+I0_d_iflag,,float64,12934
+I0_e_iflag,,float64,12934
+I0_f_iflag,,float64,12934
+I40_iflag,,float64,12934
+I41_a_iflag,,float64,12934
+I41_b_iflag,,float64,12934
+I41_c_iflag,,float64,12934
+I41_d_iflag,,float64,12934
+I41_e_iflag,,float64,12934
+FS21_a_iflag,,float64,12934
+FS21_b_iflag,,float64,12934
+FS21_c_iflag,,float64,12934
+FS21_d_iflag,,float64,12934
+FS21_e_iflag,,float64,12934
+FS21_f_iflag,,float64,12934
+FS21_g_iflag,,float64,12934
+I9_iflag,,float64,12934
+I12_iflag,,float64,12934
+I20_iflag,,float64,12934
+I21_a_iflag,,float64,12934
+I21_b_iflag,,float64,12934
+INF4_iflag,,float64,12934
+INF3_a_iflag,,float64,12934
+INF3_b_iflag,,float64,12934
+INF3_c_iflag,,float64,12934
+INF3_d_iflag,,float64,12934
+INF3_e_iflag,,float64,12934
+INF3_f_iflag,,float64,12934
+INF3_g_iflag,,float64,12934
+INF5_iflag,,float64,12934
+EF1_iflag,,float64,12934
+EF2_iflag,,float64,12934
+EF3_a_iflag,,float64,12934
+EF3_b_iflag,,float64,12934
+EF3_c_iflag,,float64,12934
+EF3_d_iflag,,float64,12934
+EF3_e_iflag,,float64,12934
+EF3_f_iflag,,float64,12934
+EF3_g_iflag,,float64,12934
+EF3_h_iflag,,float64,12934
+EF5C_iflag,,float64,12934
+EF5D_iflag,,float64,12934
+EF8_a_iflag,,float64,12934
+EF8_b_iflag,,float64,12934
+EF8_c_iflag,,float64,12934
+EF8_d_iflag,,float64,12934
+EF8_e_iflag,,float64,12934
+EF8_f_iflag,,float64,12934
+EF8_g_iflag,,float64,12934
+EF8_h_iflag,,float64,12934
+EF8_i_iflag,,float64,12934
+EF8_j_iflag,,float64,12934
+EF7_iflag,,float64,12934
+EF7A_iflag,,float64,12934
+B0_a_iflag,,float64,12934
+B0_b_iflag,,float64,12934
+B0_c_iflag,,float64,12934
+B1_a_iflag,,float64,12934
+B1_b_iflag,,float64,12934
+FD3_iflag,,float64,12934
+E1_a_iflag,,float64,12934
+E1_b_iflag,,float64,12934
+E1_c_iflag,,float64,12934
+E1_d_iflag,,float64,12934
+E1_e_iflag,,float64,12934
+E2B_iflag,,float64,12934
+E4_a_iflag,,float64,12934
+E4_b_iflag,,float64,12934
+E4_c_iflag,,float64,12934
+E4_d_iflag,,float64,12934
+E4_e_iflag,,float64,12934
+E4_f_iflag,,float64,12934
+E2_iflag,,float64,12934
+E11_b_iflag,,float64,12934
+E11_c_iflag,,float64,12934
+E11_d_iflag,,float64,12934
+E11_e_iflag,,float64,12934
+E11_f_iflag,,float64,12934
+E11_g_iflag,,float64,12934
+E12_a_iflag,,float64,12934
+E12_b_iflag,,float64,12934
+E12_c_iflag,,float64,12934
+E12_d_iflag,,float64,12934
+E12_e_iflag,,float64,12934
+E12_f_iflag,,float64,12934
+E12_g_iflag,,float64,12934
+CH2A_iflag,,float64,12934
+race_5cat,Race/Ethnicity - 5 categories,int64,12934
+inc_4cat_50k,"Income (I40) - 4 cat - <25,25–49,50–99,100+",float64,12934
+educ_4cat,"Education - 4 categories, less than hs separate",int64,12934
+pay_casheqv,Would handle $400 expense with cash or equivalent,float64,12934
+atleast_okay,Doing okay financially,int64,12934
+control,Control of institution (IPEDS),str,12934
+malefemale,Male/Female,float64,12934
+year,,float64,12934

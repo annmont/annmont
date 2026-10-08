@@ -1,0 +1,31 @@
+# SHED 2025 (public2025.dta; the CSV stores answers as text labels, the .dta has numeric codes). Names/codes/universes from SHED_2025codebook.pdf, Stata labels, and Appendix A questionnaire.
+data_file: audit/data/x/shed_dta/public2025.dta
+repweight_file: null
+merge_keys: []
+missing_codes: [-1, -2]            # -1 Refused, -2 Not asked (ppcm* variables)
+weight: weight_pop                 # main qualified respondents, scaled to US population (no replicate weights in file)
+rep_prefix: null
+fay_rho: null
+eligible: {var: D1A, codes: [1]}   # worked last month for pay or profit (universe of D50 and D52)
+ai_user:  {var: D50, codes: [1]}
+outcomes:
+  D51_freq:          {var: D51,   universe: ai_users}
+  D52a_saves_time:   {var: D52_a, universe: all_eligible}
+  D52b_quality:      {var: D52_b, universe: all_eligible}
+  D52c_new_tasks:    {var: D52_c, universe: all_eligible}
+  D52d_employer_enc: {var: D52_d, universe: all_eligible}
+  D52e_career:       {var: D52_e, universe: all_eligible}
+  D52f_replace_worry: {var: D52_f, universe: all_eligible}
+  D28a_choose_tasks: {var: D28_a, universe: all_eligible}
+  D28b_choose_how:   {var: D28_b, universe: all_eligible}
+  D3A_job_type:      {var: D3A,   universe: all_eligible}
+  occupation:        {var: ppcm0160, universe: all_eligible}
+  industry:          {var: ind1,  universe: all_eligible}
+  employer_type:     {var: ppcm1301, universe: all_eligible}
+  education:         {var: ppeducat, universe: all_eligible}
+  hh_income_7cat:    {var: ppinc7, universe: all_eligible}
+  age:               {var: ppage, universe: all_eligible}
+  telework_days:     {var: D34D,  universe: all_eligible}
+  promo_received:    {var: D44_b, universe: all_eligible}
+id_cols: [shedid]
+time_cols: []

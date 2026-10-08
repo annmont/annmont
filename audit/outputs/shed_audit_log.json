@@ -1,0 +1,51 @@
+{
+  "dataset": "shed",
+  "file": "audit/data/x/shed_dta/public2025.dta",
+  "sha256": "87e890c5b7305644b2c42258450595246a415f55cbca4680c3025782db4fed9c",
+  "n_rows": 12934,
+  "n_cols": 815,
+  "id_checks": {
+    "shedid": {
+      "n_nonmissing": 12934,
+      "n_unique": 12934,
+      "n_duplicated_values": 0
+    }
+  },
+  "time_tabs": {},
+  "inventory_counts": {
+    "ai_frequency": 10,
+    "ai_task": 3,
+    "ai_use": 3,
+    "autonomy": 4,
+    "demographics": 69,
+    "earnings": 51,
+    "employer": 23,
+    "employment": 47,
+    "ids": 23,
+    "industry": 1,
+    "occupation": 1,
+    "productivity": 40,
+    "skills": 13,
+    "time": 129,
+    "weights": 4
+  },
+  "raw_tab_eligible_var": {
+    "0": 5446,
+    "1": 7488
+  },
+  "raw_tab_ai_var": {
+    "0": 5638,
+    "1": 1850,
+    "NaN": 5446
+  },
+  "N_total": 12934,
+  "N_eligible": 7488,
+  "N_eligible_ai_valid": 7488,
+  "N_ai_user": 1850,
+  "N_ai_nonuser": 5638,
+  "prevalence_unweighted": 0.24706196581196582,
+  "prevalence_weighted": 0.24740989589536366,
+  "weight_missing_among_eligible": 0,
+  "weight_zero_among_eligible": 0,
+  "n_rep_weights_found": 0
+}
